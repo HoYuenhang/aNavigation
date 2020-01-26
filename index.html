@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>一个导航</title>
+	<meta name="keywords" content="网页导航">
+    <meta name="description" content="一个简单的网页导航">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jQuery.js"></script>
+    <script type="text/javascript" src="js/function.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container">
+
+		<!-- 搜索盒子 -->
+		<div style="margin-top: 100px;" class="search-box">
+
+			<!-- logo -->
+			<div style="margin: 0 auto;" id="logo">
+				<div style="margin: 0 auto;width: 350px;">
+					<img style="width: 350px;" id="img" src="img/logo.gif">
+				</div>
+			</div>
+			
+			<!-- 搜索 -->
+			<!-- 搜索框 -->
+			<div class="inputDiv">
+			<form action="https://cn.bing.com/search" target="_self" method="get">
+				<input type="text" placeholder="Bing搜索..." name="q">
+				<span class="bottom"></span>
+				<span class="right"></span>
+				<span class="top"></span>
+				<span class="left"></span>
+				<button class="submitButton" type="submit">搜索</button>
+			</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

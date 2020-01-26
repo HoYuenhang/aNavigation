@@ -22,7 +22,7 @@
 
 .submitButton{
 	height: 39.8px;
-	width: 12%;
+	width: 15%;
 	float: right;
 	z-index: 1;
 	position: relative;
@@ -32,7 +32,7 @@
 	padding: 0;
 	outline: none;
 	border: none;
-	background-color: hsl(236, 32%, 26%);
+	background-color: #00868B;
 	overflow: hidden;
 	transition: color 0.4s ease-in-out;
 }
@@ -45,7 +45,7 @@
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  background-color: coral;
+  background-color: #00868B;
   transform-origin: center;
   transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
   transition: transform 0.45s ease-in-out;
@@ -64,17 +64,17 @@
 /*搜索框*/
 .inputDiv {
 	margin-top: 20px;
-  	position: relative;
-  	margin-left: 20px;
-  	margin-right: 20px;
+	position: relative;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 input {
-  	width:88%; 
+  width:85%; 
 	color: white;
 	font-size: inherit;
 	font-family: inherit;
-	background-color: orange;
+	background-color: #8DB6CD;
 	padding: 0.35em 0.45em;
 	border: 5px solid transparent;
 	transition: background-color 0.5s ease-in-out;
@@ -90,7 +90,7 @@ input::placeholder {
 
 span {
   position: absolute;
-  background-color: black;
+  background-color: #00868B;
   transition: transform 0.5s ease;
 }
 

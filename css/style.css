@@ -2,6 +2,9 @@
 	/*background-image: url(../img/bg.jpg);*/
 	background-color: #fff;
 }
+html, body, .container{
+	height: 100%;
+}
 
 .search-box{
 	margin-top: 100px;
@@ -151,4 +154,16 @@ input:focus ~ .top {
 input:focus ~ .left {
   transform-origin: top left;
   transform: scaleY(1);
+}
+
+.footer{
+	bottom: 10px;
+	position: fixed;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.footer p{
+	color: black;
+	text-align: center;
 }

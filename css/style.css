@@ -66,14 +66,14 @@ html, body, .container{
 
 /*搜索框*/
 .inputDiv {
-	margin-top: 20px;
+	margin-top: 30px;
 	position: relative;
 	margin-left: 20px;
 	margin-right: 20px;
 }
 
 input {
-  width:85%; 
+    width:85%; 
 	color: white;
 	font-size: inherit;
 	font-family: inherit;

@@ -17,26 +17,26 @@
 	<div class="container">
 
 		<!-- 搜索盒子 -->
-		<div style="margin-top: 100px;" class="search-box">
+		<div class="search-box">
 
 			<!-- logo -->
-			<div style="margin: 0 auto;" id="logo">
-				<div style="margin: 0 auto;width: 350px;">
-					<img style="width: 350px;" id="img" src="img/logo.gif">
+			<div id="logo">
+				<div>
+					<img id="img" src="img/logo.gif">
 				</div>
 			</div>
 			
 			<!-- 搜索 -->
 			<!-- 搜索框 -->
 			<div class="inputDiv">
-			<form action="https://cn.bing.com/search" target="_self" method="get">
-				<input type="text" placeholder="Bing搜索..." name="q">
-				<span class="bottom"></span>
-				<span class="right"></span>
-				<span class="top"></span>
-				<span class="left"></span>
-				<button class="submitButton" type="submit">搜索</button>
-			</form>
+				<form action="https://cn.bing.com/search" target="_self" method="get" onsubmit="return check()">
+					<input id="inputText" type="text" placeholder="Bing搜索..."name="q">
+					<span class="bottom"></span>
+					<span class="right"></span>
+					<span class="top"></span>
+					<span class="left"></span>
+					<button id="submitButton" class="submitButton" type="submit">搜索</button>
+				</form>
 			</div>
 		</div>
 	</div>

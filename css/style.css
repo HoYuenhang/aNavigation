@@ -1,6 +1,23 @@
 *{
-	/*background-image: url(../img/logo.jpg);*/
+	/*background-image: url(../img/bg.jpg);*/
 	background-color: #fff;
+}
+
+.search-box{
+	margin-top: 100px;
+}
+
+#logo{
+	margin: 0 auto;
+}
+
+#logo div{
+	margin: 0 auto;
+	width: 350px;
+}
+
+#img{
+	width: 350px;
 }
 
 .submitButton{

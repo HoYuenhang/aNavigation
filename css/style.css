@@ -28,7 +28,7 @@ html, body, .container{
 
 /*搜索盒子*/
 .search-box{
-	margin-top: 100px;
+	margin-top: 20px;
 }
 
 #logo{
@@ -41,6 +41,9 @@ html, body, .container{
 }
 
 #img{
+	animation: fade-in;
+    animation-duration: 0.2s;
+    -webkit-animation:fade-in 0.2s;
 	width: 300px;
 }
 
@@ -55,53 +58,15 @@ html, body, .container{
 	font-size: 16px;
 }
 
-/*搜索按键*/
-.submitButton{
-	height: 39.8px;
-	width: 15%;
-	float: right;
-	z-index: 1;
-	position: relative;
-	font-size: inherit;
-	font-family: inherit;
-	color: white;
-	padding: 0;
-	outline: none;
-	border: none;
-	background-color: #00868B;
-	overflow: hidden;
-	transition: color 0.4s ease-in-out;
-}
-.submitButton::before {
-  content: '';
-  z-index: -1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  background-color: #00868B;
-  transform-origin: center;
-  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
-  transition: transform 0.45s ease-in-out;
-}
-
-.submitButton:hover {
-  cursor: pointer;
-  color: #161616;
-}
-
-.submitButton:hover::before {
-  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
-}
-
-
 /*搜索框*/
 .inputDiv {
+	animation: fade-in;
+    animation-duration: 0.5s;
+    -webkit-animation:fade-in 0.5s;
 	margin-top: 30px;
 	position: relative;
 	margin-left: 20px;
+	border-radius: 0px;
 	margin-right: 20px;
 }
 
@@ -113,6 +78,7 @@ input {
 	background-color: #8DB6CD;
 	padding: 0.35em 0.45em;
 	border: 5px solid transparent;
+	border-radius: 0px;
 	transition: background-color 0.5s ease-in-out;
 }
 
@@ -189,18 +155,63 @@ input:focus ~ .left {
   transform: scaleY(1);
 }
 
+/*搜索按键*/
+.submitButton{
+	animation: fade-in;
+    animation-duration: 0.5s;
+    -webkit-animation:fade-in 0.5s;
+	height: 39.8px;
+	width: 15%;
+	float: right;
+	z-index: 1;
+	position: relative;
+	font-size: inherit;
+	font-family: inherit;
+	color: white;
+	padding: 0;
+	outline: none;
+	border: none;
+	background-color: #00868B;
+	overflow: hidden;
+	transition: color 0.4s ease-in-out;
+}
+.submitButton::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  transform-origin: center;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.45s ease-in-out;
+}
+
+.submitButton:hover {
+  cursor: pointer;
+  color: #161616;
+}
+
+.submitButton:hover::before {
+  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+.Select{
+	animation: fade-in;
+    animation-duration: 0.7s;
+    -webkit-animation:fade-in 0.7s;
+}
+
 /*标签*/
 .folder{
+	animation: fade-in;
+    animation-duration: 1s;
+    -webkit-animation:fade-in 1s;
 	width: 100%;
 	margin-top: 10px;
 	display: block;
-}
-
-.folder-item-box p{
-	width: 100%;
-	margin: 0;
-	color: black;
-	text-align: center;
 }
 
 .folder-item-box , .folder-item-img{
@@ -208,8 +219,19 @@ input:focus ~ .left {
 	margin: 0 auto;
 }
 
+.folder-item-box p{
+	font-size: 12px;
+	color: #a5a5a5;
+	width: 100%;
+	margin: 0;
+	text-align: center;
+}
+
 /*导航*/
 .nav{
+	animation: fade-in;
+    animation-duration: 1s;
+    -webkit-animation:fade-in 1s;
 	width: 100%;
 	margin-top: 10px;
 	display: none;
@@ -227,4 +249,26 @@ input:focus ~ .left {
 	color: black;
 	text-align: center;
 	background-color: transparent;
+}
+
+/*animation*/
+@keyframes fade-in {  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+    40% {opacity: 0;}/*过渡状态 透明度为0*/  
+    100% {opacity: 1;}/*结束状态 透明度为1*/  
+}  
+@-webkit-keyframes fade-in {/*针对webkit内核*/  
+    0% {opacity: 0;}  
+    40% {opacity: 0;}  
+    100% {opacity: 1;}  
+}
+@keyframes fade-in-delay {  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+    48% {opacity: 0;}/*过渡状态 透明度为0*/  
+    100% {opacity: 1;}/*结束状态 透明度为1*/  
+}  
+@-webkit-keyframes fade-in-delay {/*针对webkit内核*/  
+    0% {opacity: 0;}  
+    48% {opacity: 0;}  
+    100% {opacity: 1;}  
 }

@@ -46,6 +46,9 @@ function baidu(){
     $('#nav').css('display', 'none');
     $('#folder').css('display', 'block');
     document.getElementById("Select").innerHTML = "标签 <img src='img/search-change.svg?v=2ae7ab8'>";
+    $("#inputText").attr("placeholder","百度一下...");
+    $("#form").attr("action","https://www.baidu.com/s");
+    $("#inputText").attr("name","wd");
 }
 
 function google(){
@@ -56,6 +59,9 @@ function google(){
     $('#nav').css('display', 'none');
     $('#folder').css('display', 'block');
     document.getElementById("Select").innerHTML = "标签 <img src='img/search-change.svg?v=2ae7ab8'>";
+    $("#inputText").attr("placeholder","咕噜咕噜...");
+    $("#form").attr("action","https://www.google.com/search");
+    $("#inputText").attr("name","q");
 }
 
 function bing(){
@@ -66,6 +72,9 @@ function bing(){
     $('#nav').css('display', 'none');
     $('#folder').css('display', 'block');
     document.getElementById("Select").innerHTML = "标签 <img src='img/search-change.svg?v=2ae7ab8'>";
+    $("#inputText").attr("placeholder","Bing搜索...");
+    $("#form").attr("action","https://cn.bing.com/search");
+    $("#inputText").attr("name","q");
 }
 
 function yahoo(){
@@ -76,6 +85,9 @@ function yahoo(){
     $('#nav').css('display', 'none');
     $('#folder').css('display', 'block');
     document.getElementById("Select").innerHTML = "标签 <img src='img/search-change.svg?v=2ae7ab8'>";
+    $("#inputText").attr("placeholder","Yahoo~");
+    $("#form").attr("action","https://search.yahoo.com/search");
+    $("#inputText").attr("name","p");
 }
 
 function duckduckgo(){
@@ -86,4 +98,7 @@ function duckduckgo(){
     $('#nav').css('display', 'none');
     $('#folder').css('display', 'block');
     document.getElementById("Select").innerHTML = "标签 <img src='img/search-change.svg?v=2ae7ab8'>";
+    $("#inputText").attr("placeholder","嘎嘎嘎...");
+    $("#form").attr("action","https://duckduckgo.com/");
+    $("#inputText").attr("name","q");
 }

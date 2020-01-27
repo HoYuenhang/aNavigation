@@ -1,3 +1,4 @@
+/*公共布局*/
 *{
 	/*background-image: url(../img/bg.jpg);*/
 	background-color: #fff;
@@ -17,7 +18,6 @@ li{
 ul{
 	padding: 0 10px;
 	display: inline-block;
-	/*flex-wrap: wrap;*/
 	width: 100%;
 	margin: 0 auto;
 }
@@ -26,6 +26,7 @@ html, body, .container{
 	height: 100%;
 }
 
+/*搜索盒子*/
 .search-box{
 	margin-top: 100px;
 }
@@ -43,6 +44,7 @@ html, body, .container{
 	width: 300px;
 }
 
+/*标签、导航选择器*/
 .Select{
 	margin: 20px auto 0;
 	color: #00868B;
@@ -53,6 +55,7 @@ html, body, .container{
 	font-size: 16px;
 }
 
+/*搜索按键*/
 .submitButton{
 	height: 39.8px;
 	width: 15%;
@@ -186,9 +189,11 @@ input:focus ~ .left {
   transform: scaleY(1);
 }
 
+/*标签*/
 .folder{
 	width: 100%;
 	margin-top: 10px;
+	display: block;
 }
 
 .folder-item-box p{
@@ -203,6 +208,14 @@ input:focus ~ .left {
 	margin: 0 auto;
 }
 
+/*导航*/
+.nav{
+	width: 100%;
+	margin-top: 10px;
+	display: none;
+}
+
+/*底栏*/
 .footer{
 	bottom: 10px;
 	position: fixed;

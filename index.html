@@ -4,9 +4,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>一个导航</title>
+	<title id="title"></title>
 	<meta name="keywords" content="网页导航">
     <meta name="description" content="一个简单的网页导航">
+    <link rel="stylesheet icon" href="img/icon.ico"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="js/jQuery.js"></script>
     <script type="text/javascript" src="js/function.js"></script>
@@ -20,7 +21,7 @@
 			<!-- logo -->
 			<div id="logo">
 				<div>
-					<img id="img" src="img/bing.png">
+					<img id="img" src="https://s2.ax1x.com/2020/01/26/1nnYwR.md.png">
 				</div>
 			</div>
 			
@@ -38,10 +39,67 @@
 				</form>
 			</div>
 		</div>
+		<!-- 书签、引擎选择器 -->
+		<div class="Select" onclick="">导航 <img src="img/search-change.svg?v=2ae7ab8"></div>
+
+		<!-- 书签 -->
+		<div class="folder">
+			<ul>
+				<li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<a href="folder://">
+						<div class="folder-item-box">
+							<img class="folder-item-img" src="img/folder.png">
+							<p style="text-align: center;">书签</p>
+						</div>
+					</a>
+				</li>
+				<li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<a href="http://via-app.cn">
+						<div class="folder-item-box">
+							<img class="folder-item-img" src="img/via.png">
+							<p style="text-align: center;">Via插件</p>
+						</div>
+					</a>
+				</li>
+				<li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<a href="https://tophub.today/">
+						<div class="folder-item-box">
+							<img class="folder-item-img" src="img/headline.png">
+							<p style="text-align: center;">热榜</p>
+						</div>
+					</a>
+				</li>
+				<li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<a href="https://m.apkpure.com/cn/">
+						<div class="folder-item-box">
+							<img class="folder-item-img" src="img/apkpure.png">
+							<p style="text-align: center;">Apkpure</p>
+						</div>
+					</a>
+				</li>
+				<li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<a href="https://www.htcp.net/">
+						<div class="folder-item-box">
+							<img class="folder-item-img" src="img/yunmeng.png">
+							<p style="text-align: center;">云梦</p>
+						</div>
+					</a>
+				</li>
+				<li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<a href="http://www.carrotchou.blog">
+						<div class="folder-item-box">
+							<img class="folder-item-img" src="img/carrot.png">
+							<p style="text-align: center;">萝卜周</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		
 	</div>
 	<!-- 网页底栏 -->
 	<div class="footer">
-		<p>Maintained By 酷安@_小K同學</p>
+		<p class="footerP">Maintained By 酷安@_小K同學</p>
 	</div>
 </body>
 </html>

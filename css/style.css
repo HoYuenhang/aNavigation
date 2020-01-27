@@ -2,6 +2,26 @@
 	/*background-image: url(../img/bg.jpg);*/
 	background-color: #fff;
 }
+
+a,a:hover,a:visited{
+	text-decoration: none;
+}
+
+li{
+	width: 50px;
+	list-style: none;
+	float: left;
+	margin-bottom: 15px;
+}
+
+ul{
+	padding: 0 10px;
+	display: inline-block;
+	/*flex-wrap: wrap;*/
+	width: 100%;
+	margin: 0 auto;
+}
+
 html, body, .container{
 	height: 100%;
 }
@@ -16,11 +36,21 @@ html, body, .container{
 
 #logo div{
 	margin: 0 auto;
-	width: 350px;
+	width: 300px;
 }
 
 #img{
-	width: 350px;
+	width: 300px;
+}
+
+.Select{
+	margin: 20px auto 0;
+	color: #00868B;
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+	width: 50%;
+	font-size: 16px;
 }
 
 .submitButton{
@@ -156,6 +186,23 @@ input:focus ~ .left {
   transform: scaleY(1);
 }
 
+.folder{
+	width: 100%;
+	margin-top: 10px;
+}
+
+.folder-item-box p{
+	width: 100%;
+	margin: 0;
+	color: black;
+	text-align: center;
+}
+
+.folder-item-box , .folder-item-img{
+	width: 50px;
+	margin: 0 auto;
+}
+
 .footer{
 	bottom: 10px;
 	position: fixed;
@@ -166,4 +213,5 @@ input:focus ~ .left {
 .footer p{
 	color: black;
 	text-align: center;
+	background-color: transparent;
 }

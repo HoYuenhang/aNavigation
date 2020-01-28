@@ -91,7 +91,7 @@ function yahoo(){
 }
 
 function duckduckgo(){
-	document.getElementById("state").innerHTML = "<img style='width:300px;' src='https://s2.ax1x.com/2020/01/27/1ug0r8.md.png'>";
+	document.getElementById("state").innerHTML = "<img style='width:300px;' src='https://s2.ax1x.com/2020/01/28/1KkFVP.md.png'>";
 	$('#submitButton').css('background-color', '#de5833');
 	$('#Select').css('color', '#de5833');
 	$('span').css('background-color', '#de5833');
@@ -100,5 +100,18 @@ function duckduckgo(){
     document.getElementById("Select").innerHTML = "<hr>标签 <img src='img/search-change.svg?v=2ae7ab8'>";
     $("#inputText").attr("placeholder","嘎嘎嘎...");
     $("#form").attr("action","https://duckduckgo.com/");
+    $("#inputText").attr("name","q");
+}
+
+function magi(){
+	document.getElementById("state").innerHTML = "<img style='width:300px;' src='https://s2.ax1x.com/2020/01/27/1uTCFK.md.png'>";
+	$('#submitButton').css('background-color', '#2f2f33');
+	$('#Select').css('color', '#2f2f33');
+	$('span').css('background-color', '#2f2f33');
+    $('#nav').css('display', 'none');
+    $('#folder').css('display', 'block');
+    document.getElementById("Select").innerHTML = "<hr>标签 <img src='img/search-change.svg?v=2ae7ab8'>";
+    $("#inputText").attr("placeholder","Mag[i]...");
+    $("#form").attr("action","https://magi.com/search");
     $("#inputText").attr("name","q");
 }

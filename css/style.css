@@ -158,6 +158,7 @@ input:focus ~ .left {
 
 /*搜索按键*/
 .submitButton{
+	border-radius: 0px;
 	animation: fade-in;
     animation-duration: 0.5s;
     -webkit-animation:fade-in 0.5s;
@@ -192,7 +193,6 @@ input:focus ~ .left {
 
 .submitButton:hover {
   cursor: pointer;
-  color: #161616;
 }
 
 .submitButton:hover::before {
@@ -250,6 +250,10 @@ input:focus ~ .left {
 	color: black;
 	text-align: center;
 	background-color: transparent;
+}
+
+.footerP{
+	color: black;
 }
 
 /*animation*/

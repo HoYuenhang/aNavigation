@@ -1,10 +1,4 @@
 /*公共布局*/
-*{
-	/*background-image: url(../img/bg.jpg);*/
-	/*background-color: #2f2f33;*/
-	background-color: #fff;
-}
-
 a,a:hover,a:visited{
 	text-decoration: none;
 }
@@ -21,10 +15,16 @@ ul{
 	display: inline-block;
 	width: 100%;
 	margin: 0 auto;
+	margin: 0!important;
 }
 
-html, body, .container{
-	height: 100%;
+/*媒体查询*/
+@media (min-width: 768px){
+	body{
+	/*background-image: url(https://api.xygeng.cn/bing/1366.php);*/
+	background-attachment:fixed;
+	background-size:cover;
+}
 }
 
 /*搜索盒子*/
@@ -238,22 +238,73 @@ input:focus ~ .left {
 	display: none;
 }
 
-/*底栏*/
-.footer{
-	bottom: 10px;
+/*侧栏*/
+.slider{
 	position: fixed;
-	margin: 0 auto;
-	width: 100%;
+	bottom: 10px;
+	left: 10px;
+	width: 50px;
+	cursor: pointer;
+    overflow-x: hidden;
+    transition: 0.5s; /*侧栏延迟0.5s显示*/
 }
 
-.footer p{
-	color: black;
+.slider img{
+	width: 50px;
+}
+
+/*侧边栏选择器*/
+.sidenav {
+    height: 100%;
+    width: 0px; /*原始宽度*/
+    position: fixed;
+    /*z-index、top、left共同控制侧栏的悬浮（上方1，下方-1）*/
+    z-index: 999999999999999999999;
+    top: 0;
+    left: 0;
+    box-shadow: 10px 0 5px #EDEDED;
+    overflow-x: hidden;
+    transition: 0.5s; /*侧栏延迟0.5s显示*/
+	padding-top: 20px;
+ 	background-color: #EDEDED;
+}
+
+blockquote{
+	margin: 0!important;
+	font-weight: bold;
+}
+
+.sidenav ul a li{
+	font-size: 14px;
+	margin: 4%;
+	padding: 6px;
+	border-radius: 5px;
+	background-color: #E3E3E3;
+    color: black;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+	width: 42%;
+    transition: 0.3s; /*标签延迟0.3s显示*/
+}
+
+.sidenav ul a li p{
+	margin: 0;
+	font-size: 10px;
 	text-align: center;
-	background-color: transparent;
+	color: gray;
 }
 
-.footerP{
-	color: black;
+.sidenav a:hover, .offcanvas a:focus{
+    /*color: #f1f1f1;*/
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 
 /*animation*/

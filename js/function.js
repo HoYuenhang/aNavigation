@@ -130,7 +130,7 @@ function google() {
 }
 
 function bing() {
-	document.getElementById("state").innerHTML = "<img style='width:300px;' src='https://s2.ax1x.com/2020/01/27/1ugtPA.md.png'>";
+	document.getElementById("state").innerHTML = "<img style='width:300px;' src='https://s2.ax1x.com/2020/01/30/1l6I0K.md.png'>";
 	$('#submitButton').css('background-color', '#00868B');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#00868B');

@@ -9,10 +9,11 @@
     <meta name="description" content="一个简单的网页导航">
     <link rel="stylesheet icon" href="img/icon.ico"/>
 	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css?v=2.1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="js/jQuery.js"></script>
     <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/function.js?v=2.1.0"></script>
+    <script type="text/javascript" src="js/function.js"></script>
+    <style type="text/css"></style>
 </head>
 <body id="body" bgColor="#fff">
 	<div class="container">
@@ -28,8 +29,8 @@
 			<!-- 搜索 -->
 			<!-- 搜索框 -->
 			<div class="inputDiv">
-				<form id="form" action="https://cn.bing.com/search" target="_self" method="get" onsubmit="return check()">
-					<input id="inputText" type="text" placeholder="Bing搜索..."name="q">
+				<form id="form" action="https://cn.bing.com/search" target="_self" onsubmit="return check()">
+					<input id="inputText" type="text" placeholder="Bing搜索..." name="q" size=30 baiduSug=1>
 					<span class="bottom"></span>
 					<span class="right"></span>
 					<span class="top"></span>
@@ -205,6 +206,10 @@
 	</div>
 	
 	<div id="mySidenav" class="sidenav">
+		<blockquote class="blockquote">▎ 工具</blockquote>
+        <ul>
+        	
+        </ul>
         <blockquote class="blockquote">▎ 社交媒体</blockquote>
         <ul>
         	<a target="_blank" href="https://www.52pojie.cn/"><li class="sidenav-btn">吾爱破解<p>软件破解基地</p></li></a>
@@ -258,4 +263,5 @@
         </ul>
     </div>
 </body>
+<script charset="gbk" src="js/baiduSug.js"></script>
 </html>

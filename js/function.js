@@ -60,7 +60,7 @@ function select() {
 	if ($('#folder').css('display') == 'block') {
 		$('#folder').css('display', 'none');
 		$('#nav').css('display', 'block');
-		document.getElementById("Select").innerHTML = "<hr>导航 <img src='img/search-change.svg?v=2ae7ab8'>";
+		document.getElementById("Select").innerHTML = "<hr>搜索引擎 <img src='img/search-change.svg?v=2ae7ab8'>";
 	} else if ($('#nav').css('display') == 'block') {
 		$('#nav').css('display', 'none');
 		$('#folder').css('display', 'block');
@@ -82,7 +82,6 @@ function Slider() {
 
 function openSlider() {
 	var bodywidth = $('#body').outerWidth();
-	console.log(bodywidth);
 	if (bodywidth >= 992) {
 		document.getElementById("slider").style.left = "30%";
 		document.getElementById("mySidenav").style.width = "28%";
@@ -187,10 +186,10 @@ function duckduckgo() {
 
 function magi() {
 	document.getElementById("state").innerHTML = "<img style='width:300px;' src='https://s2.ax1x.com/2020/01/27/1uTCFK.md.png'>";
-	$('#submitButton').css('background-color', '#2f2f33');
+	$('#submitButton').css('background-color', 'black');
 	$('#submitButton').css('color', 'white');
-	$('#Select').css('color', '#2f2f33');
-	$('span').css('background-color', '#2f2f33');
+	$('#Select').css('color', 'black');
+	$('span').css('background-color', 'black');
 	$('#nav').css('display', 'none');
 	$('#folder').css('display', 'block');
 	document.getElementById("Select").innerHTML = "<hr>标签 <img src='img/search-change.svg?v=2ae7ab8'>";

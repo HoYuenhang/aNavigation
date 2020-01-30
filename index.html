@@ -14,7 +14,7 @@
     <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/function.js"></script>
 </head>
-<body bgColor="#fff">
+<body id="body" bgColor="#fff">
 	<div class="container">
 		<!-- 搜索盒子 -->
 		<div class="search-box">
@@ -205,37 +205,44 @@
 	</div>
 	
 	<div id="mySidenav" class="sidenav">
-        <blockquote>▎ 常用</blockquote>
+        <blockquote class="blockquote">▎ 常用</blockquote>
         <ul>
         	
         </ul>
-        <blockquote>▎ 社交媒体</blockquote>
+        <blockquote class="blockquote">▎ 社交媒体</blockquote>
         <ul>
-        	<a target="_blank" href="http://www.mp4ba.la/"><li>MP4吧<p>高清MP4吧</p></li></a>
-        	<a target="_blank" href="http://www.rrys2019.com/"><li>YYeTs<p>人人字幕组</p></li></a>
-        	<a target="_blank" href="http://www.doki8.com/"><li>doki8<p>心动日剧</p></li></a>
-        	<a target="_blank" href="http://www.zzrbl.com/"><li>猪猪日部落<p>猪猪日剧字幕组</p></li></a>
+        	<a target="_blank" href="https://www.52pojie.cn/"><li class="sidenav-btn">吾爱破解<p>软件破解基地</p></li></a>
+        	<a target="_blank" href="https://www.youtube.com/"><li class="sidenav-btn">Youtube<p>国外视频网站</p></li></a>
+        	<a target="_blank" href="https://www.csdn.net/"><li class="sidenav-btn">CSDN<p>IT技术社区</p></li></a>
+        	<a target="_blank" href="https://www.zhihu.com/"><li class="sidenav-btn">知乎<p>有问题，上知乎</p></li></a>
+        	<a target="_blank" href="https://www.weibo.com/"><li class="sidenav-btn">微博<p>欣赏世界精彩瞬间</p></li></a>
+        	<a target="_blank" href="https://www.instagram.com/"><li class="sidenav-btn">Instagram<p>国外图片分享社区</p></li></a>
+        	<a target="_blank" href="https://twitter.com/"><li class="sidenav-btn">Twitter<p>国外微博</p></li></a>
+        	<a target="_blank" href="https://www.facebook.com/"><li class="sidenav-btn">Facebook<p>一本面子书</p></li></a>
         </ul>
-        <blockquote>▎ 追剧</blockquote>
+        <blockquote class="blockquote">▎ 追剧</blockquote>
         <ul>
-        	<a target="_blank" href="http://www.mp4ba.la/"><li>MP4吧<p>高清MP4吧</p></li></a>
-        	<a target="_blank" href="http://www.rrys2019.com/"><li>YYeTs<p>人人字幕组</p></li></a>
-        	<a target="_blank" href="http://www.doki8.com/"><li>doki8<p>心动日剧</p></li></a>
-        	<a target="_blank" href="http://www.zzrbl.com/"><li>猪猪日部落<p>猪猪日剧字幕组</p></li></a>
+        	<a target="_blank" href="http://www.mp4ba.la/"><li class="sidenav-btn">MP4吧<p>高清MP4吧</p></li></a>
+        	<a target="_blank" href="http://www.rrys2019.com/"><li class="sidenav-btn">YYeTs<p>人人字幕组</p></li></a>
+        	<a target="_blank" href="http://www.doki8.com/"><li class="sidenav-btn">doki8<p>心动日剧</p></li></a>
+        	<a target="_blank" href="http://www.zzrbl.com/"><li class="sidenav-btn">猪猪日部落<p>猪猪日剧字幕组</p></li></a>
         </ul>
-        <blockquote>▎ 开发</blockquote>
+        <blockquote class="blockquote">▎ 开发</blockquote>
         <ul>
-        	<a target="_blank" href="https://uigradients.com/"><li>uiGradients<p>网页设计配色</p></li></a>
-        	<a target="_blank" href="https://cssfx.netlify.com/"><li>CSSFX<p>CSS效果</p></li></a>
-        	<a target="_blank" href="https://www.faviator.xyz/"><li>Faviator<p>自动生成图标</p></li></a>
-        	<a target="_blank" href="https://www.iconfont.cn/"><li>IconFont<p>阿里巴巴图标库</p></li></a>
-        	<a target="_blank" href="https://cloudconvert.com/"><li>FileConvert<p>文件转换器</p></li></a>
+        	<a target="_blank" href="https://uigradients.com/"><li class="sidenav-btn">uiGradients<p>网页设计配色</p></li></a>
+        	<a target="_blank" href="https://cssfx.netlify.com/"><li class="sidenav-btn">CSSFX<p>CSS效果</p></li></a>
+        	<a target="_blank" href="https://www.faviator.xyz/"><li class="sidenav-btn">Faviator<p>自动生成图标</p></li></a>
+        	<a target="_blank" href="https://www.iconfont.cn/"><li class="sidenav-btn">IconFont<p>阿里巴巴图标库</p></li></a>
+        	<a target="_blank" href="https://cloudconvert.com/"><li class="sidenav-btn">FileConvert<p>文件转换器</p></li></a>
         </ul>
-        <blockquote>▎ 关于我的</blockquote>
+        <blockquote class="blockquote">▎ 关于我的</blockquote>
         <ul>
-        	<a target="_blank" href="https://uigradients.com/"><li>Github<p>本网页导航</p></li></a>
-        	<a href="coolmarket://u/691518"><li>@_小K同學<p>来酷安找我</p></li></a>
-        	<a href="#"><li id="night" onclick="night()">夜间模式</li></a>
+        	<a target="_blank" href="https://uigradients.com/"><li class="sidenav-btn">Github<p>本网页导航</p></li></a>
+        	<a href="coolmarket://u/691518"><li class="sidenav-btn">@_小K同學<p>来酷安找我</p></li></a>
+        </ul>
+        <blockquote class="blockquote">▎ 设置</blockquote>
+        <ul>
+        	<a href="#"><li class="sidenav-btn" id="night" onclick="night()">夜间模式</li></a>
         </ul>
     </div>
 </body>

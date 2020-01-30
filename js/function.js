@@ -26,16 +26,32 @@ if (time < 5) {
 
 // 夜间模式
 function night() {
+	var li = document.getElementsByClassName("sidenav-btn");
+	var blockquote = document.getElementsByClassName("blockquote");
 	if (document.bgColor == "#fff") {
 		document.bgColor = "#2f2f33";
 		document.getElementById("night").innerHTML = "日间模式";
-		document.getElementById("mySidenav").style.backgroundColor = "#6E6E6E";
-		document.getElementById("mySidenav").style.boxShadow="10px 0 5px #6E6E6E";
+		document.getElementById("mySidenav").style.backgroundColor = "#5C5C5C";
+		document.getElementById("mySidenav").style.boxShadow = "10px 0 5px #5C5C5C";
+		for (var i = 0; i < li.length; i++) {
+			li[i].style.backgroundColor = "#575757";
+			li[i].style.color = "#DBDBDB";
+		}
+		for (var j = 0; j < blockquote.length; j++) {
+			blockquote[j].style.color = "#DBDBDB";
+		}
 	} else if (document.bgColor == "#2f2f33") {
 		document.bgColor = "#fff";
 		document.getElementById("night").innerHTML = "夜间模式";
 		document.getElementById("mySidenav").style.backgroundColor = "#EDEDED";
-		document.getElementById("mySidenav").style.boxShadow="10px 0 5px #EDEDED";
+		document.getElementById("mySidenav").style.boxShadow = "10px 0 5px #EDEDED";
+		for (var i = 0; i < li.length; i++) {
+			li[i].style.backgroundColor = "#E3E3E3";
+			li[i].style.color = "black";
+		}
+		for (var j = 0; j < blockquote.length; j++) {
+			blockquote[j].style.color = "black";
+		}
 	}
 }
 
@@ -65,9 +81,17 @@ function Slider() {
 }
 
 function openSlider() {
-	document.getElementById("slider").style.left = "83%";
-	document.getElementById("mySidenav").style.width = "78%";
-	document.getElementById("sliderImg").style.transform = "rotateY(180deg)";
+	var bodywidth = $('#body').outerWidth();
+	console.log(bodywidth);
+	if (bodywidth >= 992) {
+		document.getElementById("slider").style.left = "30%";
+		document.getElementById("mySidenav").style.width = "28%";
+		document.getElementById("sliderImg").style.transform = "rotateY(180deg)";
+	} else if (bodywidth < 992) {
+		document.getElementById("slider").style.left = "83%";
+		document.getElementById("mySidenav").style.width = "78%";
+		document.getElementById("sliderImg").style.transform = "rotateY(180deg)";
+	}
 }
 
 function closeSlider() {

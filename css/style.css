@@ -272,11 +272,12 @@ input:focus ~ .left {
 blockquote{
 	margin: 0!important;
 	font-weight: bold;
+	color: black;
 }
 
-.sidenav ul a li{
+.sidenav-btn{
 	font-size: 14px;
-	margin: 4%;
+	margin: 2% 4%;
 	padding: 6px;
 	border-radius: 5px;
 	background-color: #E3E3E3;
@@ -288,15 +289,11 @@ blockquote{
     transition: 0.3s; /*标签延迟0.3s显示*/
 }
 
-.sidenav ul a li p{
+.sidenav-btn p{
 	margin: 0;
 	font-size: 10px;
 	text-align: center;
 	color: gray;
-}
-
-.sidenav a:hover, .offcanvas a:focus{
-    /*color: #f1f1f1;*/
 }
 
 .sidenav .closebtn {

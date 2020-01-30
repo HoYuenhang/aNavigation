@@ -243,14 +243,15 @@ input:focus ~ .left {
 	position: fixed;
 	bottom: 10px;
 	left: 10px;
-	width: 50px;
+	width: 40px;
 	cursor: pointer;
     overflow-x: hidden;
     transition: 0.5s; /*侧栏延迟0.5s显示*/
 }
 
 .slider img{
-	width: 50px;
+	width: 40px;
+	border-radius: 50%;
 }
 
 /*侧边栏选择器*/

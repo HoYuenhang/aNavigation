@@ -9,10 +9,15 @@
     <meta name="description" content="一个简单的网页导航">
     <link rel="stylesheet icon" href="img/icon.ico"/>
 	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css?v=2.2">
+	<!-- <link rel="stylesheet" type="text/css" href="css/style.css?v=2.2"> -->
     <script type="text/javascript" src="js/jQuery.js"></script>
     <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/function.js?v=2.2"></script>
+    <!-- <script type="text/javascript" src="js/function.js?v=2.2"></script> -->
+	<script>
+		var now = new Date().getTime();
+		document.write('<link href="css/style.css?v=' + now + '" rel="stylesheet" type="text/css"/>');
+		document.write('<script src="js/function.js?v=' + now + '"><\/script\>');
+	</script>
     <style type="text/css"></style>
 </head>
 <body id="body" bgColor="#fff">

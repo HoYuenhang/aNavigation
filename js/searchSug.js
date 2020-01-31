@@ -696,7 +696,7 @@ var BaiduSuggestion = (function() {
 					T.id = "bdSug_script";
 					document.body.appendChild(T)
 				},
-				append_html: "<div style='background:#FFF;line-height:normal;border:0;text-align:right;margin:0;padding:0;'></div>",
+				append_html: "<div style='background:#FFF;line-height:normal;border:0;text-align:right;margin:0;padding:0;'><a class='bdsug_copy' href='https://github.com/Jackie1123/aNavigation' ltarget='_blank' >一个导航</a></div>",
 				apd_body: true
 			}
 		},
@@ -826,12 +826,12 @@ var BaiduSuggestion = (function() {
 	function A() {
 		L(".bdSug_wpr", "line-height:normal;background:#FFF;padding:0;margin:0;border:1px solid #817F82;position:absolute;z-index:9999;");
 		L(".bdSug_wpr table", "padding:0;width:100%;background:#fff;cursor:default;");
-		L(".bdSug_wpr tr", "padding:0;margin:0");
-		L(".bdSug_wpr td", "padding:2px;margin:0;text-align:left;vertical-align:middle;font:14px verdana;font-weight:normal;text-decoration:none;text-indent:0");
+		L(".bdSug_wpr tr", "padding:0;margin:0;");
+		L(".bdSug_wpr td", "padding:10px;margin:0;text-align:left;vertical-align:middle;font:14px verdana;font-weight:normal;text-decoration:none;text-indent:0");
 		L(".bdSug_mo", "background:#36c;color:#fff");
 		L(".bdSug_app", "padding:0;margin:0;background:#fff");
 		L(".bdSug_pre", "padding:0;margin:0");
-		L(".bdsug_copy", "margin:0;background:transparent url(http://www.baidu.com/img/bd.gif) no-repeat;font-size:13px;color:#77c;text-decoration:none;padding:0 2px 0 16px;")
+		L(".bdsug_copy", "margin:0;background:transparent url(http://www.orgloft.com/page/search/img/org.png) no-repeat;font-size:13px;color:#8DB6CD;text-decoration:none;padding:0 2px 0 16px;")
 	}
 	A();
 	var H = document.body.getElementsByTagName("INPUT");

@@ -61,6 +61,7 @@ ul{
 
 /*搜索框*/
 .inputDiv {
+	z-index: -9;
 	animation: fade-in;
     animation-duration: 0.5s;
     -webkit-animation:fade-in 0.5s;
@@ -241,7 +242,7 @@ input:focus ~ .left {
 /*侧栏*/
 .slider{
 	position: fixed;
-	bottom: 10px;
+	bottom: 6px;
 	left: 10px;
 	width: 40px;
 	cursor: pointer;

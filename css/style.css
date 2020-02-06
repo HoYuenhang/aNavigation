@@ -21,15 +21,15 @@ ul{
 /*媒体查询*/
 @media (min-width: 768px){
 	body{
-	/*background-image: url(https://api.xygeng.cn/bing/1366.php);*/
-	background-attachment:fixed;
-	background-size:cover;
-}
+		/*background-image: url(https://api.xygeng.cn/bing/1366.php);*/
+		background-attachment:fixed;
+		background-size:cover;
+	}
 }
 
 /*搜索盒子*/
 .search-box{
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 }
 
 #logo{

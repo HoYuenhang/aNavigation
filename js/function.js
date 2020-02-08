@@ -101,7 +101,7 @@ function closeSlider() {
 
 // 切换搜索引擎
 function baidu() {
-	document.getElementById("state").innerHTML = "<img style='width:300px;' src='https://s2.ax1x.com/2020/01/27/1ugwKf.md.png'>";
+	document.getElementById("state").innerHTML = "<img style='width:300px;' src='img/baidu.png'>";
 	$('#submitButton').css('background-color', '#3245df');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#3245df');
@@ -112,10 +112,11 @@ function baidu() {
 	$("#inputText").attr("placeholder", "百度一下...");
 	$("#form").attr("action", "https://www.baidu.com/s");
 	$("#inputText").attr("name", "wd");
+	$(".bdSug_wpr").css('box-shadow', '#3245df 0px 0px 5px');
 }
 
 function google() {
-	document.getElementById("state").innerHTML = "<img style='width:300px;' src='https://s2.ax1x.com/2020/01/27/1ugy5j.md.png'>";
+	document.getElementById("state").innerHTML = "<img style='width:300px;' src='img/google.png'>";
 	$('#submitButton').css('background-color', '#4285f4');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#4285f4');
@@ -126,10 +127,11 @@ function google() {
 	$("#inputText").attr("placeholder", "咕噜咕噜...");
 	$("#form").attr("action", "https://www.google.com/search");
 	$("#inputText").attr("name", "q");
+	$(".bdSug_wpr").css('box-shadow', '#4285f4 0px 0px 5px');
 }
 
 function bing() {
-	document.getElementById("state").innerHTML = "<img style='width:300px;' src='https://s2.ax1x.com/2020/01/30/1l6I0K.md.png'>";
+	document.getElementById("state").innerHTML = "<img style='width:300px;' src='img/bing.png'>";
 	$('#submitButton').css('background-color', '#00868B');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#00868B');
@@ -140,10 +142,11 @@ function bing() {
 	$("#inputText").attr("placeholder", "Bing搜索...");
 	$("#form").attr("action", "https://cn.bing.com/search");
 	$("#inputText").attr("name", "q");
+	$(".bdSug_wpr").css('box-shadow', '#00868B 0px 0px 5px');
 }
 
 function yahoo() {
-	document.getElementById("state").innerHTML = "<img style='width:300px;' src='https://s2.ax1x.com/2020/01/27/1ughrT.md.png'>";
+	document.getElementById("state").innerHTML = "<img style='width:300px;' src='img/yahoo.png'>";
 	$('#submitButton').css('background-color', '#5f01d1');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#5f01d1');
@@ -154,10 +157,11 @@ function yahoo() {
 	$("#inputText").attr("placeholder", "Yahoo~");
 	$("#form").attr("action", "https://search.yahoo.com/search");
 	$("#inputText").attr("name", "p");
+	$(".bdSug_wpr").css('box-shadow', '#5f01d1 0px 0px 5px');
 }
 
 function sougou() {
-	document.getElementById("state").innerHTML = "<img style='width:300px;' src='https://s2.ax1x.com/2020/01/28/1KdA8U.md.png'>";
+	document.getElementById("state").innerHTML = "<img style='width:300px;' src='img/sougou.png'>";
 	$('#submitButton').css('background-color', '#f94c18');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#f94c18');
@@ -168,10 +172,11 @@ function sougou() {
 	$("#inputText").attr("placeholder", "搜狗搜索...");
 	$("#form").attr("action", "https://www.sogou.com/web");
 	$("#inputText").attr("name", "query");
+	$(".bdSug_wpr").css('box-shadow', '#f94c18 0px 0px 5px');
 }
 
 function duckduckgo() {
-	document.getElementById("state").innerHTML = "<img style='width:300px;' src='https://s2.ax1x.com/2020/01/28/1KkFVP.md.png'>";
+	document.getElementById("state").innerHTML = "<img style='width:300px;' src='img/duckduckgo.png'>";
 	$('#submitButton').css('background-color', '#de5833');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#de5833');
@@ -182,10 +187,11 @@ function duckduckgo() {
 	$("#inputText").attr("placeholder", "嘎嘎嘎...");
 	$("#form").attr("action", "https://duckduckgo.com/");
 	$("#inputText").attr("name", "q");
+	$(".bdSug_wpr").css('box-shadow', '#de5833 0px 0px 5px');
 }
 
 function magi() {
-	document.getElementById("state").innerHTML = "<img style='width:300px;' src='https://s2.ax1x.com/2020/01/27/1uTCFK.md.png'>";
+	document.getElementById("state").innerHTML = "<img style='width:300px;' src='img/magi.png'>";
 	$('#submitButton').css('background-color', 'black');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', 'black');
@@ -196,10 +202,11 @@ function magi() {
 	$("#inputText").attr("placeholder", "Mag[i]...");
 	$("#form").attr("action", "https://magi.com/search");
 	$("#inputText").attr("name", "q");
+	$(".bdSug_wpr").css('box-shadow', 'black 0px 0px 5px');
 }
 
 function doge() {
-	document.getElementById("state").innerHTML = "<img style='width:300px;' src='https://s2.ax1x.com/2020/01/28/1Ktf3Q.md.png'>";
+	document.getElementById("state").innerHTML = "<img style='width:300px;' src='img/doge.png'>";
 	$('#submitButton').css('background-color', '#ffca74');
 	$('#submitButton').css('color', 'black');
 	$('#Select').css('color', '#ffca74');
@@ -210,10 +217,11 @@ function doge() {
 	$("#inputText").attr("placeholder", "手动狗头.jpg");
 	$("#form").attr("action", "https://www.dogedoge.com/results");
 	$("#inputText").attr("name", "q");
+	$(".bdSug_wpr").css('box-shadow', '#ffca74 0px 0px 5px');
 }
 
 function wechat() {
-	document.getElementById("state").innerHTML = "<img style='width:300px;' src='https://s2.ax1x.com/2020/01/28/1KwGF0.md.png'>";
+	document.getElementById("state").innerHTML = "<img style='width:300px;' src='img/wechat.png'>";
 	$('#submitButton').css('background-color', '#2ca43a');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#2ca43a');
@@ -224,4 +232,5 @@ function wechat() {
 	$("#inputText").attr("placeholder", "搜微信文章...");
 	$("#form").attr("action", "https://weixin.sogou.com/weixin");
 	$("#inputText").attr("name", "query");
+	$(".bdSug_wpr").css('box-shadow', '#2ca43a 0px 0px 5px');
 }

@@ -306,6 +306,11 @@ blockquote{
     margin-left: 50px;
 }
 
+/*搜索返回提示词边框*/
+.bdSug_wpr{
+	box-shadow: #00868B 0px 0px 5px /*rgb(153, 102, 140) 0px 0px 5px*/;
+}
+
 /*animation*/
 @keyframes fade-in {  
     0% {opacity: 0;}/*初始状态 透明度为0*/  

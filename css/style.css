@@ -21,7 +21,7 @@ ul{
 /*媒体查询*/
 @media (min-width: 768px){
 	body{
-		/*background-image: url(https://api.xygeng.cn/bing/1366.php);*/
+		background-image: url(../img/bg.jpg);
 		background-attachment:fixed;
 		background-size:cover;
 	}
@@ -61,6 +61,7 @@ ul{
 
 /*搜索框*/
 .inputDiv {
+	padding: 0;
 	z-index: 0;
 	animation: fade-in;
     animation-duration: 0.5s;

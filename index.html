@@ -1,338 +1,279 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title id="title"></title>
-	<meta name="keywords" content="网页导航">
-    <meta name="description" content="一个简单的网页导航">
-    <link rel="stylesheet icon" href="img/icon.ico"/>
-	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
-	<!-- <link rel="stylesheet" type="text/css" href="css/style.css?v=2.2"> -->
-    <script type="text/javascript" src="js/jQuery.js"></script>
-    <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
-    <!-- <script type="text/javascript" src="js/function.js?v=2.2"></script> -->
-	<script>
-		var now = new Date().getTime();
-		document.write('<link href="css/style.css?v=' + now + '" rel="stylesheet" type="text/css"/>');
-		document.write('<script src="js/function.js?v=' + now + '"><\/script\>');
-	</script>
-    <style type="text/css"></style>
-    <!-- 百度统计 -->
-	<script>
-	var _hmt = _hmt || [];
-	(function() {
-	  var hm = document.createElement("script");
-	  hm.src = "https://hm.baidu.com/hm.js?cb801bf75a59bf9ae0d416685cd39811";
-	  var s = document.getElementsByTagName("script")[0]; 
-	  s.parentNode.insertBefore(hm, s);
-	})();
-	</script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title id="title"></title>
+  <meta name="keywords" content="网页导航">
+  <meta name="description" content="一个简单的网页导航">
+  <link rel="stylesheet icon" href="img/icon.ico"/>
+  <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/style.css?v=2.2"> -->
+  <script type="text/javascript" src="js/jQuery.js"></script>
+  <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
+  <!-- <script type="text/javascript" src="js/function.js?v=2.2"></script> -->
+  <script>
+    var now = new Date().getTime();
+    document.write('<link href="css/style.css?v=' + now + '" rel="stylesheet" type="text/css"/>');
+    document.write('<script src="js/function.js?v=' + now + '"><\/script\>');
+  </script>
+  <link rel="stylesheet" href="css/slideout.css">
+  <style type="text/css"></style>
 </head>
-<body id="body" bgColor="#fff">
-	<div class="container">
-		<!-- 天气 -->
-		<!-- <iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=6" width="130" height="80" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> -->
-		<!-- weather -->
-		<script type="text/javascript">
-		WIDGET = {FID: 'BzqiAu2wQA'}
-		</script>
-		<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
 
-		<!-- 搜索盒子 -->
-		<div class="search-box">
-			<!-- logo -->
-			<div id="logo">
-				<div id="state">
-					<a href="folder://"><img id="img" src="img/bing.png"></a>
-				</div>
-			</div>
-			
-			<!-- 搜索 -->
-			<!-- 搜索框 -->
-			<div class="inputDiv">
-				<form id="form" action="https://cn.bing.com/search" target="_self" onsubmit="return check()">
-					<input id="inputText" type="text" placeholder="Bing搜索..." name="q" size=30 baiduSug=1>
-					<span class="bottom"></span>
-					<span class="right"></span>
-					<span class="top"></span>
-					<span class="left"></span>
-					<!-- 搜索按键 -->
-					<button id="submitButton" class="submitButton" type="submit">搜索</button>
-				</form>
-			</div>
-		</div>
-		<!-- 书签、引擎选择器 -->
-		<div id="Select" class="Select" onclick="select()"><hr>标签 <img src="img/search-change.svg?v=2ae7ab8"></div>
+<body>
+  <!-- 侧边栏 -->
+  <nav id="menu" class="menu"> 
+   <blockquote class="blockquote">▎ 工具</blockquote> 
+   <ul> 
+    <a target="_blank" href="http://forsigner.com/browser-md5-file/"><li class="sidenav-btn">查询文件MD5<p>forsigner的项目</p></li></a> 
+    <a target="_blank" href="http://www.speedtest.cn/"><li class="sidenav-btn">SpeedTest<p>测速网</p></li></a> 
+    <a target="_blank" href="http://ip.tool.chinaz.com/"><li class="sidenav-btn">IP查询<p>站长工具</p></li></a> 
+    <a target="_blank" href="https://www.mdeditor.com/"><li class="sidenav-btn">MD编辑器<p>在线编辑MD</p></li></a> 
+    <a target="_blank" href="https://www.baiduwp.com/"><li class="sidenav-btn">网盘解析<p>破解云盘</p></li></a> 
+    <a target="_blank" href="https://mm.edrawsoft.cn/"><li class="sidenav-btn">思维导图<p>在线思维导图工具</p></li></a>
+    <a target="_blank" href="https://www.desmos.com/calculator"><li class="sidenav-btn">desmos<p>在线函数图生成</p></li></a> 
+    <a target="_blank" href="https://123apps.com/cn/"><li class="sidenav-btn">123apps<p>免费网络应用</p></li></a> 
+    <a target="_blank" href="https://tool.oschina.net/"><li class="sidenav-btn">OSCHINA<p>应有尽有</p></li></a> 
+    <a target="_blank" href="https://5iux.cn/base64/"><li class="sidenav-btn">base64<p>加密解密base64</p></li></a> 
+    <a target="_blank" href="http://ping.pe/"><li class="sidenav-btn">ping.pe<p>黑科技感的ping</p></li></a> 
+    <a target="_blank" href="https://m.apkpure.com/cn/"><li class="sidenav-btn">Apkpure<p>国外类谷歌应用商店</p></li></a> 
+   </ul> 
+   <blockquote class="blockquote">▎ 文件传送</blockquote> 
+   <ul> 
+    <a target="_blank" href="https://cowtransfer.com/"><li class="sidenav-btn">奶牛快传<p>安全、省时高效</p></li></a> 
+    <a target="_blank" href="https://www.wenshushu.cn/"><li class="sidenav-btn">文叔叔<p>传文件的酸爽！</p></li></a> 
+    <a target="_blank" href="https://send.firefox.com/"><li class="sidenav-btn">FirefoxSend<p>安全高效火狐传送</p></li></a> 
+    <a target="_blank" href="https://app.tmp.link/"><li class="sidenav-btn">TMPLink<p>简单临时文件中转</p></li></a> 
+    <a target="_blank" href="https://pan.baidu.com/"><li class="sidenav-btn">百度云盘<p>毒！</p></li></a> 
+   </ul> 
+   <blockquote class="blockquote">▎ 社交媒体</blockquote> 
+   <ul> 
+    <a target="_blank" href="https://www.52pojie.cn/"><li class="sidenav-btn">吾爱破解<p>软件破解基地</p></li></a> 
+    <a target="_blank" href="https://www.youtube.com/"><li class="sidenav-btn">Youtube<p>国外视频网站</p></li></a> 
+    <a target="_blank" href="https://www.csdn.net/"><li class="sidenav-btn">CSDN<p>IT技术社区</p></li></a> 
+    <a target="_blank" href="https://www.zhihu.com/"><li class="sidenav-btn">知乎<p>有问题，上知乎</p></li></a> 
+    <a target="_blank" href="https://www.weibo.com/"><li class="sidenav-btn">微博<p>欣赏世界精彩瞬间</p></li></a> 
+    <a target="_blank" href="https://www.instagram.com/"><li class="sidenav-btn">Instagram<p>国外图片分享社区</p></li></a> 
+    <a target="_blank" href="https://twitter.com/"><li class="sidenav-btn">Twitter<p>国外微博</p></li></a> 
+    <a target="_blank" href="https://www.facebook.com/"><li class="sidenav-btn">Facebook<p>一本面子书</p></li></a> 
+   </ul> 
+   <blockquote class="blockquote">▎ 新闻</blockquote> 
+   <ul> 
+    <a target="_blank" href="http://www.chinadaily.com.cn/"><li class="sidenav-btn">中国日报</li></a> 
+    <a target="_blank" href="http://www.sc168.com/"><li class="sidenav-btn">顺德新闻</li></a> 
+    <a target="_blank" href="http://news.cctv.com/"><li class="sidenav-btn">央视新闻</li></a> 
+    <a target="_blank" href="https://www.thepaper.cn/"><li class="sidenav-btn">澎湃新闻</li></a> 
+    <a target="_blank" href="https://www.hk01.com/"><li class="sidenav-btn">香港01</li></a> 
+    <a target="_blank" href="https://www.msn.com/zh-tw/news"><li class="sidenav-btn">台湾即时新闻</li></a> 
+    <a target="_blank" href="https://www.bbc.com/"><li class="sidenav-btn">BBC</li></a> 
+    <a target="_blank" href="https://www.nhk.or.jp/"><li class="sidenav-btn">NHK</li></a> 
+   </ul> 
+   <blockquote class="blockquote">▎ 追剧</blockquote> 
+   <ul> 
+    <a target="_blank" href="http://www.mp4ba.la/"><li class="sidenav-btn">MP4吧<p>高清MP4吧</p></li></a> 
+    <a target="_blank" href="http://www.rrys2019.com/"><li class="sidenav-btn">YYeTs<p>人人字幕组</p></li></a> 
+    <a target="_blank" href="https://ddrk.me/"><li class="sidenav-btn">低端影视<p>超清在线视频站</p></li></a> 
+    <a target="_blank" href="https://www.biyov.com/"><li class="sidenav-btn">比优视频<p>人生如戏</p></li></a> 
+    <a target="_blank" href="http://www.novipnoad.com/"><li class="sidenav-btn">NO视频<p>不负追剧好时光</p></li></a> 
+    <a target="_blank" href="http://www.doki8.com/"><li class="sidenav-btn">doki8<p>心动日剧</p></li></a> 
+    <a target="_blank" href="http://www.zzrbl.com/"><li class="sidenav-btn">猪猪日部落<p>猪猪日剧字幕组</p></li></a> 
+    <a target="_blank" href="https://bde4.com/"><li class="sidenav-btn">哔嘀影视<p>热门最新电影</p></li></a> 
+    <a target="_blank" href="http://1090ys.com/"><li class="sidenav-btn">1090影视<p>挺全的电影</p></li></a> 
+    <a target="_blank" href="https://www.shenma4480.com/"><li class="sidenav-btn">神马影院<p>神马都有？</p></li></a> 
+   </ul> 
+   <blockquote class="blockquote">▎ 开发</blockquote> 
+   <ul> 
+    <a target="_blank" href="https://developer.mozilla.org/zh-CN/"><li class="sidenav-btn">MDN<p>服务开发者</p></li></a> 
+    <a target="_blank" href="https://cdnjs.com/"><li class="sidenav-btn">cdnjs<p>Web开发资源</p></li></a> 
+    <a target="_blank" href="https://www.w3school.com.cn/"><li class="sidenav-btn">W3school<p>Web技术教程</p></li></a> 
+    <a target="_blank" href="https://github.com/"><li class="sidenav-btn">Github<p>分布式版本管理</p></li></a> 
+    <a target="_blank" href="https://codepen.io/"><li class="sidenav-btn">Codepen<p>Coding online</p></li></a> 
+    <a target="_blank" href="https://uigradients.com/"><li class="sidenav-btn">uiGradients<p>网页设计配色</p></li></a> 
+    <a target="_blank" href="https://cssfx.netlify.com/"><li class="sidenav-btn">CSSFX<p>CSS效果</p></li></a> 
+    <a target="_blank" href="https://www.faviator.xyz/"><li class="sidenav-btn">Faviator<p>自动生成图标</p></li></a> 
+    <a target="_blank" href="https://www.iconfont.cn/"><li class="sidenav-btn">IconFont<p>阿里巴巴图标库</p></li></a> 
+    <a target="_blank" href="https://cloudconvert.com/"><li class="sidenav-btn">FileConvert<p>文件转换器</p></li></a> 
+   </ul> 
+   <blockquote class="blockquote">▎ 关于我的</blockquote> 
+   <ul> 
+    <a target="_blank" href="https://github.com/Jackie1123/aNavigation"><li class="sidenav-btn">Github<p>本网页导航</p></li></a> 
+    <a href="coolmarket://u/691518"><li class="sidenav-btn">@_小K同學<p>来酷安找我</p></li></a> 
+   </ul> 
+   <blockquote class="blockquote">▎ 设置</blockquote> 
+   <ul> 
+    <a href="#"><li class="sidenav-btn" id="night" onclick="night()">夜间模式</li></a> 
+   </ul> 
+  </nav>
 
-		<!-- 书签 -->
-		<div id="folder" class="folder">
-			<ul>
-				<li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="https://yuenhangho.gitee.io/blog/posts/12023/">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/log.png">
-							<p>开发日志</p>
-						</div>
-					</a>
-				</li>
-				<li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="https://www.coolapk.com">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/coolapk.png">
-							<p>酷安</p>
-						</div>
-					</a>
-				</li>
-				<li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="http://via-app.cn">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/via.png">
-							<p>Via插件</p>
-						</div>
-					</a>
-				</li>
-				<li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="https://tophub.today/">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/headline.png">
-							<p>今日热榜</p>
-						</div>
-					</a>
-				</li>
-				<li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="http://www.carrotchou.blog">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/carrot.png">
-							<p>胡萝卜周</p>
-						</div>
-					</a>
-				</li>
-				<li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="https://yuenhangho.gitee.io/blog">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/org.png">
-							<p>小K同學</p>
-						</div>
-					</a>
-				</li>
-				<li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="https://unsplash.com/">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/unsplash.png">
-							<p>unsplash</p>
-						</div>
-					</a>
-				</li>
-				<li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="https://www.htcp.net/">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/yunmeng.png">
-							<p>云梦</p>
-						</div>
-					</a>
-				</li>
-				<li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="https://www.xda-developers.com/">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/xda.png">
-							<p>XDA</p>
-						</div>
-					</a>
-				</li>
-				<li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="https://www.mi.com/">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/mi.png">
-							<p>小米商城</p>
-						</div>
-					</a>
-				</li>
-				<li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="https://ncov.dxy.cn/ncovh5/view/pneumonia">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/ding.png">
-							<p>疫情跟踪</p>
-						</div>
-					</a>
-				</li>
-				<li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="https://vp.fact.qq.com/home">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/true.png">
-							<p>疫情辟谣</p>
-						</div>
-					</a>
-				</li>
-			</ul>
-		</div>
-
-		<!-- 导航引擎 -->
-		<div id="nav" class="nav">
-			<ul>
-				<li onclick="baidu()" class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a id="baidu" href="#">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/baidu-xs.png">
-						</div>
-					</a>
-				</li>
-				<li onclick="google()" class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="#">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/google-xs.png">
-						</div>
-					</a>
-				</li>
-				<li onclick="bing()" class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="#">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/bing-xs.png">
-						</div>
-					</a>
-				</li>
-				<li onclick="yahoo()" class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="#">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/yahoo-xs.png">
-						</div>
-					</a>
-				</li>
-				<li onclick="sougou()" class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="#">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/sougou-xs.png">
-						</div>
-					</a>
-				</li>
-				<li onclick="duckduckgo()" class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="#">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/duckduckgo-xs.png">
-						</div>
-					</a>
-				</li>
-				<li onclick="magi()" class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="#">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/magi-xs.png">
-						</div>
-					</a>
-				</li>
-				<li onclick="doge()" class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="#">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/doge-xs.png">
-						</div>
-					</a>
-				</li>
-				<li onclick="seeres()" class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="#">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/seeres-xs.png">
-						</div>
-					</a>
-				</li>
-				<li onclick="wechat()" class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<a href="#">
-						<div class="folder-item-box">
-							<img class="folder-item-img" src="img/wechat-xs.png">
-						</div>
-					</a>
-				</li>
-			</ul>
-		</div>
-		
-	</div>
-
-	<!-- 网页侧栏 -->
-	<div id="slider" onclick="Slider()" class="slider">
-		<img id="sliderImg" src="img/arrow.png">
-	</div>
-	
-	<div id="mySidenav" class="sidenav">
-		<blockquote class="blockquote">▎ 工具</blockquote>
-        <ul>
-        	<a target="_blank" href="http://forsigner.com/browser-md5-file/"><li class="sidenav-btn">查询文件MD5值<p>forsigner的项目</p></li></a>
-        	<a target="_blank" href="http://www.speedtest.cn/"><li class="sidenav-btn">SpeedTest<p>测速网</p></li></a>
-        	<a target="_blank" href="http://ip.tool.chinaz.com/"><li class="sidenav-btn">IP查询<p>站长工具</p></li></a>
-        	<a target="_blank" href="https://www.mdeditor.com/"><li class="sidenav-btn">MD编辑器<p>在线编辑MD</p></li></a>
-        	<a target="_blank" href="https://www.baiduwp.com/"><li class="sidenav-btn">网盘解析<p>破解云盘</p></li></a>
-        	<a target="_blank" href="https://mm.edrawsoft.cn/"><li class="sidenav-btn">思维导图<p>在线思维导图工具</p></li></a>
-        	<a target="_blank" href="https://www.desmos.com/calculator"><li class="sidenav-btn">desmos<p>在线函数图生成</p></li></a>
-        	<a target="_blank" href="https://123apps.com/cn/"><li class="sidenav-btn">123apps<p>免费网络应用</p></li></a>
-        	<a target="_blank" href="https://tool.oschina.net/"><li class="sidenav-btn">OSCHINA<p>应有尽有</p></li></a>
-        	<a target="_blank" href="https://5iux.cn/base64/"><li class="sidenav-btn">base64<p>加密解密base64</p></li></a>
-        	<a target="_blank" href="http://ping.pe/"><li class="sidenav-btn">ping.pe<p>黑科技感的ping</p></li></a>
-        	<a target="_blank" href="https://m.apkpure.com/cn/"><li class="sidenav-btn">Apkpure<p>国外类谷歌应用商店</p></li></a>
-        </ul>
-        <blockquote class="blockquote">▎ 文件传送</blockquote>
-        <ul>
-        	<a target="_blank" href="https://cowtransfer.com/"><li class="sidenav-btn">奶牛快传<p>安全、省时高效</p></li></a>
-        	<a target="_blank" href="https://www.wenshushu.cn/"><li class="sidenav-btn">文叔叔<p>传文件的酸爽！</p></li></a>
-        	<a target="_blank" href="https://send.firefox.com/"><li class="sidenav-btn">FirefoxSend<p>安全高效火狐传送</p></li></a>
-        	<a target="_blank" href="https://app.tmp.link/"><li class="sidenav-btn">TMPLink<p>简单,好用临时文件中转</p></li></a>
-        	<a target="_blank" href="https://pan.baidu.com/"><li class="sidenav-btn">百度云盘<p>毒！</p></li></a>
-        </ul>
-        <blockquote class="blockquote">▎ 社交媒体</blockquote>
-        <ul>
-        	<a target="_blank" href="https://www.52pojie.cn/"><li class="sidenav-btn">吾爱破解<p>软件破解基地</p></li></a>
-        	<a target="_blank" href="https://www.youtube.com/"><li class="sidenav-btn">Youtube<p>国外视频网站</p></li></a>
-        	<a target="_blank" href="https://www.csdn.net/"><li class="sidenav-btn">CSDN<p>IT技术社区</p></li></a>
-        	<a target="_blank" href="https://www.zhihu.com/"><li class="sidenav-btn">知乎<p>有问题，上知乎</p></li></a>
-        	<a target="_blank" href="https://www.weibo.com/"><li class="sidenav-btn">微博<p>欣赏世界精彩瞬间</p></li></a>
-        	<a target="_blank" href="https://www.instagram.com/"><li class="sidenav-btn">Instagram<p>国外图片分享社区</p></li></a>
-        	<a target="_blank" href="https://twitter.com/"><li class="sidenav-btn">Twitter<p>国外微博</p></li></a>
-        	<a target="_blank" href="https://www.facebook.com/"><li class="sidenav-btn">Facebook<p>一本面子书</p></li></a>
-        </ul>
-        <blockquote class="blockquote">▎ 新闻</blockquote>
-        <ul>
-        	<a target="_blank" href="http://www.chinadaily.com.cn/"><li class="sidenav-btn">中国日报</li></a>
-        	<a target="_blank" href="http://www.sc168.com/"><li class="sidenav-btn">顺德新闻</li></a>
-        	<a target="_blank" href="http://news.cctv.com/"><li class="sidenav-btn">央视新闻</li></a>
-        	<a target="_blank" href="https://www.thepaper.cn/"><li class="sidenav-btn">澎湃新闻</li></a>
-        	<a target="_blank" href="https://www.hk01.com/"><li class="sidenav-btn">香港01</li></a>
-        	<a target="_blank" href="https://www.msn.com/zh-tw/news"><li class="sidenav-btn">台湾即时新闻</li></a>
-        	<a target="_blank" href="https://www.bbc.com/"><li class="sidenav-btn">BBC</li></a>
-        	<a target="_blank" href="https://www.nhk.or.jp/"><li class="sidenav-btn">NHK</li></a>
-        </ul>
-        <blockquote class="blockquote">▎ 追剧</blockquote>
-        <ul>
-        	<a target="_blank" href="http://www.mp4ba.la/"><li class="sidenav-btn">MP4吧<p>高清MP4吧</p></li></a>
-        	<a target="_blank" href="http://www.rrys2019.com/"><li class="sidenav-btn">YYeTs<p>人人字幕组</p></li></a>
-        	<a target="_blank" href="https://ddrk.me/"><li class="sidenav-btn">低端影视<p>超清在线视频站</p></li></a>
-        	<a target="_blank" href="https://www.biyov.com/"><li class="sidenav-btn">比优视频<p>人生如戏</p></li></a>
-        	<a target="_blank" href="http://www.novipnoad.com/"><li class="sidenav-btn">NO视频<p>不负追剧好时光</p></li></a>
-        	<a target="_blank" href="http://www.doki8.com/"><li class="sidenav-btn">doki8<p>心动日剧</p></li></a>
-        	<a target="_blank" href="http://www.zzrbl.com/"><li class="sidenav-btn">猪猪日部落<p>猪猪日剧字幕组</p></li></a>
-        	<a target="_blank" href="https://bde4.com/"><li class="sidenav-btn">哔嘀影视<p>热门最新电影</p></li></a>
-        	<a target="_blank" href="http://1090ys.com/"><li class="sidenav-btn">1090影视<p>挺全的电影</p></li></a>
-        	<a target="_blank" href="https://www.shenma4480.com/"><li class="sidenav-btn">神马影院<p>神马都有？</p></li></a>
-        </ul>
-        <blockquote class="blockquote">▎ 开发</blockquote>
-        <ul>
-        	<a target="_blank" href="https://developer.mozilla.org/zh-CN/"><li class="sidenav-btn">MDN<p>服务开发者</p></li></a>
-        	<a target="_blank" href="https://cdnjs.com/"><li class="sidenav-btn">cdnjs<p>Web开发资源</p></li></a>
-        	<a target="_blank" href="https://www.w3school.com.cn/"><li class="sidenav-btn">W3school<p>Web技术教程</p></li></a>
-        	<a target="_blank" href="https://github.com/"><li class="sidenav-btn">Github<p>分布式版本管理</p></li></a>
-        	<a target="_blank" href="https://codepen.io/"><li class="sidenav-btn">Codepen<p>Coding online</p></li></a>
-        	<a target="_blank" href="https://uigradients.com/"><li class="sidenav-btn">uiGradients<p>网页设计配色</p></li></a>
-        	<a target="_blank" href="https://cssfx.netlify.com/"><li class="sidenav-btn">CSSFX<p>CSS效果</p></li></a>
-        	<a target="_blank" href="https://www.faviator.xyz/"><li class="sidenav-btn">Faviator<p>自动生成图标</p></li></a>
-        	<a target="_blank" href="https://www.iconfont.cn/"><li class="sidenav-btn">IconFont<p>阿里巴巴图标库</p></li></a>
-        	<a target="_blank" href="https://cloudconvert.com/"><li class="sidenav-btn">FileConvert<p>文件转换器</p></li></a>
-        </ul>
-        <blockquote class="blockquote">▎ 关于我的</blockquote>
-        <ul>
-        	<a target="_blank" href="https://github.com/Jackie1123/aNavigation"><li class="sidenav-btn">Github<p>本网页导航</p></li></a>
-        	<a href="coolmarket://u/691518"><li class="sidenav-btn">@_小K同學<p>来酷安找我</p></li></a>
-        </ul>
-        <blockquote class="blockquote">▎ 设置</blockquote>
-        <ul>
-        	<a href="#"><li class="sidenav-btn" id="night" onclick="night()">夜间模式</li></a>
-        </ul>
-    </div>
+  <!-- 主页面 -->
+  <main id="main" class="panel"> 
+   <div class="container"> 
+    <img class="btn-hamburger js-slideout-toggle" src="img/menu.svg" /> 
+    <!-- 天气 --> 
+    <!-- <iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=6" width="130" height="80" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> --> 
+    <!-- weather --> 
+    <script type="text/javascript">
+      WIDGET = {FID: 'BzqiAu2wQA'}
+      </script> 
+    <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script> 
+    <!-- 搜索盒子 --> 
+    <div class="search-box"> 
+     <!-- logo --> 
+     <div id="logo"> 
+      <div id="state"> 
+       <a href="folder://"><img id="img" src="img/bing.png" /></a> 
+      </div> 
+     </div> 
+     <!-- 搜索 --> 
+     <!-- 搜索框 --> 
+     <div class="inputDiv"> 
+      <form id="form" action="https://cn.bing.com/search" target="_self" onsubmit="return check()"> 
+       <input id="inputText" type="text" placeholder="Bing搜索..." name="q" size="30" baidusug="1" /> 
+       <span class="bottom"></span> 
+       <span class="right"></span> 
+       <span class="top"></span> 
+       <span class="left"></span> 
+       <!-- 搜索按键 --> 
+       <button id="submitButton" class="submitButton" type="submit">搜索</button> 
+      </form> 
+     </div> 
+    </div> 
+    <!-- 书签、引擎选择器 --> 
+    <div id="Select" class="Select" onclick="select()">
+     <hr />标签 
+     <img src="img/search-change.svg?v=2ae7ab8" />
+    </div> 
+    <!-- 书签 --> 
+    <div id="folder" class="folder"> 
+     <ul> 
+      <li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="https://yuenhangho.gitee.io/blog/posts/12023/"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/log.png" /> 
+         <p>开发日志</p> 
+        </div> </a> </li> 
+      <li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="https://www.coolapk.com"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/coolapk.png" /> 
+         <p>酷安</p> 
+        </div> </a> </li> 
+      <li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="http://via-app.cn"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/via.png" /> 
+         <p>Via插件</p> 
+        </div> </a> </li> 
+      <li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="https://tophub.today/"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/headline.png" /> 
+         <p>今日热榜</p> 
+        </div> </a> </li> 
+      <li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="http://www.carrotchou.blog"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/carrot.png" /> 
+         <p>胡萝卜周</p> 
+        </div> </a> </li> 
+      <li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="https://yuenhangho.gitee.io/blog"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/org.png" /> 
+         <p>小K同學</p> 
+        </div> </a> </li> 
+      <li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="https://unsplash.com/"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/unsplash.png" /> 
+         <p>unsplash</p> 
+        </div> </a> </li> 
+      <li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="https://www.htcp.net/"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/yunmeng.png" /> 
+         <p>云梦</p> 
+        </div> </a> </li> 
+      <li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="https://www.xda-developers.com/"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/xda.png" /> 
+         <p>XDA</p> 
+        </div> </a> </li> 
+      <li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="https://www.mi.com/"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/mi.png" /> 
+         <p>小米商城</p> 
+        </div> </a> </li> 
+      <li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="https://ncov.dxy.cn/ncovh5/view/pneumonia"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/ding.png" /> 
+         <p>疫情跟踪</p> 
+        </div> </a> </li> 
+      <li class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="https://vp.fact.qq.com/home"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/true.png" /> 
+         <p>疫情辟谣</p> 
+        </div> </a> </li> 
+     </ul> 
+    </div> 
+    <!-- 导航引擎 --> 
+    <div id="nav" class="nav"> 
+     <ul> 
+      <li onclick="baidu()" class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a id="baidu" href="#"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/baidu-xs.png" /> 
+        </div> </a> </li> 
+      <li onclick="google()" class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="#"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/google-xs.png" /> 
+        </div> </a> </li> 
+      <li onclick="bing()" class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="#"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/bing-xs.png" /> 
+        </div> </a> </li> 
+      <li onclick="yahoo()" class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="#"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/yahoo-xs.png" /> 
+        </div> </a> </li> 
+      <li onclick="sougou()" class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="#"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/sougou-xs.png" /> 
+        </div> </a> </li> 
+      <li onclick="duckduckgo()" class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="#"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/duckduckgo-xs.png" /> 
+        </div> </a> </li> 
+      <li onclick="magi()" class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="#"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/magi-xs.png" /> 
+        </div> </a> </li> 
+      <li onclick="doge()" class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="#"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/doge-xs.png" /> 
+        </div> </a> </li> 
+      <li onclick="seeres()" class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="#"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/seeres-xs.png" /> 
+        </div> </a> </li> 
+      <li onclick="wechat()" class="folder-item col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="#"> 
+        <div class="folder-item-box"> 
+         <img class="folder-item-img" src="img/wechat-xs.png" /> 
+        </div> </a> </li> 
+     </ul> 
+    </div> 
+   </div> 
+  </main>
+ 
+<script type="text/javascript" src="js/slideout.min.js"></script>
+<script type="text/javascript">
+  var slideout = new Slideout({
+    'panel': document.getElementById('main'),
+    'menu': document.getElementById('menu'),
+    'padding': 290,
+    'tolerance': 70
+   });
+  document.querySelector('.js-slideout-toggle').addEventListener('click', function() {
+    slideout.toggle();
+   });
+  document.querySelector('.menu').addEventListener('click', function(eve) {
+    if (eve.target.nodeName === 'A') { slideout.close(); }
+  });
+</script>
+ 
 </body>
 <script charset="UTF-8" src="js/searchSug.js"></script>
 </html>

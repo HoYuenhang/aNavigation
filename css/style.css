@@ -21,10 +21,18 @@ ul{
 /*媒体查询*/
 @media (min-width: 768px){
 	body{
+		overflow-y: hidden;
+	}
+	#main{
 		background-image: url(../img/bg.jpg);
 		background-attachment:fixed;
 		background-size:cover;
 	}
+}
+
+/*天气*/
+#weather-float-he{
+	z-index: 1;
 }
 
 /*搜索盒子*/
@@ -164,7 +172,7 @@ input:focus ~ .left {
 	animation: fade-in;
     animation-duration: 0.5s;
     -webkit-animation:fade-in 0.5s;
-	height: 39.8px;
+	height: 43.6px;
 	width: 15%;
 	float: right;
 	z-index: 1;
@@ -240,38 +248,7 @@ input:focus ~ .left {
 	display: none;
 }
 
-/*侧栏*/
-.slider{
-	position: fixed;
-	bottom: 6px;
-	left: 10px;
-	width: 40px;
-	cursor: pointer;
-    overflow-x: hidden;
-    transition: 0.5s; /*侧栏延迟0.5s显示*/
-}
-
-.slider img{
-	width: 40px;
-	border-radius: 50%;
-}
-
-/*侧边栏选择器*/
-.sidenav {
-    height: 100%;
-    width: 0px; /*原始宽度*/
-    position: fixed;
-    /*z-index、top、left共同控制侧栏的悬浮（上方1，下方-1）*/
-    z-index: 999999999999999999999;
-    top: 0;
-    left: 0;
-    box-shadow: 10px 0 5px #EDEDED;
-    overflow-x: hidden;
-    transition: 0.5s; /*侧栏延迟0.5s显示*/
-	padding-top: 20px;
- 	background-color: #EDEDED;
-}
-
+/*侧边栏内容*/
 blockquote{
 	margin: 0!important;
 	font-weight: bold;
@@ -297,14 +274,6 @@ blockquote{
 	font-size: 10px;
 	text-align: center;
 	color: gray;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
 }
 
 /*搜索返回提示词边框*/

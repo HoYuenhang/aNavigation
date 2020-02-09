@@ -20,14 +20,15 @@ ul{
 
 /*媒体查询*/
 @media (min-width: 768px){
-	body{
-		overflow-y: hidden;
-	}
 	#main{
 		background-image: url(../img/bg.jpg);
 		background-attachment:fixed;
 		background-size:cover;
 	}
+}
+
+#main{
+	margin: 0;
 }
 
 /*天气*/
@@ -274,6 +275,10 @@ blockquote{
 	font-size: 10px;
 	text-align: center;
 	color: gray;
+}
+
+#weather-float-he{
+	z-index: 9;
 }
 
 /*搜索返回提示词边框*/

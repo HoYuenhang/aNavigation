@@ -6,7 +6,6 @@ a,a:hover,a:visited{
 li{
 	width: 50px;
 	list-style: none;
-	float: left;
 	margin-bottom: 15px;
 }
 
@@ -254,6 +253,10 @@ blockquote{
 	margin: 0!important;
 	font-weight: bold;
 	color: black;
+}
+
+.menu ul a li{
+	float: left;
 }
 
 .sidenav-btn{

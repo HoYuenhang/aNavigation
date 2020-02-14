@@ -101,7 +101,7 @@ function closeSlider() {
 
 // 切换搜索引擎
 function baidu() {
-	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/baidu.png'></a>";
+	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/baidu.svg'></a>";
 	$('#submitButton').css('background-color', '#3245df');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#3245df');
@@ -116,7 +116,7 @@ function baidu() {
 }
 
 function google() {
-	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/google.png'></a>";
+	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/google.svg'></a>";
 	$('#submitButton').css('background-color', '#4285f4');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#4285f4');
@@ -131,7 +131,7 @@ function google() {
 }
 
 function bing() {
-	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/bing.png'></a>";
+	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/bing.svg'></a>";
 	$('#submitButton').css('background-color', '#00868B');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#00868B');
@@ -146,7 +146,7 @@ function bing() {
 }
 
 function yahoo() {
-	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/yahoo.png'></a>";
+	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/yahoo.svg'></a>";
 	$('#submitButton').css('background-color', '#5f01d1');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#5f01d1');
@@ -161,7 +161,7 @@ function yahoo() {
 }
 
 function sougou() {
-	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/sougou.png'></a>";
+	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/sougou.svg'></a>";
 	$('#submitButton').css('background-color', '#f94c18');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#f94c18');
@@ -176,7 +176,7 @@ function sougou() {
 }
 
 function duckduckgo() {
-	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/duckduckgo.png'></a>";
+	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/duckduckgo.svg'></a>";
 	$('#submitButton').css('background-color', '#de5833');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#de5833');
@@ -191,7 +191,7 @@ function duckduckgo() {
 }
 
 function magi() {
-	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/magi.png'></a>";
+	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/magi.svg'></a>";
 	$('#submitButton').css('background-color', 'black');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', 'black');
@@ -206,7 +206,7 @@ function magi() {
 }
 
 function doge() {
-	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/doge.png'></a>";
+	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/doge.svg'></a>";
 	$('#submitButton').css('background-color', '#ffca74');
 	$('#submitButton').css('color', 'black');
 	$('#Select').css('color', '#ffca74');
@@ -221,7 +221,7 @@ function doge() {
 }
 
 function wechat() {
-	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/wechat.png'></a>";
+	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/wechat.svg'></a>";
 	$('#submitButton').css('background-color', '#2ca43a');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#2ca43a');
@@ -236,7 +236,7 @@ function wechat() {
 }
 
 function seeres() {
-	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/seeres.png'></a>";
+	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/seeres.svg'></a>";
 	$('#submitButton').css('background-color', '#414baa');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#414baa');

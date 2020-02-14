@@ -20,7 +20,7 @@ ul{
 /*媒体查询*/
 @media (min-width: 768px){
 	#main{
-		background-image: url(../img/bg.jpg);
+		background-image: url(../img/bg.svg);
 		background-attachment:fixed;
 		background-size:cover;
 	}

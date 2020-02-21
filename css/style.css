@@ -30,14 +30,9 @@ ul{
 	margin: 0;
 }
 
-/*天气*/
-#weather-float-he{
-	z-index: 1;
-}
-
 /*搜索盒子*/
 .search-box{
-	/*margin-top: 20px;*/
+	margin-top: 20px;
 }
 
 #logo{
@@ -280,8 +275,13 @@ blockquote{
 	color: gray;
 }
 
-#weather-float-he{
+#tp-weather-widget .sw-container {
 	z-index: 9;
+	left: unset;
+	right: 10px;
+	top: unset;
+	bottom: 10px;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px;
 }
 
 /*搜索返回提示词边框*/

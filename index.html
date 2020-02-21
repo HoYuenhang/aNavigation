@@ -13,12 +13,12 @@
   <script type="text/javascript" src="js/jQuery.js"></script>
   <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
   <!-- <script type="text/javascript" src="js/function.js?v=2.2"></script> -->
+  <link rel="stylesheet" href="css/slideout.css">
   <script>
     var now = new Date().getTime();
     document.write('<link href="css/style.css?v=' + now + '" rel="stylesheet" type="text/css"/>');
     document.write('<script src="js/function.js?v=' + now + '"><\/script\>');
   </script>
-  <link rel="stylesheet" href="css/slideout.css">
   <style type="text/css"></style>
   <!-- 百度统计 -->
 	<script>
@@ -33,12 +33,6 @@
 </head>
 
 <body>
-    <script type="text/javascript">
-    WIDGET = {FID: 'pXhWxOJyv4'}
-    </script>
-    <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
-
-  <!-- 侧边栏 -->
   <nav id="menu" class="menu"> 
    <blockquote class="blockquote">▎ 工具</blockquote> 
    <ul> 
@@ -130,23 +124,23 @@
   </nav>
 
   <!-- 主页面 -->
-  <main id="main" class="panel"> 
+  <main id="main" class="panel">
+  <div id="tp-weather-widget"></div>
+  <script>
+    (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+    window.SeniverseWeatherWidget('show', {
+      flavor: "bubble",
+      location: "WX4FBXXFKE4F",
+      geolocation: true,
+      language: "auto",
+      unit: "c",
+      theme: "auto",
+      token: "e14489a8-9a7e-477d-9c6c-b4b390175cca",
+      hover: "enabled",
+      container: "tp-weather-widget"
+    })
+  </script>
    <div class="container"> 
-    <div id="tp-weather-widget"></div>
-    <script>
-      (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
-      window.SeniverseWeatherWidget('show', {
-        flavor: "slim",
-        location: "WX4FBXXFKE4F",
-        geolocation: true,
-        language: "auto",
-        unit: "c",
-        theme: "auto",
-        token: "e14489a8-9a7e-477d-9c6c-b4b390175cca",
-        hover: "enabled",
-        container: "tp-weather-widget"
-      })
-    </script>
     <img class="btn-hamburger js-slideout-toggle" src="img/menu.svg" /> 
     
     <!-- 搜索盒子 --> 

@@ -3,6 +3,10 @@ a,a:hover,a:visited{
 	text-decoration: none;
 }
 
+span{
+	background-color: transparent;
+}
+
 li{
 	width: 50px;
 	list-style: none;

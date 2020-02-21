@@ -33,13 +33,10 @@
 </head>
 
 <body>
-  <!-- 天气 --> 
-    <!-- <iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=6" width="130" height="80" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> --> 
-    <!-- weather --> 
     <script type="text/javascript">
-      WIDGET = {FID: 'BzqiAu2wQA'}
-      </script> 
-    <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script> 
+    WIDGET = {FID: 'pXhWxOJyv4'}
+    </script>
+    <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
 
   <!-- 侧边栏 -->
   <nav id="menu" class="menu"> 
@@ -79,7 +76,7 @@
    </ul> 
    <blockquote class="blockquote">▎ 个人网站</blockquote> 
    <ul> 
-    <a target="_blank" href="https://yuenhangho.gitee.io/blog/"><li class="sidenav-btn">小K同學的博客<p>技术 日语 云旅游</p></li></a> 
+    <a target="_blank" href="http://kksan.top"><li class="sidenav-btn">小K同學的博客<p>技术 日语 云旅游</p></li></a> 
     <a target="_blank" href="http://www.carrotchou.blog/"><li class="sidenav-btn">胡萝卜周<p>软件分享领跑者</p></li></a> 
     <a target="_blank" href="https://www.htcp.net/"><li class="sidenav-btn">云梦小站<p>安卓新资源</p></li></a> 
     <a target="_blank" href="https://www.423down.com/"><li class="sidenav-btn">423down<p>软件搬运工</p></li></a> 
@@ -135,6 +132,21 @@
   <!-- 主页面 -->
   <main id="main" class="panel"> 
    <div class="container"> 
+    <div id="tp-weather-widget"></div>
+    <script>
+      (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+      window.SeniverseWeatherWidget('show', {
+        flavor: "slim",
+        location: "WX4FBXXFKE4F",
+        geolocation: true,
+        language: "auto",
+        unit: "c",
+        theme: "auto",
+        token: "e14489a8-9a7e-477d-9c6c-b4b390175cca",
+        hover: "enabled",
+        container: "tp-weather-widget"
+      })
+    </script>
     <img class="btn-hamburger js-slideout-toggle" src="img/menu.svg" /> 
     
     <!-- 搜索盒子 --> 
@@ -142,7 +154,7 @@
      <!-- logo --> 
      <div id="logo"> 
       <div id="state"> 
-       <a href="folder://"><img id="img" src="img/bing.svg" /></a> 
+       <a href="folder://"><img id="img" src="img/bing.png" /></a> 
       </div> 
      </div> 
      <!-- 搜索 --> 
@@ -167,59 +179,59 @@
     <!-- 书签 --> 
     <div id="folder" class="folder"> 
      <ul> 
-      <li class="folder-item col-xs-3 col-sm-3"> <a href="https://yuenhangho.gitee.io/blog/posts/12023/"> 
+      <li class="folder-item col-xs-3 col-sm-3"> <a href="http://kksan.top/posts/12023/"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/log.svg" /> 
+         <img class="folder-item-img" src="img/log.png" /> 
          <p>开发日志</p> 
         </div> </a> </li> 
       <li class="folder-item col-xs-3 col-sm-3"> <a href="https://www.coolapk.com"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/coolapk.svg" /> 
+         <img class="folder-item-img" src="img/coolapk.png" /> 
          <p>酷安</p> 
         </div> </a> </li> 
       <li class="folder-item col-xs-3 col-sm-3"> <a href="http://via-app.cn"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/via.svg" /> 
+         <img class="folder-item-img" src="img/via.png" /> 
          <p>Via插件</p> 
         </div> </a> </li> 
       <li class="folder-item col-xs-3 col-sm-3"> <a href="https://tophub.today/"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/headline.svg" /> 
+         <img class="folder-item-img" src="img/headline.png" /> 
          <p>今日热榜</p> 
         </div> </a> </li> 
       <li class="folder-item col-xs-3 col-sm-3"> <a href="https://www.zhihu.com/"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/zhihu.svg" /> 
+         <img class="folder-item-img" src="img/zhihu.png" /> 
          <p>知乎</p> 
         </div> </a> </li> 
       <li class="folder-item col-xs-3 col-sm-3"> <a href="https://www.xda-developers.com/"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/xda.svg" /> 
+         <img class="folder-item-img" src="img/xda.png" /> 
          <p>XDA</p> 
         </div> </a> </li> 
       <li class="folder-item col-xs-3 col-sm-3"> <a href="https://www.mi.com/"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/mi.svg" /> 
+         <img class="folder-item-img" src="img/mi.png" /> 
          <p>小米商城</p> 
         </div> </a> </li> 
       <li class="folder-item col-xs-3 col-sm-3"> <a href="https://unsplash.com/"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/unsplash.svg" /> 
+         <img class="folder-item-img" src="img/unsplash.png" /> 
          <p>unsplash</p> 
         </div> </a> </li> 
       <li class="folder-item col-xs-3 col-sm-3"> <a href="https://sspai.com/"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/sspai.svg" /> 
+         <img class="folder-item-img" src="img/sspai.png" /> 
          <p>少数派</p> 
         </div> </a> </li> 
       <li class="folder-item col-xs-3 col-sm-3"> <a href="https://ncov.dxy.cn/ncovh5/view/pneumonia"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/ding.svg" /> 
+         <img class="folder-item-img" src="img/ding.png" /> 
          <p>疫情跟踪</p> 
         </div> </a> </li> 
       <li class="folder-item col-xs-3 col-sm-3"> <a href="https://vp.fact.qq.com/home"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/true.svg" /> 
+         <img class="folder-item-img" src="img/true.png" /> 
          <p>疫情辟谣</p> 
         </div> </a> </li> 
      </ul> 
@@ -229,43 +241,43 @@
      <ul> 
       <li onclick="baidu()" class="folder-item col-xs-3 col-sm-3"> <a id="baidu" href="#"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/baidu-xs.svg" /> 
+         <img class="folder-item-img" src="img/baidu-xs.png" /> 
         </div> </a> </li> 
       <li onclick="google()" class="folder-item col-xs-3 col-sm-3"> <a href="#"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/google-xs.svg" /> 
+         <img class="folder-item-img" src="img/google-xs.png" /> 
         </div> </a> </li> 
       <li onclick="bing()" class="folder-item col-xs-3 col-sm-3"> <a href="#"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/bing-xs.svg" /> 
+         <img class="folder-item-img" src="img/bing-xs.png" /> 
         </div> </a> </li> 
       <li onclick="yahoo()" class="folder-item col-xs-3 col-sm-3"> <a href="#"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/yahoo-xs.svg" /> 
+         <img class="folder-item-img" src="img/yahoo-xs.png" /> 
         </div> </a> </li> 
       <li onclick="sougou()" class="folder-item col-xs-3 col-sm-3"> <a href="#"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/sougou-xs.svg" /> 
+         <img class="folder-item-img" src="img/sougou-xs.png" /> 
         </div> </a> </li> 
       <li onclick="duckduckgo()" class="folder-item col-xs-3 col-sm-3"> <a href="#"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/duckduckgo-xs.svg" /> 
+         <img class="folder-item-img" src="img/duckduckgo-xs.png" /> 
         </div> </a> </li> 
       <li onclick="magi()" class="folder-item col-xs-3 col-sm-3"> <a href="#"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/magi-xs.svg" /> 
+         <img class="folder-item-img" src="img/magi-xs.png" /> 
         </div> </a> </li> 
       <li onclick="doge()" class="folder-item col-xs-3 col-sm-3"> <a href="#"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/doge-xs.svg" /> 
+         <img class="folder-item-img" src="img/doge-xs.png" /> 
         </div> </a> </li> 
       <li onclick="seeres()" class="folder-item col-xs-3 col-sm-3"> <a href="#"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/seeres-xs.svg" /> 
+         <img class="folder-item-img" src="img/seeres-xs.png" /> 
         </div> </a> </li> 
       <li onclick="wechat()" class="folder-item col-xs-3 col-sm-3"> <a href="#"> 
         <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/wechat-xs.svg" /> 
+         <img class="folder-item-img" src="img/wechat-xs.png" /> 
         </div> </a> </li> 
      </ul> 
     </div> 

@@ -20,7 +20,7 @@ ul{
 /*媒体查询*/
 @media (min-width: 768px){
 	#main{
-		background-image: url(../img/bg.svg);
+		background-image: url(../img/bg.jpg);
 		background-attachment:fixed;
 		background-size:cover;
 	}
@@ -101,7 +101,7 @@ input::placeholder {
   color: hsla(0, 0%, 100%, 0.6);
 }
 
-span {
+.top, .bottom, .left, .right {
   position: absolute;
   background-color: #00868B;
   transition: transform 0.5s ease;

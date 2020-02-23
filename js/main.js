@@ -4,11 +4,9 @@ var night = storage.night;
 var li = $('.sidenav-btn');
 var blockquote = $('.blockquote');
 
-if (storage.data || storage.night) {
+if (storage.data != undefined) {
   data = data.split(',');
-  night = night.split(',');
   console.log(data);
-  console.log(night);
   $('#state a img').attr('src', data[0]); //头图
   $('.submitButton').css('background-color', data[1]); //按钮bgc
   $('.submitButton').css('color', data[2]); //按钮文字color
@@ -18,7 +16,10 @@ if (storage.data || storage.night) {
   $('#Select').css('color', data[1]);
   $('.span').css('background-color', data[1]);
   $('.bdSug_wpr').css('box-shadow', data[1] + ' 0px 0px 5px');
-
+}
+if (storage.night != undefined) {
+  night = night.split(',');
+  console.log(night);
   $('#main').css('background-color', night[0]); //主界面
   $('#menu').css('background-color', night[1]); //侧栏
   document.getElementById("night").innerHTML = night[2];

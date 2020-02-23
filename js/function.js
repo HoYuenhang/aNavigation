@@ -24,37 +24,6 @@ if (time < 5) {
 	document.getElementById("title").innerHTML = "一个导航 | Stay up late again";
 }
 
-// 夜间模式
-function night() {
-	var li = document.getElementsByClassName("sidenav-btn");
-	var blockquote = document.getElementsByClassName("blockquote");
-	if (document.bgColor == "#fff") {
-		document.bgColor = "#2f2f33";
-		document.getElementById("night").innerHTML = "日间模式";
-		document.getElementById("mySidenav").style.backgroundColor = "#5C5C5C";
-		document.getElementById("mySidenav").style.boxShadow = "10px 0 5px #5C5C5C";
-		for (var i = 0; i < li.length; i++) {
-			li[i].style.backgroundColor = "#575757";
-			li[i].style.color = "#DBDBDB";
-		}
-		for (var j = 0; j < blockquote.length; j++) {
-			blockquote[j].style.color = "#DBDBDB";
-		}
-	} else if (document.bgColor == "#2f2f33") {
-		document.bgColor = "#fff";
-		document.getElementById("night").innerHTML = "夜间模式";
-		document.getElementById("mySidenav").style.backgroundColor = "#EDEDED";
-		document.getElementById("mySidenav").style.boxShadow = "10px 0 5px #EDEDED";
-		for (var i = 0; i < li.length; i++) {
-			li[i].style.backgroundColor = "#E3E3E3";
-			li[i].style.color = "black";
-		}
-		for (var j = 0; j < blockquote.length; j++) {
-			blockquote[j].style.color = "black";
-		}
-	}
-}
-
 //导航、引擎选择器
 function select() {
 	if ($('#folder').css('display') == 'block') {

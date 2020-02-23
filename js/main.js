@@ -1,8 +1,14 @@
 var storage = window.localStorage;
 var data = storage.data;
-if (storage.data != undefined) {
+var night = storage.night;
+var li = $('.sidenav-btn');
+var blockquote = $('.blockquote');
+
+if (storage.data || storage.night) {
   data = data.split(',');
+  night = night.split(',');
   console.log(data);
+  console.log(night);
   $('#state a img').attr('src', data[0]); //头图
   $('.submitButton').css('background-color', data[1]); //按钮bgc
   $('.submitButton').css('color', data[2]); //按钮文字color
@@ -11,7 +17,14 @@ if (storage.data != undefined) {
   $('#inputText').attr('name', data[5]);
   $('#Select').css('color', data[1]);
   $('.span').css('background-color', data[1]);
-  $('.bdSug_wpr').css('box-shadow', data[1]+' 0px 0px 5px');
+  $('.bdSug_wpr').css('box-shadow', data[1] + ' 0px 0px 5px');
+
+  $('#main').css('background-color', night[0]); //主界面
+  $('#menu').css('background-color', night[1]); //侧栏
+  document.getElementById("night").innerHTML = night[2];
+  li.css('background-color', night[3]);
+  li.css('color', night[4]);
+  blockquote.css('color', night[5]);
 }
 
 // rgb to hex
@@ -126,6 +139,33 @@ $(function() {
     var placeholder = $('#inputText').attr('placeholder');
     // console.log(storage.data);
     storage.data = [searchPho, color, fontcolor, placeholder, searchL, searchN]
+  })
+
+  // 夜间模式
+  $('#night').click(function() {
+    if (rgb2hex($('#main').css('background-color')) == '#ffffff') {
+      $('#main').css('background-color', '#2f2f33'); //主界面
+      $('#menu').css('background-color', '#5C5C5C'); //侧栏
+      document.getElementById("night").innerHTML = "日间模式";
+      li.css('background-color', '#575757');
+      li.css('color', '#DBDBDB');
+      blockquote.css('color', '#DBDBDB');
+    } else if (rgb2hex($('#main').css('background-color')) == '#2f2f33') {
+      $('#main').css('background-color', '#ffffff'); //主界面
+      $('#menu').css('background-color', '#EDEDED'); //侧栏
+      document.getElementById("night").innerHTML = "夜间模式";
+      li.css('background-color', '#E3E3E3');
+      li.css('color', 'black');
+      blockquote.css('color', 'black');
+    }
+    var mainbg = rgb2hex($('#main').css('background-color'));
+    var menubg = rgb2hex($('#menu').css('background-color'));
+    var inner = document.getElementById("night").innerHTML;
+    var libg = rgb2hex(li.css('background-color'));
+    console.log(libg)
+    var lico = rgb2hex(li.css('color'));
+    var blockquoteco = rgb2hex(blockquote.css('color'));
+    storage.night = [mainbg, menubg, inner, libg, lico, blockquoteco];
   })
 
   //点击搜索引擎切换

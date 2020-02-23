@@ -102,17 +102,17 @@ function closeSlider() {
 // 切换搜索引擎
 function baidu() {
 	document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/baidu.png'></a>";
-	$('#submitButton').css('background-color', '#3245df');
-	$('#submitButton').css('color', 'white');
-	$('#Select').css('color', '#3245df');
-	$('span').css('background-color', '#3245df');
+	$('#submitButton').css('background-color', '#3245df'); //按钮bg
+	$('#submitButton').css('color', 'white'); //按钮
+	$('#Select').css('color', '#3245df'); //选择器
+	$('.span').css('background-color', '#3245df'); //输入框四边
 	$('#nav').css('display', 'none');
 	$('#folder').css('display', 'block');
 	document.getElementById("Select").innerHTML = "<hr>标签 <img src='img/search-change.svg?v=2ae7ab8'>";
 	$("#inputText").attr("placeholder", "百度一下...");
 	$("#form").attr("action", "https://www.baidu.com/s");
 	$("#inputText").attr("name", "wd");
-	$(".bdSug_wpr").css('box-shadow', '#3245df 0px 0px 5px');
+	$(".bdSug_wpr").css('box-shadow', '#3245df 0px 0px 5px'); //提示框
 }
 
 function google() {
@@ -120,7 +120,7 @@ function google() {
 	$('#submitButton').css('background-color', '#4285f4');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#4285f4');
-	$('span').css('background-color', '#4285f4');
+	$('.span').css('background-color', '#4285f4');
 	$('#nav').css('display', 'none');
 	$('#folder').css('display', 'block');
 	document.getElementById("Select").innerHTML = "<hr>标签 <img src='img/search-change.svg?v=2ae7ab8'>";
@@ -135,7 +135,7 @@ function bing() {
 	$('#submitButton').css('background-color', '#00868B');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#00868B');
-	$('span').css('background-color', '#00868B');
+	$('.span').css('background-color', '#00868B');
 	$('#nav').css('display', 'none');
 	$('#folder').css('display', 'block');
 	document.getElementById("Select").innerHTML = "<hr>标签 <img src='img/search-change.svg?v=2ae7ab8'>";
@@ -150,7 +150,7 @@ function yahoo() {
 	$('#submitButton').css('background-color', '#5f01d1');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#5f01d1');
-	$('span').css('background-color', '#5f01d1');
+	$('.span').css('background-color', '#5f01d1');
 	$('#nav').css('display', 'none');
 	$('#folder').css('display', 'block');
 	document.getElementById("Select").innerHTML = "<hr>标签 <img src='img/search-change.svg?v=2ae7ab8'>";
@@ -165,7 +165,7 @@ function sougou() {
 	$('#submitButton').css('background-color', '#f94c18');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#f94c18');
-	$('span').css('background-color', '#f94c18');
+	$('.span').css('background-color', '#f94c18');
 	$('#nav').css('display', 'none');
 	$('#folder').css('display', 'block');
 	document.getElementById("Select").innerHTML = "<hr>标签 <img src='img/search-change.svg?v=2ae7ab8'>";
@@ -180,7 +180,7 @@ function duckduckgo() {
 	$('#submitButton').css('background-color', '#de5833');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#de5833');
-	$('span').css('background-color', '#de5833');
+	$('.span').css('background-color', '#de5833');
 	$('#nav').css('display', 'none');
 	$('#folder').css('display', 'block');
 	document.getElementById("Select").innerHTML = "<hr>标签 <img src='img/search-change.svg?v=2ae7ab8'>";
@@ -195,7 +195,7 @@ function magi() {
 	$('#submitButton').css('background-color', 'black');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', 'black');
-	$('span').css('background-color', 'black');
+	$('.span').css('background-color', 'black');
 	$('#nav').css('display', 'none');
 	$('#folder').css('display', 'block');
 	document.getElementById("Select").innerHTML = "<hr>标签 <img src='img/search-change.svg?v=2ae7ab8'>";
@@ -210,7 +210,7 @@ function doge() {
 	$('#submitButton').css('background-color', '#ffca74');
 	$('#submitButton').css('color', 'black');
 	$('#Select').css('color', '#ffca74');
-	$('span').css('background-color', '#ffca74');
+	$('.span').css('background-color', '#ffca74');
 	$('#nav').css('display', 'none');
 	$('#folder').css('display', 'block');
 	document.getElementById("Select").innerHTML = "<hr>标签 <img src='img/search-change.svg?v=2ae7ab8'>";
@@ -225,7 +225,7 @@ function wechat() {
 	$('#submitButton').css('background-color', '#2ca43a');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#2ca43a');
-	$('span').css('background-color', '#2ca43a');
+	$('.span').css('background-color', '#2ca43a');
 	$('#nav').css('display', 'none');
 	$('#folder').css('display', 'block');
 	document.getElementById("Select").innerHTML = "<hr>标签 <img src='img/search-change.svg?v=2ae7ab8'>";
@@ -240,7 +240,7 @@ function seeres() {
 	$('#submitButton').css('background-color', '#414baa');
 	$('#submitButton').css('color', 'white');
 	$('#Select').css('color', '#414baa');
-	$('span').css('background-color', '#414baa');
+	$('.span').css('background-color', '#414baa');
 	$('#nav').css('display', 'none');
 	$('#folder').css('display', 'block');
 	document.getElementById("Select").innerHTML = "<hr>标签 <img src='img/search-change.svg?v=2ae7ab8'>";

@@ -178,7 +178,7 @@ input:focus ~ .left {
 	position: relative;
 	font-size: inherit;
 	font-family: inherit;
-	color: white;
+	color: #fff;
 	padding: 0;
 	outline: none;
 	border: none;

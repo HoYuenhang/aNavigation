@@ -148,15 +148,19 @@ $(function() {
       $('#main').css('background-color', '#2f2f33'); //主界面
       $('#menu').css('background-color', '#5C5C5C'); //侧栏
       document.getElementById("night").innerHTML = "日间模式";
-      li.css('background-color', '#575757');
-      li.css('color', '#DBDBDB');
+      li.css({
+        "background-color": "#575757",
+        "color": "#DBDBDB"
+      });
       blockquote.css('color', '#DBDBDB');
     } else if (rgb2hex($('#main').css('background-color')) == '#2f2f33') {
       $('#main').css('background-color', '#ffffff'); //主界面
       $('#menu').css('background-color', '#EDEDED'); //侧栏
       document.getElementById("night").innerHTML = "夜间模式";
-      li.css('background-color', '#E3E3E3');
-      li.css('color', 'black');
+      li.css({
+        "background-color": "#E3E3E3",
+        "color": "black"
+      });
       blockquote.css('color', 'black');
     }
     var mainbg = rgb2hex($('#main').css('background-color'));
@@ -167,6 +171,7 @@ $(function() {
     var lico = rgb2hex(li.css('color'));
     var blockquoteco = rgb2hex(blockquote.css('color'));
     storage.night = [mainbg, menubg, inner, libg, lico, blockquoteco];
+    // localStorage.clear()
   })
 
   //点击搜索引擎切换

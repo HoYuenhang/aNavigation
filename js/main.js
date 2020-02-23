@@ -167,27 +167,9 @@ $(function() {
     var menubg = rgb2hex($('#menu').css('background-color'));
     var inner = document.getElementById("night").innerHTML;
     var libg = rgb2hex(li.css('background-color'));
-    console.log(libg)
     var lico = rgb2hex(li.css('color'));
     var blockquoteco = rgb2hex(blockquote.css('color'));
-    storage.night = [mainbg, menubg, inner, libg, lico, blockquoteco];
+    // storage.night = [mainbg, menubg, inner, libg, lico, blockquoteco];
     // localStorage.clear()
   })
-
-  //点击搜索引擎切换
-  // $('.folder-item').click(function() {
-  //   for (var i = 0; i < search.data.length; i++) {
-  //     if ($('.folder-item a').attr('id') == search.data[i].name) {
-  //       $('#state a img').attr('src', 'img/' + search.data[i].name + '.png');
-  //       $('#submitButton').css('background-color', search.data[i].color);
-  //       $('#submitButton').css('color', search.data[i].fontcolor);
-  //       $('#Select').css('color', search.data[i].color);
-  //       $('.span').css('background-color', search.data[i].color);
-  //       $('#nav').css('display', 'none');
-  //       $('#folder').css('display', 'block');
-  //       document.getElementById("Select").innerHTML = "<hr>标签 <img src='img/search-change.svg?v=2ae7ab8'>";
-  //       $("#inputText").attr("placeholder", search.data[i].placeholder);
-  //     }
-  //   }
-  // })
 })

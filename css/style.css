@@ -1,19 +1,19 @@
 /*公共布局*/
-a,a:hover,a:visited{
+a,a:hover,a:visited {
 	text-decoration: none;
 }
 
-span{
+span {
 	background-color: transparent;
 }
 
-li{
+li {
 	width: 50px;
 	list-style: none;
 	margin-bottom: 15px;
 }
 
-ul{
+ul {
 	padding: 0 10px;
 	display: inline-block;
 	width: 100%;
@@ -22,42 +22,50 @@ ul{
 }
 
 /*媒体查询*/
-@media (min-width: 768px){
-	#main{
-		background-image: url(../img/bg.jpg);
-		background-attachment:fixed;
-		background-size:cover;
+@media (max-width: 768px) {
+	#main {
+		background-image: url(../img/bg-xs.jpg);
+		background-attachment: fixed;
+		background-size: cover;
 	}
 }
 
-#main{
+@media (min-width: 768px) {
+	#main {
+		background-image: url(../img/bg.jpg);
+		background-attachment: fixed;
+		background-size: cover;
+	}
+}
+
+#main {
 	margin: 0;
 	background-color: #fff
 }
 
 /*搜索盒子*/
-.search-box{
+.search-box {
 	margin-top: 20px;
 }
 
-#logo{
+#logo {
 	margin: 0 auto;
 }
 
-#logo div{
+#logo div {
 	margin: 0 auto;
 	width: 300px;
 }
 
-#img{
+#img {
 	animation: fade-in;
-    animation-duration: 0.2s;
-    -webkit-animation:fade-in 0.2s;
+	animation-duration: 0.2s;
+	-webkit-animation: fade-in 0.2s;
 	width: 300px;
 }
 
 /*标签、导航选择器*/
-.Select{
+.Select {
 	margin: 20px auto 0;
 	color: #00868B;
 	font-weight: bold;
@@ -72,8 +80,8 @@ ul{
 	padding: 0;
 	z-index: 0;
 	animation: fade-in;
-    animation-duration: 0.5s;
-    -webkit-animation:fade-in 0.5s;
+	animation-duration: 0.5s;
+	-webkit-animation: fade-in 0.5s;
 	margin-top: 30px;
 	position: relative;
 	margin-left: 20px;
@@ -82,7 +90,7 @@ ul{
 }
 
 input {
-    width:85%; 
+	width: 85%;
 	color: white;
 	font-size: inherit;
 	font-family: inherit;
@@ -94,84 +102,84 @@ input {
 }
 
 input:focus {
-  outline: none;
+	outline: none;
 }
 
 input::placeholder {
-  color: hsla(0, 0%, 100%, 0.6);
+	color: hsla(0, 0%, 100%, 0.6);
 }
 
 .top, .bottom, .left, .right {
-  position: absolute;
-  background-color: #00868B;
-  transition: transform 0.5s ease;
+	position: absolute;
+	background-color: #00868B;
+	transition: transform 0.5s ease;
 }
 
 .bottom,
 .top {
-  height: 2px;
-  left: 0;
-  right: 0;
-  transform: scaleX(0);
+	height: 2px;
+	left: 0;
+	right: 0;
+	transform: scaleX(0);
 }
 
 .left,
 .right {
-  width: 2px;
-  top: 0;
-  bottom: 0;
-  transform: scaleY(0);
+	width: 2px;
+	top: 0;
+	bottom: 0;
+	transform: scaleY(0);
 }
 
 .bottom {
-  bottom: 0;
-  transform-origin: bottom right;
+	bottom: 0;
+	transform-origin: bottom right;
 }
 
 input:focus ~ .bottom {
-  transform-origin: bottom left;
-  transform: scaleX(1);
+	transform-origin: bottom left;
+	transform: scaleX(1);
 }
 
 .right {
-  right: 0;
-  transform-origin: top right;
-  transition-delay: 0.05s;
+	right: 0;
+	transform-origin: top right;
+	transition-delay: 0.05s;
 }
 
 input:focus ~ .right {
-  transform-origin: bottom right;
-  transform: scaleY(1);
+	transform-origin: bottom right;
+	transform: scaleY(1);
 }
 
 .top {
-  top: 0;
-  transform-origin: top left;
-  transition-delay: 0.15s;
+	top: 0;
+	transform-origin: top left;
+	transition-delay: 0.15s;
 }
 
 input:focus ~ .top {
-  transform-origin: top right;
-  transform: scaleX(1);
+	transform-origin: top right;
+	transform: scaleX(1);
 }
 
 .left {
-  left: 0;
-  transform-origin: bottom left;
-  transition-delay: 0.25s;
+	left: 0;
+	transform-origin: bottom left;
+	transition-delay: 0.25s;
 }
 
 input:focus ~ .left {
-  transform-origin: top left;
-  transform: scaleY(1);
+	transform-origin: top left;
+	transform: scaleY(1);
 }
 
 /*搜索按键*/
-.submitButton{
+.submitButton {
 	border-radius: 0px;
 	animation: fade-in;
-    animation-duration: 0.5s;
-    -webkit-animation:fade-in 0.5s;
+	animation-duration: 0.5s;
+	-webkit-animation: fade-in 0.5s;
 	height: 43.6px;
 	width: 15%;
 	float: right;
@@ -187,50 +195,51 @@ input:focus ~ .left {
 	overflow: hidden;
 	transition: color 0.4s ease-in-out;
 }
+
 .submitButton::before {
-  content: '';
-  z-index: -1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  transform-origin: center;
-  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
-  transition: transform 0.45s ease-in-out;
+	content: '';
+	z-index: -1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	transform-origin: center;
+	transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+	transition: transform 0.45s ease-in-out;
 }
 
 .submitButton:hover {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .submitButton:hover::before {
-  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+	transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
 }
 
-.Select{
+.Select {
 	animation: fade-in;
-    animation-duration: 0.7s;
-    -webkit-animation:fade-in 0.7s;
+	animation-duration: 0.7s;
+	-webkit-animation: fade-in 0.7s;
 }
 
 /*标签*/
-.folder{
+.folder {
 	animation: fade-in;
-    animation-duration: 1s;
-    -webkit-animation:fade-in 1s;
+	animation-duration: 1s;
+	-webkit-animation: fade-in 1s;
 	width: 100%;
 	margin-top: 10px;
 	display: block;
 }
 
-.folder-item-box , .folder-item-img{
+.folder-item-box , .folder-item-img {
 	width: 50px;
 	margin: 0 auto;
 }
 
-.folder-item-box p{
+.folder-item-box p {
 	font-size: 12px;
 	color: #a5a5a5;
 	width: 100%;
@@ -239,41 +248,42 @@ input:focus ~ .left {
 }
 
 /*导航*/
-.nav{
+.nav {
 	animation: fade-in;
-    animation-duration: 1s;
-    -webkit-animation:fade-in 1s;
+	animation-duration: 1s;
+	-webkit-animation: fade-in 1s;
 	width: 100%;
 	margin-top: 10px;
 	display: none;
 }
 
 /*侧边栏内容*/
-blockquote{
+blockquote {
 	margin: 0!important;
 	font-weight: bold;
 	color: black;
 }
 
-.menu ul a li{
+.menu ul a li {
 	float: left;
 }
 
-.sidenav-btn{
+.sidenav-btn {
 	font-size: 14px;
 	margin: 2% 4%;
 	padding: 6px;
 	border-radius: 5px;
 	background-color: #E3E3E3;
-    color: black;
-    display: block;
-    text-align: center;
-    text-decoration: none;
+	color: black;
+	display: block;
+	text-align: center;
+	text-decoration: none;
 	width: 42%;
-    transition: 0.3s; /*标签延迟0.3s显示*/
+	transition: 0.3s;
+ /*标签延迟0.3s显示*/
 }
 
-.sidenav-btn p{
+.sidenav-btn p {
 	margin: 0;
 	font-size: 10px;
 	text-align: center;
@@ -290,28 +300,63 @@ blockquote{
 }
 
 /*搜索返回提示词边框*/
-.bdSug_wpr{
+.bdSug_wpr {
 	box-shadow: #00868B 0px 0px 5px /*rgb(153, 102, 140) 0px 0px 5px*/;
 }
 
 /*animation*/
-@keyframes fade-in {  
-    0% {opacity: 0;}/*初始状态 透明度为0*/  
-    40% {opacity: 0;}/*过渡状态 透明度为0*/  
-    100% {opacity: 1;}/*结束状态 透明度为1*/  
-}  
-@-webkit-keyframes fade-in {/*针对webkit内核*/  
-    0% {opacity: 0;}  
-    40% {opacity: 0;}  
-    100% {opacity: 1;}  
+@keyframes fade-in {
+  
+	0% {
+		opacity: 0;
+	}/*初始状态 透明度为0*/  
+	40% {
+		opacity: 0;
+	}/*过渡状态 透明度为0*/  
+	100% {
+		opacity: 1;
+	}/*结束状态 透明度为1*/
 }
-@keyframes fade-in-delay {  
-    0% {opacity: 0;}/*初始状态 透明度为0*/  
-    48% {opacity: 0;}/*过渡状态 透明度为0*/  
-    100% {opacity: 1;}/*结束状态 透明度为1*/  
-}  
-@-webkit-keyframes fade-in-delay {/*针对webkit内核*/  
-    0% {opacity: 0;}  
-    48% {opacity: 0;}  
-    100% {opacity: 1;}  
+
+@-webkit-keyframes fade-in {
+/*针对webkit内核*/  
+	0% {
+		opacity: 0;
+	}
+
+	40% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-in-delay {
+  
+	0% {
+		opacity: 0;
+	}/*初始状态 透明度为0*/  
+	48% {
+		opacity: 0;
+	}/*过渡状态 透明度为0*/  
+	100% {
+		opacity: 1;
+	}/*结束状态 透明度为1*/
+}
+
+@-webkit-keyframes fade-in-delay {
+/*针对webkit内核*/  
+	0% {
+		opacity: 0;
+	}
+
+	48% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }

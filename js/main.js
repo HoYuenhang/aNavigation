@@ -17,7 +17,7 @@
 var storage = window.localStorage;
 var data = storage.data;
 var night = storage.night;
-var bg_xs = storage.bg_xs;
+var bg = storage.bg;
 var li = $('.sidenav-btn');
 var blockquote = $('.blockquote');
 
@@ -46,9 +46,9 @@ if (storage.night != undefined) {
   blockquote.css('color', night[5]);
 }
 
-if (storage.bg_xs != undefined) {
-  bg_xs = bg_xs.split(',');
-  $('#main').css('background-image', bg_xs[0]);
+if (storage.bg != undefined) {
+  bg = bg.split(',');
+  $('#main').css('background-image', bg[0]);
 }
 
 // rgb to hex
@@ -332,7 +332,7 @@ $('#bg').click(function() {
     $('#main').css('background-image') == 'none' ? ($('#main').css('background-image', 'url(img/bg.jpg)')) : ($('#main').css('background-image', 'none'));
   }
   var background = $('#main').css('background-image');
-  storage.bg_xs = [background];
+  storage.bg = [background];
 })
 
 //检查搜索框是否为空

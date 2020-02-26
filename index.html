@@ -9,15 +9,12 @@
   <meta name="description" content="一个简单的网页导航">
   <link rel="stylesheet icon" href="img/icon.ico"/>
   <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
-  <!-- <link rel="stylesheet" type="text/css" href="css/style.css?v=2.2"> -->
   <script type="text/javascript" src="js/jQuery.js"></script>
   <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
-  <!-- <script type="text/javascript" src="js/function.js?v=2.2"></script> -->
   <link rel="stylesheet" href="css/slideout.css">
   <script>
     var now = new Date().getTime();
     document.write('<link href="css/style.css?v=' + now + '" rel="stylesheet" type="text/css"/>');
-    document.write('<script src="js/function.js?v=' + now + '"><\/script\>');
   </script>
   <style type="text/css"></style>
   <!-- 百度统计 -->
@@ -33,6 +30,15 @@
 </head>
 
 <body>
+  <!-- loading -->
+  <div id="loading" style="display: none; opacity: 0;">
+    <div class="dots">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
   <nav id="menu" class="menu"> 
    <blockquote class="blockquote">▎ 工具</blockquote> 
    <ul> 
@@ -125,6 +131,7 @@
 
   <!-- 主页面 -->
   <main id="main" class="panel">
+  <!-- 天气 -->
   <div id="tp-weather-widget"></div>
   <script>
     (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
@@ -167,75 +174,18 @@
     </div> 
     <!-- 书签、引擎选择器 --> 
     <div id="Select" class="Select" onclick="select()">
-     <hr />标签 
+     <hr>书签 
      <img src="img/search-change.svg?v=2ae7ab8" />
     </div> 
     <!-- 书签 --> 
     <div id="folder" class="folder"> 
-     <ul> 
-      <li class="folder-item col-xs-3 col-sm-2"> <a href="http://kksan.top/posts/12023/"> 
-        <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/log.png" /> 
-         <p>开发日志</p> 
-        </div> </a> </li> 
-      <li class="folder-item col-xs-3 col-sm-2"> <a href="https://www.coolapk.com"> 
-        <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/coolapk.png" /> 
-         <p>酷安</p> 
-        </div> </a> </li> 
-      <li class="folder-item col-xs-3 col-sm-2"> <a href="http://via-app.cn"> 
-        <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/via.png" /> 
-         <p>Via插件</p> 
-        </div> </a> </li> 
-      <li class="folder-item col-xs-3 col-sm-2"> <a href="https://tophub.today/"> 
-        <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/headline.png" /> 
-         <p>今日热榜</p> 
-        </div> </a> </li> 
-      <li class="folder-item col-xs-3 col-sm-2"> <a href="https://www.zhihu.com/"> 
-        <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/zhihu.png" /> 
-         <p>知乎</p> 
-        </div> </a> </li> 
-      <li class="folder-item col-xs-3 col-sm-2"> <a href="https://www.xda-developers.com/"> 
-        <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/xda.png" /> 
-         <p>XDA</p> 
-        </div> </a> </li> 
-      <li class="folder-item col-xs-3 col-sm-2"> <a href="https://www.mi.com/"> 
-        <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/mi.png" /> 
-         <p>小米商城</p> 
-        </div> </a> </li> 
-      <li class="folder-item col-xs-3 col-sm-2"> <a href="https://unsplash.com/"> 
-        <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/unsplash.png" /> 
-         <p>unsplash</p> 
-        </div> </a> </li> 
-      <li class="folder-item col-xs-3 col-sm-2"> <a href="https://sspai.com/"> 
-        <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/sspai.png" /> 
-         <p>少数派</p> 
-        </div> </a> </li> 
-      <li class="folder-item col-xs-3 col-sm-2"> <a href="https://ncov.dxy.cn/ncovh5/view/pneumonia"> 
-        <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/ding.png" /> 
-         <p>疫情跟踪</p> 
-        </div> </a> </li> 
-      <li class="folder-item col-xs-3 col-sm-2"> <a href="https://vp.fact.qq.com/home"> 
-        <div class="folder-item-box"> 
-         <img class="folder-item-img" src="img/true.png" /> 
-         <p>疫情辟谣</p> 
-        </div> </a> </li> 
-     </ul>  
+     <ul></ul>
     </div> 
     <!-- 导航引擎 --> 
     <div id="nav" class="nav"> 
-     <ul> 
-      
-     </ul> 
+     <ul></ul> 
     </div> 
+
    </div> 
   </main>
  
@@ -257,5 +207,7 @@
  
 </body>
 <script charset="UTF-8" src="js/searchSug.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+    document.write('<script src="js/main.js?v=' + now + '"><\/script\>');
+</script>
 </html>

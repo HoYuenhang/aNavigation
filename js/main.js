@@ -12,11 +12,12 @@
  * bootstrap：https://getbootstrap.com/
  *
  * 版权所有，请勿删除！
-*/
+ */
 
 var storage = window.localStorage;
 var data = storage.data;
 var night = storage.night;
+var bg_xs = storage.bg_xs;
 var li = $('.sidenav-btn');
 var blockquote = $('.blockquote');
 
@@ -43,6 +44,11 @@ if (storage.night != undefined) {
   li.css('background-color', night[3]);
   li.css('color', night[4]);
   blockquote.css('color', night[5]);
+}
+
+if (storage.bg_xs != undefined) {
+  bg_xs = bg_xs.split(',');
+  $('#main').css('background-image', bg_xs[0]);
 }
 
 // rgb to hex
@@ -316,6 +322,19 @@ $(function() {
   // 夜间模式结束
 })
 
+// 显示/干掉壁纸
+var width = $(document).width();
+$('#bg').click(function() {
+  if (width < 768) {
+    $('#main').css('background-image') == 'none' ? ($('#main').css('background-image', 'url(img/bg-xs.jpg)')) : ($('#main').css('background-image', 'none'));
+  }
+  if (width >= 768) {
+    $('#main').css('background-image') == 'none' ? ($('#main').css('background-image', 'url(img/bg.jpg)')) : ($('#main').css('background-image', 'none'));
+  }
+  var background = $('#main').css('background-image');
+  storage.bg_xs = [background];
+})
+
 //检查搜索框是否为空
 function check() {
   var o = document.getElementById("inputText");
@@ -396,4 +415,4 @@ function select() {
  * bootstrap：https://getbootstrap.com/
  *
  * 版权所有，请勿删除！
-*/
+ */

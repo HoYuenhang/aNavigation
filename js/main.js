@@ -358,28 +358,28 @@ function select() {
 }
 //导航、引擎选择器结束
 
-// 加载动画
-function toggle(elemt, speed) {
-  speed = speed || 16.6; //默认速度为16.6ms
-  elemt.style.display = "block"
-  if (elemt.style.opacity == 1 || elemt.style.opacity != null) {
-    let num = 20;
-    let timer = setInterval(function() {
-      num--;
-      elemt.style.opacity = num / 20;
-      if (num <= 0) {
-        clearInterval(timer);
-        elemt.style.display = "none"
-      }
-    }, speed);
-  }
-}
+// 加载动画相关
+// function toggle(elemt, speed) {
+//   speed = speed || 16.6; //默认速度为16.6ms
+//   elemt.style.display = "block"
+//   if (elemt.style.opacity == 1 || elemt.style.opacity != null) {
+//     let num = 20;
+//     let timer = setInterval(function() {
+//       num--;
+//       elemt.style.opacity = num / 20;
+//       if (num <= 0) {
+//         clearInterval(timer);
+//         elemt.style.display = "none"
+//       }
+//     }, speed);
+//   }
+// }
 
-document.onreadystatechange = function() {
-  if (document.readyState == "complete") {
-    toggle(loading, 40);
-  }
-}
+// document.onreadystatechange = function() {
+//   if (document.readyState == "complete") {
+//     toggle(loading, 40);
+//   }
+// }
 // 加载动画相关结束
 
 /*

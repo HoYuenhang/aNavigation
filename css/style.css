@@ -305,7 +305,7 @@ blockquote {
 }
 
 /*加载中*/
-#loading {
+/*#loading {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -339,7 +339,7 @@ blockquote {
 
 .dots div:nth-of-type(2) {
   animation-delay: -0.2s;
-}
+}*/
 
 /*动画*/
 @keyframes fade-in {
@@ -393,11 +393,12 @@ blockquote {
 	}
 }
 
-@keyframes loadingfade {/*加载中*/
+/*加载中*/
+/*@keyframes loadingfade {
   from {
     opacity: 1;
   }
   to {
     opacity: 0;
   }
-}
+}*/

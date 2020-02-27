@@ -24,7 +24,7 @@ ul {
 /*媒体查询*/
 @media (max-width: 768px) {
 	#main {
-		background-image: url(../img/bg-xs.jpg);
+		background: url(../img/bg-xs.jpg) no-repeat;
 		background-attachment: fixed;
 		background-size: cover;
 	}
@@ -32,7 +32,7 @@ ul {
 
 @media (min-width: 768px) {
 	#main {
-		background-image: url(../img/bg.jpg);
+	    background: url(../img/bg.jpg) no-repeat;
 		background-attachment: fixed;
 		background-size: cover;
 	}
@@ -89,7 +89,7 @@ ul {
 	margin-right: 20px;
 }
 
-input {
+/*input {
 	width: 85%;
 	color: white;
 	font-size: inherit;
@@ -174,7 +174,7 @@ input:focus ~ .left {
 	transform: scaleY(1);
 }
 
-/*搜索按键*/
+
 .submitButton {
 	border-radius: 0px;
 	animation: fade-in;
@@ -222,7 +222,7 @@ input:focus ~ .left {
 	animation: fade-in;
 	animation-duration: 0.7s;
 	-webkit-animation: fade-in 0.7s;
-}
+}*/
 
 /*标签*/
 .folder {

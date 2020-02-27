@@ -9,6 +9,7 @@
   <meta name="description" content="一个简单的网页导航">
   <link rel="stylesheet icon" href="img/icon.ico"/>
   <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
   <script type="text/javascript" src="js/jQuery.js"></script>
   <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/slideout.css">
@@ -16,7 +17,35 @@
     var now = new Date().getTime();
     document.write('<link href="css/style.css?v=' + now + '" rel="stylesheet" type="text/css"/>');
   </script>
-  <style type="text/css"></style>
+  <style type="text/css">
+    .inputDiv input, .inputDiv button {
+      border: none;
+      outline: none;
+      border-radius: 3px;
+    }
+    .inputDiv input {
+      width: 100%;
+      height: 42px;
+      background: #F9F0DA;
+      padding-left: 15px;
+    }
+    .inputDiv button {
+      height: 26px;
+      width: 26px;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: #F15B42;
+      cursor: pointer;
+    }
+    .inputDiv button:before {
+      content: "\f105";
+      font-family: FontAwesome;
+      color: #F9F0DA;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
   <!-- 百度统计 -->
 	<script>
 	var _hmt = _hmt || [];
@@ -161,18 +190,24 @@
      </div> 
      <!-- 搜索 --> 
      <!-- 搜索框 --> 
-     <div class="inputDiv"> 
+     <div class="inputDiv">
+      <form id="form" action="https://cn.bing.com/search" target="_self" onsubmit="return check()"> 
+      <input id="inputText" type="text" placeholder="Bing搜索..." name="q" size="30" baidusug="1" /> 
+      <button id="submitButton" class="submitButton" type="submit"></button> 
+      </form>
+    </div>
+     <!-- <div class="inputDiv"> 
       <form id="form" action="https://cn.bing.com/search" target="_self" onsubmit="return check()"> 
        <input id="inputText" type="text" placeholder="Bing搜索..." name="q" size="30" baidusug="1" /> 
        <span class="span bottom"></span> 
        <span class="span right"></span> 
        <span class="span top"></span> 
        <span class="span left"></span> 
-       <!-- 搜索按键 --> 
+       
        <button id="submitButton" class="submitButton" type="submit">搜索</button> 
       </form> 
      </div> 
-    </div> 
+    </div>  -->
     <!-- 书签、引擎选择器 --> 
     <div id="Select" class="Select" onclick="select()">
      <hr>书签 
@@ -205,7 +240,7 @@
     if (eve.target.nodeName === 'A') { slideout.close(); }
   });
 </script>
- 
+
 </body>
 <script charset="UTF-8" src="js/searchSug.js"></script>
 <script type="text/javascript">

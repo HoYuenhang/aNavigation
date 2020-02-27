@@ -32,7 +32,7 @@ ul {
 
 @media (min-width: 768px) {
 	#main {
-	    background: url(../img/bg.jpg) no-repeat;
+		background: url(../img/bg.jpg) no-repeat;
 		background-attachment: fixed;
 		background-size: cover;
 	}
@@ -89,140 +89,36 @@ ul {
 	margin-right: 20px;
 }
 
-/*input {
-	width: 85%;
-	color: white;
-	font-size: inherit;
-	font-family: inherit;
-	background-color: #8DB6CD;
-	padding: 0.35em 0.45em;
-	border: 5px solid transparent;
-	border-radius: 0px;
-	transition: background-color 0.5s ease-in-out;
-}
-
-input:focus {
-	outline: none;
-}
-
-input::placeholder {
-	color: hsla(0, 0%, 100%, 0.6);
-}
-
-.top, .bottom, .left, .right {
-	position: absolute;
-	background-color: #00868B;
-	transition: transform 0.5s ease;
-}
-
-.bottom,
-.top {
-	height: 2px;
-	left: 0;
-	right: 0;
-	transform: scaleX(0);
-}
-
-.left,
-.right {
-	width: 2px;
-	top: 0;
-	bottom: 0;
-	transform: scaleY(0);
-}
-
-.bottom {
-	bottom: 0;
-	transform-origin: bottom right;
-}
-
-input:focus ~ .bottom {
-	transform-origin: bottom left;
-	transform: scaleX(1);
-}
-
-.right {
-	right: 0;
-	transform-origin: top right;
-	transition-delay: 0.05s;
-}
-
-input:focus ~ .right {
-	transform-origin: bottom right;
-	transform: scaleY(1);
-}
-
-.top {
-	top: 0;
-	transform-origin: top left;
-	transition-delay: 0.15s;
-}
-
-input:focus ~ .top {
-	transform-origin: top right;
-	transform: scaleX(1);
-}
-
-.left {
-	left: 0;
-	transform-origin: bottom left;
-	transition-delay: 0.25s;
-}
-
-input:focus ~ .left {
-	transform-origin: top left;
-	transform: scaleY(1);
-}
-
-
-.submitButton {
-	border-radius: 0px;
-	animation: fade-in;
-	animation-duration: 0.5s;
-	-webkit-animation: fade-in 0.5s;
-	height: 43.6px;
-	width: 15%;
-	float: right;
-	z-index: 1;
-	position: relative;
-	font-size: inherit;
-	font-family: inherit;
-	color: #fff;
-	padding: 0;
-	outline: none;
+.inputDiv input, .inputDiv button {
 	border: none;
-	background-color: #00868B;
-	overflow: hidden;
-	transition: color 0.4s ease-in-out;
+	outline: none;
+	border-radius: 3px;
 }
 
-.submitButton::before {
-	content: '';
-	z-index: -1;
+.inputDiv input {
+	width: 100%;
+	height: 42px;
+	background: #F9F0DA;
+	padding-left: 15px;
+}
+
+.inputDiv button {
+	height: 26px;
+	width: 26px;
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 1em;
-	height: 1em;
-	border-radius: 50%;
-	transform-origin: center;
-	transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
-	transition: transform 0.45s ease-in-out;
-}
-
-.submitButton:hover {
+	top: 8px;
+	right: 8px;
+	background: #00868B;
 	cursor: pointer;
 }
 
-.submitButton:hover::before {
-	transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+.inputDiv button:before {
+	content: "\f105";
+	font-family: FontAwesome;
+	color: #F9F0DA;
+	font-size: 20px;
+	font-weight: bold;
 }
-
-.Select {
-	animation: fade-in;
-	animation-duration: 0.7s;
-	-webkit-animation: fade-in 0.7s;
-}*/
 
 /*标签*/
 .folder {
@@ -304,43 +200,6 @@ blockquote {
 	box-shadow: #00868B 0px 0px 5px /*rgb(153, 102, 140) 0px 0px 5px*/;
 }
 
-/*加载中*/
-/*#loading {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2000;
-    background: #ffffff;
-}
-
-.dots {
-  margin: 0 auto;
-  height: 100%;
-  width: 3.5em;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.dots div {
-  width: 0.8em;
-  height: 0.8em;
-  border-radius: 50%;
-  background-color: #fc2f70;
-  animation: loadingfade 0.8s ease-in-out alternate infinite;
-}
-
-.dots div:nth-of-type(1) {
-  animation-delay: -0.4s;
-}
-
-.dots div:nth-of-type(2) {
-  animation-delay: -0.2s;
-}*/
-
 /*动画*/
 @keyframes fade-in {
 	0% {
@@ -359,9 +218,11 @@ blockquote {
 	0% {
 		opacity: 0;
 	}
+
 	40% {
 		opacity: 0;
 	}
+
 	100% {
 		opacity: 1;
 	}
@@ -385,20 +246,12 @@ blockquote {
 	0% {
 		opacity: 0;
 	}
+
 	48% {
 		opacity: 0;
 	}
+
 	100% {
 		opacity: 1;
 	}
 }
-
-/*加载中*/
-/*@keyframes loadingfade {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}*/

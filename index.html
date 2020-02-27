@@ -17,35 +17,7 @@
     var now = new Date().getTime();
     document.write('<link href="css/style.css?v=' + now + '" rel="stylesheet" type="text/css"/>');
   </script>
-  <style type="text/css">
-    .inputDiv input, .inputDiv button {
-      border: none;
-      outline: none;
-      border-radius: 3px;
-    }
-    .inputDiv input {
-      width: 100%;
-      height: 42px;
-      background: #F9F0DA;
-      padding-left: 15px;
-    }
-    .inputDiv button {
-      height: 26px;
-      width: 26px;
-      position: absolute;
-      top: 8px;
-      right: 8px;
-      background: #F15B42;
-      cursor: pointer;
-    }
-    .inputDiv button:before {
-      content: "\f105";
-      font-family: FontAwesome;
-      color: #F9F0DA;
-      font-size: 20px;
-      font-weight: bold;
-    }
-  </style>
+  <style type="text/css"></style>
   <!-- 百度统计 -->
 	<script>
 	var _hmt = _hmt || [];
@@ -59,15 +31,6 @@
 </head>
 
 <body>
-  <!-- loading -->
-  <!-- <div id="loading" style="display: none; opacity: 0;">
-    <div class="dots">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div> -->
-
   <nav id="menu" class="menu"> 
    <blockquote class="blockquote">▎ 工具</blockquote> 
    <ul> 
@@ -178,6 +141,13 @@
     })
   </script>
    <div class="container"> 
+    <!-- 提示框 -->
+    <div id="alert" class="alert alert-info alert-dismissible" role="alert">
+      <button type="button" id="closealert" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong>有新版本啦！</strong>赶紧清除缓存刷新看下吧！更新内容可查看<a href="http://kksan.top/posts/12023/" class="alert-link">更新日志</a>。
+    </div>
+
+    <!-- 侧边栏按钮 -->
     <img class="btn-hamburger js-slideout-toggle" src="img/menu.svg" /> 
     
     <!-- 搜索盒子 --> 
@@ -196,18 +166,6 @@
       <button id="submitButton" class="submitButton" type="submit"></button> 
       </form>
     </div>
-     <!-- <div class="inputDiv"> 
-      <form id="form" action="https://cn.bing.com/search" target="_self" onsubmit="return check()"> 
-       <input id="inputText" type="text" placeholder="Bing搜索..." name="q" size="30" baidusug="1" /> 
-       <span class="span bottom"></span> 
-       <span class="span right"></span> 
-       <span class="span top"></span> 
-       <span class="span left"></span> 
-       
-       <button id="submitButton" class="submitButton" type="submit">搜索</button> 
-      </form> 
-     </div> 
-    </div>  -->
     <!-- 书签、引擎选择器 --> 
     <div id="Select" class="Select" onclick="select()">
      <hr>书签 

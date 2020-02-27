@@ -1,7 +1,7 @@
 /*
  * 作者：酷安@_小K同學
  * 项目开始日期：2020年01月26日
- * 上次修改时间：2020年02月26日
+ * 上次修改时间：2020年02月27日
  * 开发日志：https://kksan.top/posts/12023/
  *
  * 开源相关：
@@ -18,6 +18,7 @@ var storage = window.localStorage;
 var data = storage.data;
 var night = storage.night;
 var bg = storage.bg;
+var closealert = storage.closealert;
 var li = $('.sidenav-btn');
 var blockquote = $('.blockquote');
 
@@ -26,10 +27,9 @@ if (storage.data != undefined) {
   // console.log('已存在localStorage的数据：' + data); //已存在localStorage的数据
   $('#state a img').attr('src', data[0]); //头图
   $('.submitButton').css('background-color', data[1]); //按钮bgc
-  $('.submitButton').css('color', data[2]); //按钮文字color
-  $('#inputText').attr('placeholder', data[3]);
-  $('#form').attr('action', data[4]);
-  $('#inputText').attr('name', data[5]);
+  $('#inputText').attr('placeholder', data[2]);
+  $('#form').attr('action', data[3]);
+  $('#inputText').attr('name', data[4]);
   $('#Select').css('color', data[1]);
   $('.span').css('background-color', data[1]);
   $('.bdSug_wpr').css('box-shadow', data[1] + ' 0px 0px 5px');
@@ -49,6 +49,13 @@ if (storage.night != undefined) {
 if (storage.bg != undefined) {
   bg = bg.split(',');
   $('#main').css('background-image', bg[0]);
+}
+
+if (storage.closealert != undefined) {
+  closealert = closealert.split(',');
+  if (closealert[0] == '4.0.7') {
+    $('#alert').remove();
+  }
 }
 
 // rgb to hex
@@ -127,7 +134,6 @@ $(function() {
       searchlink: 'https://www.baidu.com/s',
       searchname: 'wd',
       color: '#3245df',
-      fontcolor: 'white',
       placeholder: '百度一下...'
     }, {
       name: 'google',
@@ -135,7 +141,6 @@ $(function() {
       searchlink: 'https://www.google.com/search',
       searchname: 'q',
       color: '#4285f4',
-      fontcolor: 'white',
       placeholder: '咕噜咕噜...'
     }, {
       name: 'bing',
@@ -143,7 +148,6 @@ $(function() {
       searchlink: 'https://cn.bing.com/search',
       searchname: 'q',
       color: '#00868B',
-      fontcolor: 'white',
       placeholder: 'Bing搜索...'
     }, {
       name: 'yahoo',
@@ -151,7 +155,6 @@ $(function() {
       searchlink: 'https://search.yahoo.com/search',
       searchname: 'p',
       color: '#5f01d1',
-      fontcolor: 'white',
       placeholder: 'Yahoo~'
     }, {
       name: 'magi',
@@ -159,7 +162,6 @@ $(function() {
       searchlink: 'https://magi.com/search',
       searchname: 'q',
       color: 'black',
-      fontcolor: 'white',
       placeholder: 'Mag[i]...'
     }, {
       name: 'sougou',
@@ -167,7 +169,6 @@ $(function() {
       searchlink: 'https://www.sogou.com/web',
       searchname: 'query',
       color: '#f94c18',
-      fontcolor: 'white',
       placeholder: '搜狗搜索...'
     }, {
       name: 'duckduckgo',
@@ -175,7 +176,6 @@ $(function() {
       searchlink: 'https://duckduckgo.com',
       searchname: 'q',
       color: '#de5833',
-      fontcolor: 'white',
       placeholder: '嘎嘎嘎...'
     }, {
       name: 'doge',
@@ -183,7 +183,6 @@ $(function() {
       searchlink: 'https://www.dogedoge.com/results',
       searchname: 'q',
       color: '#ffca74',
-      fontcolor: 'black',
       placeholder: '手动狗头.jpg'
     }, {
       name: 'wechat',
@@ -191,7 +190,6 @@ $(function() {
       searchlink: 'https://weixin.sogou.com/weixin',
       searchname: 'query',
       color: '#2ca43a',
-      fontcolor: 'white',
       placeholder: '搜微信文章...'
     }, {
       name: 'seeres',
@@ -199,7 +197,6 @@ $(function() {
       searchlink: 'https://seeres.com/search',
       searchname: 'q',
       color: '#414baa',
-      fontcolor: 'white',
       placeholder: 'private search...'
     }, {
       name: 'quark',
@@ -207,7 +204,6 @@ $(function() {
       searchlink: 'https://quark.sm.cn/s',
       searchname: 'q',
       color: '#6182f6',
-      fontcolor: 'white',
       placeholder: '夸克搜索...'
     }, {
       name: 'bilibili',
@@ -215,7 +211,6 @@ $(function() {
       searchlink: 'https://search.bilibili.com/all',
       searchname: 'keyword',
       color: '#e47494',
-      fontcolor: 'white',
       placeholder: 'b站是一个学习网站...'
     }, {
       name: 'github',
@@ -223,7 +218,6 @@ $(function() {
       searchlink: 'https://github.com/search',
       searchname: 'q',
       color: '#24292e',
-      fontcolor: 'white',
       placeholder: '全球最大的开源社区...'
     }, {
       name: 'toutiao',
@@ -231,7 +225,6 @@ $(function() {
       searchlink: 'https://m.toutiao.com/search',
       searchname: 'keyword',
       color: '#ed2f28',
-      fontcolor: 'white',
       placeholder: '搜今日头条...'
     }, {
       name: 'weibo',
@@ -239,7 +232,6 @@ $(function() {
       searchlink: 'https://s.weibo.com/weibo',
       searchname: 'q',
       color: '#e6162d',
-      fontcolor: 'white',
       placeholder: '搜微博...'
     }, {
       name: 'zhihu',
@@ -247,7 +239,6 @@ $(function() {
       searchlink: 'https://www.zhihu.com/search',
       searchname: 'q',
       color: '#1087eb',
-      fontcolor: 'white',
       placeholder: '我们都是有问题的人...'
     }]
   }
@@ -263,9 +254,7 @@ $(function() {
       if (id == search.data[i].name) {
         document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/" + search.data[i].name + ".png'></a>";
         $('#submitButton').css('background-color', search.data[i].color); //按钮bg
-        $('#submitButton').css('color', search.data[i].fontcolor); //按钮
         $('#Select').css('color', search.data[i].color); //选择器
-        $('.span').css('background-color', search.data[i].color); //输入框四边
         $('#nav').css('display', 'none');
         $('#folder').css('display', 'block');
         document.getElementById("Select").innerHTML = "<hr>书签 <img src='img/search-change.svg?v=2ae7ab8'>";
@@ -277,11 +266,10 @@ $(function() {
         //存入用户数据
         var searchPho = $('#state a img').attr("src"); //搜索引擎头图
         var color = rgb2hex($('.submitButton').css('background-color')); //搜索按钮颜色和搜索框四边颜色
-        var fontcolor = rgb2hex($('.submitButton').css('color')); //搜索按钮文字颜色
         var searchL = $('#form').attr("action"); //searchlink
         var searchN = $('#inputText').attr("name"); //searchname
         var placeholder = $('#inputText').attr('placeholder');
-        storage.data = [searchPho, color, fontcolor, placeholder, searchL, searchN] //记录用户数据
+        storage.data = [searchPho, color, placeholder, searchL, searchN] //记录用户数据
         // console.log('新存入localStorage的数据：' + storage.data); //新存入localStorage的数据
         break;
       }
@@ -320,6 +308,14 @@ $(function() {
     // localStorage.clear()
   })
   // 夜间模式结束
+
+  // 更新提示框
+  $('#closealert').click(function() {
+    var version = '4.0.7';
+    localStorage.closealert = [version];
+  })
+  // 更新提示框结束
+
 })
 
 // 显示/干掉壁纸
@@ -377,34 +373,10 @@ function select() {
 }
 //导航、引擎选择器结束
 
-// 加载动画相关
-// function toggle(elemt, speed) {
-//   speed = speed || 16.6; //默认速度为16.6ms
-//   elemt.style.display = "block"
-//   if (elemt.style.opacity == 1 || elemt.style.opacity != null) {
-//     let num = 20;
-//     let timer = setInterval(function() {
-//       num--;
-//       elemt.style.opacity = num / 20;
-//       if (num <= 0) {
-//         clearInterval(timer);
-//         elemt.style.display = "none"
-//       }
-//     }, speed);
-//   }
-// }
-
-// document.onreadystatechange = function() {
-//   if (document.readyState == "complete") {
-//     toggle(loading, 40);
-//   }
-// }
-// 加载动画相关结束
-
 /*
  * 作者：酷安@_小K同學
  * 项目开始日期：2020年01月26日
- * 上次修改时间：2020年02月26日
+ * 上次修改时间：2020年02月27日
  * 开发日志：https://kksan.top/posts/12023/
  *
  * 开源相关：

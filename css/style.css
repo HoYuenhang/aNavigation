@@ -28,6 +28,10 @@ ul {
 		background-attachment: fixed;
 		background-size: cover;
 	}
+
+	.inputDiv {
+		margin: 30px 20px 0;
+	}
 }
 
 @media (min-width: 768px) {
@@ -35,6 +39,10 @@ ul {
 		background: url(../img/bg.jpg) no-repeat;
 		background-attachment: fixed;
 		background-size: cover;
+	}
+
+	.inputDiv {
+		margin: 30px 120px 0;
 	}
 }
 
@@ -82,11 +90,8 @@ ul {
 	animation: fade-in;
 	animation-duration: 0.5s;
 	-webkit-animation: fade-in 0.5s;
-	margin-top: 30px;
 	position: relative;
-	margin-left: 20px;
 	border-radius: 0px;
-	margin-right: 20px;
 }
 
 .inputDiv input, .inputDiv button {
@@ -100,11 +105,23 @@ ul {
 	height: 42px;
 	background: #F9F0DA;
 	padding-left: 15px;
+	transition: box-shadow 0.3s;
+	-moz-transition: box-shadow 0.3s;
+ /* Firefox */
+	-webkit-transition: box-shadow 0.3s;
+ /* Safari and Chrome */
+	-o-transition: box-shadow 0.3s;
+ /* Opera */
+}
+
+.inputDiv input:focus {
+	box-shadow: 0px 0px 0px 3px #F9F0DA;
 }
 
 .inputDiv button {
 	height: 26px;
 	width: 26px;
+	padding: 2px;
 	position: absolute;
 	top: 8px;
 	right: 8px;
@@ -220,34 +237,6 @@ blockquote {
 	}
 
 	40% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
-}
-
-@keyframes fade-in-delay {
-  
-	0% {
-		opacity: 0;
-	}/*初始状态 透明度为0*/  
-	48% {
-		opacity: 0;
-	}/*过渡状态 透明度为0*/  
-	100% {
-		opacity: 1;
-	}/*结束状态 透明度为1*/
-}
-
-@-webkit-keyframes fade-in-delay {
-/*针对webkit内核*/  
-	0% {
-		opacity: 0;
-	}
-
-	48% {
 		opacity: 0;
 	}
 

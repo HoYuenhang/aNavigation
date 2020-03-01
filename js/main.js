@@ -406,8 +406,6 @@ class jsonpDemo {
     this.list.innerHTML = str;
     if (str) { //有返回才显示#searchlist
       $('#searchlist').css("display", "block");
-    } else if (!str) {
-      $('#searchlist').css("display", "none");
     }
     $(document).click(function() { //点击其他地方隐藏#searchlist
       $('#searchlist').css("display", "none");

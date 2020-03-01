@@ -1,15 +1,18 @@
 /*
+ * ALL RIGHTS RESERVED.
+ *
  * 作者：酷安@_小K同學
  * 项目开始日期：2020年01月26日
- * 上次修改时间：2020年02月27日
- * 开发日志：https://kksan.top/posts/12023/
+ * 上次修改时间：2020年03月01日
+ * 开发日志：https://kksan.top/posts/12023
  *
  * 开源相关：
  * Github：https://github.com/Jackie1123/aNavigation
  * CSSFX：https://cssfx.netlify.com
- * jQuery：https://jquery.com/
- * slideout：https://slideout.js.org/
- * bootstrap：https://getbootstrap.com/
+ * jQuery：https://jquery.com
+ * slideout：https://slideout.js.org
+ * bootstrap：https://getbootstrap.com
+ * font-awesome：https://fontawesome.com
  *
  * 版权所有，请勿删除！
  */
@@ -32,7 +35,6 @@ if (storage.data != undefined) {
   $('#inputText').attr('name', data[4]);
   $('#Select').css('color', data[1]);
   $('.span').css('background-color', data[1]);
-  $('.bdSug_wpr').css('box-shadow', data[1] + ' 0px 0px 5px');
 }
 
 if (storage.night != undefined) {
@@ -53,7 +55,7 @@ if (storage.bg != undefined) {
 
 if (storage.closealert != undefined) {
   closealert = closealert.split(',');
-  if (closealert[0] == '4.0.7') {
+  if (closealert[0] == '4.0.8') {
     $('#alert').remove();
   }
 }
@@ -261,7 +263,6 @@ $(function() {
         $("#inputText").attr("placeholder", search.data[i].placeholder);
         $("#form").attr("action", search.data[i].searchlink);
         $("#inputText").attr("name", search.data[i].searchname);
-        $(".bdSug_wpr").css('box-shadow', search.data[i].color + ' 0px 0px 5px'); //提示框
 
         //存入用户数据
         var searchPho = $('#state a img').attr("src"); //搜索引擎头图
@@ -311,7 +312,7 @@ $(function() {
 
   // 更新提示框
   $('#closealert').click(function() {
-    var version = '4.0.7';
+    var version = '4.0.8';
     localStorage.closealert = [version];
   })
   // 更新提示框结束
@@ -371,20 +372,67 @@ function select() {
     document.getElementById("Select").innerHTML = "<hr>书签 <img src='img/search-change.svg?v=2ae7ab8'>";
   }
 }
+
+// 搜索提示词
+class jsonpDemo {
+  constructor() {
+    this.search = inputText;
+    this.list = list;
+    this.body = document.body;
+    this.init();
+  };
+  init() {
+    this.watchInput();
+  };
+  watchInput() {
+    this.search.onkeyup = () => {
+      if (this.search.value.length == 0) {
+        this.list.innerHTML = '';
+        return;
+      }
+      const script = document.createElement('script');
+      script.src = "http://www.baidu.com/su?wd=" + this.search.value + "&cb=jsonp.showMsg";
+      this.body.appendChild(script);
+      this.body.removeChild(script);
+    }
+  };
+  showMsg(msg) {
+    var href = $('#form').attr('action');
+    var name = $('#inputText').attr('name');
+    var str = '';
+    for (var i = 0; i < msg.s.length; i++) {
+      str += '<a href=' + href + '?' + name + '=' + msg.s[i] + '><li><span>' + (i + 1) + '</span>' + msg.s[i] + '</li></a>';
+    }
+    this.list.innerHTML = str;
+    if (str) { //有返回才显示#searchlist
+      $('#searchlist').css("display", "block");
+    } else if (!str) {
+      $('#searchlist').css("display", "none");
+    }
+    $(document).click(function() { //点击其他地方隐藏#searchlist
+      $('#searchlist').css("display", "none");
+    });
+  }
+}
+const jsonp = new jsonpDemo();
+
 //导航、引擎选择器结束
 
 /*
+ * ALL RIGHTS RESERVED.
+ *
  * 作者：酷安@_小K同學
  * 项目开始日期：2020年01月26日
- * 上次修改时间：2020年02月27日
- * 开发日志：https://kksan.top/posts/12023/
+ * 上次修改时间：2020年03月01日
+ * 开发日志：https://kksan.top/posts/12023
  *
  * 开源相关：
  * Github：https://github.com/Jackie1123/aNavigation
  * CSSFX：https://cssfx.netlify.com
- * jQuery：https://jquery.com/
- * slideout：https://slideout.js.org/
- * bootstrap：https://getbootstrap.com/
+ * jQuery：https://jquery.com
+ * slideout：https://slideout.js.org
+ * bootstrap：https://getbootstrap.com
+ * font-awesome：https://fontawesome.com
  *
  * 版权所有，请勿删除！
  */

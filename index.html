@@ -16,18 +16,15 @@
   <script>
     var now = new Date().getTime();
     document.write('<link href="css/style.css?v=' + now + '" rel="stylesheet" type="text/css"/>');
+    // 百度统计
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?cb801bf75a59bf9ae0d416685cd39811";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
   </script>
-  <style type="text/css"></style>
-  <!-- 百度统计 -->
-	<script>
-	var _hmt = _hmt || [];
-	(function() {
-	  var hm = document.createElement("script");
-	  hm.src = "https://hm.baidu.com/hm.js?cb801bf75a59bf9ae0d416685cd39811";
-	  var s = document.getElementsByTagName("script")[0]; 
-	  s.parentNode.insertBefore(hm, s);
-	})();
-	</script>
 </head>
 
 <body>
@@ -140,10 +137,10 @@
       container: "tp-weather-widget"
     })
   </script>
+  
    <div class="container">
     <!-- 侧边栏按钮 -->
     <img class="btn-hamburger js-slideout-toggle" src="img/menu.svg" /> 
-    
     <!-- 搜索盒子 --> 
     <div class="search-box"> 
      <!-- logo --> 
@@ -151,8 +148,8 @@
       <div id="state"> 
        <a href="folder://"><img id="img" src="img/bing.png" /></a> 
       </div> 
-     </div> 
-     <!-- 搜索 --> 
+     </div>
+
      <!-- 搜索框 --> 
      <div class="inputDiv">
       <form id="form" action="https://cn.bing.com/search" target="_self" onsubmit="return check()"> 
@@ -163,49 +160,6 @@
       <div id="searchlist">
         <ul id="list"></ul>
       </div>
-      <script>
-        class jsonpDemo {
-            constructor() {
-                this.search = inputText;
-                this.list = list;
-                this.body = document.body;
-                this.init();
-            };
-            init() {
-                this.watchInput();
-            };
-            watchInput() {
-                this.search.onkeyup = () => {
-                    if (this.search.value.length == 0) {
-                        this.list.innerHTML = '';
-                        return;
-                    }
-                    const script = document.createElement('script');
-                    script.src = "http://www.baidu.com/su?wd=" + this.search.value + "&cb=jsonp.showMsg";
-                    this.body.appendChild(script);
-                    this.body.removeChild(script);
-                }
-            };
-            showMsg(msg) {
-                var href = $('#form').attr('action');
-                var name = $('#inputText').attr('name');
-                var str = '';
-                for (var i = 0; i < msg.s.length; i++) {
-                    str += '<a href=' + href + '?' + name + '=' + msg.s[i] + '><li><span>' + (i+1) + '</span>' + msg.s[i] + '</li></a>';
-                }
-                this.list.innerHTML = str;
-                if (str) {//有返回才显示#searchlist
-                  $('#searchlist').css("display", "block");
-                } else if (!str) {
-                  $('#searchlist').css("display", "none");
-                }
-                $(document).click(function() {//点击其他地方隐藏#searchlist
-                 $('#searchlist').css("display", "none");
-               });
-            }
-        }
-        const jsonp = new jsonpDemo();
-    </script>
     </div>
 
     <!-- 书签、引擎选择器 --> 
@@ -220,12 +174,14 @@
     <!-- 导航引擎 --> 
     <div id="nav" class="nav"> 
      <ul></ul> 
-    </div> 
-    <!-- 提示框 -->
+    </div>
+
+    <!-- 更新提示框 -->
     <div id="alert" class="alert alert-info alert-dismissible" role="alert">
       <button type="button" id="closealert" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       <strong>有新版本啦！</strong>赶紧清除缓存刷新看下吧！更新内容可查看<a href="http://kksan.top/posts/12023/" class="alert-link">更新日志</a>。
     </div>
+
    </div> 
   </main>
  
@@ -236,17 +192,18 @@
     'menu': document.getElementById('menu'),
     'padding': 290,
     'tolerance': 70
-   });
+  });
   document.querySelector('.js-slideout-toggle').addEventListener('click', function() {
     slideout.toggle();
-   });
+  });
   document.querySelector('.menu').addEventListener('click', function(eve) {
-    if (eve.target.nodeName === 'A') { slideout.close(); }
+    if (eve.target.nodeName === 'A') {
+      slideout.close();
+    }
   });
 </script>
 
 </body>
-<!-- <script charset="UTF-8" src="js/searchSug.js"></script> -->
 <script type="text/javascript">
     document.write('<script src="js/main.js?v=' + now + '"><\/script\>');
 </script>

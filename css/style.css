@@ -40,7 +40,7 @@ ul {
 	}
 
 	.inputDiv {
-		margin: 30px 120px 0;
+		margin: 30px 200px 0;
 	}
 }
 
@@ -84,28 +84,28 @@ ul {
 	padding: 10px;
 }
 
-#searchlist ul li{
+#searchlist ul a li{
 	color: #777;
 	text-align: left;
 	padding: 8px 0;
 	border-radius:5px;
 }
 
-#searchlist ul li:hover{
+#searchlist ul a li:hover{
 	color: lightcoral;
 	background-color: #DCDCDC;
 }
 
-#searchlist ul li span{
+#searchlist ul a li span{
 	-webkit-tap-highlight-color: #00000000;
     list-style: none;
     cursor: pointer;
     box-sizing: border-box;
     display: inline-block;
     width: 16px;
-    height: 15px;
+    height: 16px;
     font-size: 16px;
-    line-height: 15px;
+    line-height: 16px;
     text-align: center;
     background: lightblue;
     margin-right: 10px;
@@ -146,17 +146,14 @@ ul {
 	height: 42px;
 	background: #F9F0DA;
 	padding-left: 15px;
-	transition: box-shadow 0.3s;
-	-moz-transition: box-shadow 0.3s;
- /* Firefox */
-	-webkit-transition: box-shadow 0.3s;
- /* Safari and Chrome */
-	-o-transition: box-shadow 0.3s;
- /* Opera */
+	transition: box-shadow 0.2s;
+	-moz-transition: box-shadow 0.2s;/* Firefox */
+	-webkit-transition: box-shadow 0.2s;/* Safari and Chrome */
+	-o-transition: box-shadow 0.2s;/* Opera */
 }
 
 .inputDiv input:focus {
-	box-shadow: 0px 0px 0px 3px #F9F0DA;
+	box-shadow: 0px 0px 0px 4px #F9F0DA;
 }
 
 .inputDiv button {
@@ -186,6 +183,10 @@ ul {
 	width: 100%;
 	margin-top: 10px;
 	display: block;
+}
+
+.folder-item{
+	margin-bottom: 15px;
 }
 
 .folder-item-box , .folder-item-img {

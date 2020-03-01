@@ -8,9 +8,7 @@ span {
 }
 
 li {
-	width: 50px;
 	list-style: none;
-	margin-bottom: 15px;
 }
 
 ul {
@@ -70,6 +68,31 @@ ul {
 	animation-duration: 0.2s;
 	-webkit-animation: fade-in 0.2s;
 	width: 300px;
+}
+
+/*搜索提示词*/
+#searchlist{
+	width:100%;
+	position: absolute;
+	background-color: rgba(249,240,218,0.9);
+	border-radius:5px;
+	margin-top:10px;
+	display: none;
+}
+
+#searchlist ul{
+	padding: 10px;
+}
+
+#searchlist ul li{
+	color: #777;
+	padding: 8px 0;
+	border-radius:5px;
+}
+
+#searchlist ul li:hover{
+	color: lightcoral;
+	background-color: #DCDCDC;
 }
 
 /*标签、导航选择器*/

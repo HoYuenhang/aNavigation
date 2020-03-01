@@ -157,9 +157,57 @@
      <div class="inputDiv">
       <form id="form" action="https://cn.bing.com/search" target="_self" onsubmit="return check()"> 
       <input id="inputText" type="text" placeholder="Bing搜索..." name="q" size="30" baidusug="1" /> 
-      <button id="submitButton" class="submitButton" type="submit"></button> 
+      <button id="submitButton" class="submitButton" type="submit"></button>
       </form>
+      <!-- 搜索提示词 -->
+      <div id="searchlist">
+        <ul id="list"></ul>
+      </div>
+      <script>
+        class jsonpDemo {
+            constructor() {
+                this.search = inputText;
+                this.list = list;
+                this.body = document.body;
+                this.init();
+            };
+            init() {
+                this.watchInput();
+            };
+            watchInput() {
+                this.search.onkeyup = () => {
+                    if (this.search.value.length == 0) {
+                        this.list.innerHTML = '';
+                        return;
+                    }
+                    const script = document.createElement('script');
+                    script.src = "http://www.baidu.com/su?wd=" + this.search.value + "&cb=jsonp.showMsg";
+                    this.body.appendChild(script);
+                    this.body.removeChild(script);
+                }
+            };
+            showMsg(msg) {
+                var href = $('#form').attr('action');
+                var name = $('#inputText').attr('name');
+                var str = '';
+                for (var i = 0; i < msg.s.length; i++) {
+                    str += '<a href=' + href + '?' + name + '=' + msg.s[i] + '><li>' + msg.s[i] + '</li></a>';
+                }
+                this.list.innerHTML = str;
+                if (str) {//有返回才显示#searchlist
+                  $('#searchlist').css("display", "block");
+                } else if (!str) {
+                  $('#searchlist').css("display", "none");
+                }
+                $(document).click(function() {//点击其他地方隐藏#searchlist
+                 $('#searchlist').css("display", "none");
+               });
+            }
+        }
+        const jsonp = new jsonpDemo();
+    </script>
     </div>
+
     <!-- 书签、引擎选择器 --> 
     <div id="Select" class="Select" onclick="select()">
      <hr>书签 
@@ -198,7 +246,7 @@
 </script>
 
 </body>
-<script charset="UTF-8" src="js/searchSug.js"></script>
+<!-- <script charset="UTF-8" src="js/searchSug.js"></script> -->
 <script type="text/javascript">
     document.write('<script src="js/main.js?v=' + now + '"><\/script\>');
 </script>

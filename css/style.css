@@ -86,6 +86,7 @@ ul {
 
 #searchlist ul li{
 	color: #777;
+	text-align: left;
 	padding: 8px 0;
 	border-radius:5px;
 }
@@ -93,6 +94,23 @@ ul {
 #searchlist ul li:hover{
 	color: lightcoral;
 	background-color: #DCDCDC;
+}
+
+#searchlist ul li span{
+	-webkit-tap-highlight-color: #00000000;
+    list-style: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    font-size: 16px;
+    line-height: 15px;
+    text-align: center;
+    background: lightblue;
+    margin-right: 10px;
+    border-radius: 10px;
+    color: #999;
 }
 
 /*标签、导航选择器*/

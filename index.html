@@ -191,7 +191,7 @@
                 var name = $('#inputText').attr('name');
                 var str = '';
                 for (var i = 0; i < msg.s.length; i++) {
-                    str += '<a href=' + href + '?' + name + '=' + msg.s[i] + '><li>' + msg.s[i] + '</li></a>';
+                    str += '<a href=' + href + '?' + name + '=' + msg.s[i] + '><li><span>' + (i+1) + '</span>' + msg.s[i] + '</li></a>';
                 }
                 this.list.innerHTML = str;
                 if (str) {//有返回才显示#searchlist

@@ -391,7 +391,7 @@ class jsonpDemo {
         return;
       }
       const script = document.createElement('script');
-      script.src = "http://www.baidu.com/su?wd=" + this.search.value + "&cb=jsonp.showMsg";
+      script.src = "https://www.baidu.com/su?wd=" + this.search.value + "&cb=jsonp.showMsg";
       this.body.appendChild(script);
       this.body.removeChild(script);
     }

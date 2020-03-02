@@ -9,9 +9,11 @@
 ------------
 
 **桌面端**
+
 ![桌面端预览](https://s2.ax1x.com/2020/03/02/3RYo4A.gif)
 
-**端动端**
+**移动端**
+
 ![移动端预览](https://s2.ax1x.com/2020/03/02/3RaORs.gif)
 
 
@@ -20,8 +22,12 @@
 ------------
 
 Bootstrap：[https://getbootstrap.com](https://getbootstrap.com "https://getbootstrap.com")
+
 CSSFX：[https://cssfx.netlify.com](https://cssfx.netlify.com "https://cssfx.netlify.com")
+
 jQuery：[https://jquery.com](https://jquery.com "https://jquery.com")
 slideout：[https://slideout.js.org](https://slideout.js.org "https://slideout.js.org")
+
 font-awesome：[https://fontawesome.com](https://fontawesome.com "https://fontawesome.com")
+
 知心天气：[https://www.seniverse.com/](https://www.seniverse.com/ "https://www.seniverse.com/")

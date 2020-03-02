@@ -3,7 +3,7 @@
  *
  * 作者：酷安@_小K同學
  * 项目开始日期：2020年01月26日
- * 上次修改时间：2020年03月01日
+ * 上次修改时间：2020年03月02日
  * 开发日志：https://kksan.top/posts/12023
  *
  * 开源相关：
@@ -401,7 +401,9 @@ class jsonpDemo {
     var name = $('#inputText').attr('name');
     var str = '';
     for (var i = 0; i < msg.s.length; i++) {
-      str += '<a href=' + href + '?' + name + '=' + msg.s[i] + '><li><span>' + (i + 1) + '</span>' + msg.s[i] + '</li></a>';
+      var sk = new Array();
+      sk[i] = msg.s[i].replace(/\s*/g, ''); //去掉关键字空格
+      str += '<a href=' + href + '?' + name + '=' + sk[i] + '><li><span>' + (i + 1) + '</span>' + msg.s[i] + '</li></a>';
     }
     this.list.innerHTML = str;
     if (str) { //有返回才显示#searchlist
@@ -421,7 +423,7 @@ const jsonp = new jsonpDemo();
  *
  * 作者：酷安@_小K同學
  * 项目开始日期：2020年01月26日
- * 上次修改时间：2020年03月01日
+ * 上次修改时间：2020年03月02日
  * 开发日志：https://kksan.top/posts/12023
  *
  * 开源相关：

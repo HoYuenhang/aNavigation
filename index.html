@@ -188,10 +188,16 @@
       slideout.close();
     }
   });
+  $(document).click(function(e) {
+    var classid = $(e.target).attr("class");
+    if (classid == 'panel slideout-panel slideout-panel-left') {
+      slideout.close();
+    }
+  });
 </script>
 
 </body>
 <script type="text/javascript">
-    document.write('<script src="js/main.js?v=' + now + '"><\/script\>');
+  document.write('<script src="js/main.js?v=' + now + '"><\/script\>');
 </script>
 </html>

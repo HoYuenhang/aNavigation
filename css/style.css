@@ -175,6 +175,16 @@ ul {
 	font-weight: bold;
 }
 
+/*侧边栏按钮*/
+.slidebtn {
+	border-radius: 50%;
+	transition: background-color 0.2s;
+}
+
+.slidebtn:hover {
+	background-color: #4A708B;
+}
+
 /*标签*/
 .folder {
 	animation: fade-in;

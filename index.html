@@ -189,8 +189,9 @@
     }
   });
   $(document).click(function(e) {
-    var classid = $(e.target).attr("class");
-    if (classid == 'panel slideout-panel slideout-panel-left') {
+    var Class = $(e.target).attr("class");
+    var Id = $(e.target).attr("id");
+    if (Class == 'panel slideout-panel slideout-panel-left' || Class == 'folder-item col-xs-3 col-sm-2' || Class == 'search-box' || Id == 'inputText' || Id == 'logo') {
       slideout.close();
     }
   });

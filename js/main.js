@@ -407,7 +407,7 @@ window.SeniverseWeatherWidget('show', {
 })
 
 // 搜索提示词
-class jsonpDemo {
+class searchHint {
   constructor() {
     this.search = inputText;
     this.list = list;
@@ -453,7 +453,7 @@ class jsonpDemo {
     });
   }
 }
-const jsonp = new jsonpDemo();
+const jsonp = new searchHint();
 
 //导航、引擎选择器结束
 

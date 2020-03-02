@@ -182,7 +182,7 @@ ul {
 }
 
 .slidebtn:hover {
-	background-color: #4A708B;
+	background-color: rgba(211,211,211,0.2);
 }
 
 /*标签*/

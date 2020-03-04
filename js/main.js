@@ -322,12 +322,7 @@ $(function() {
 // 显示/干掉壁纸
 var width = $(document).width();
 $('#bg').click(function() {
-  if (width < 768) {
-    $('#main').css('background-image') == 'none' ? ($('#main').css('background-image', 'url(img/bg-xs.jpg)')) : ($('#main').css('background-image', 'none'));
-  }
-  if (width >= 768) {
-    $('#main').css('background-image') == 'none' ? ($('#main').css('background-image', 'url(img/bg.jpg)')) : ($('#main').css('background-image', 'none'));
-  }
+  width < 768 ? ($('#main').css('background-image') == 'none' ? ($('#main').css('background-image', 'url(img/bg-xs.jpg)')) : ($('#main').css('background-image', 'none'))) : $('#main').css('background-image') == 'none' ? ($('#main').css('background-image', 'url(img/bg.jpg)')) : ($('#main').css('background-image', 'none'));
   var background = $('#main').css('background-image');
   storage.bg = [background];
 })
@@ -362,15 +357,7 @@ if (time < 5) {
 
 //导航、引擎选择器
 function select() {
-  if ($('#folder').css('display') == 'block') {
-    $('#folder').css('display', 'none');
-    $('#nav').css('display', 'block');
-    document.getElementById("Select").innerHTML = "<hr>搜索引擎 <img src='img/search-change.svg?v=2ae7ab8'>";
-  } else if ($('#nav').css('display') == 'block') {
-    $('#nav').css('display', 'none');
-    $('#folder').css('display', 'block');
-    document.getElementById("Select").innerHTML = "<hr>书签 <img src='img/search-change.svg?v=2ae7ab8'>";
-  }
+  $('#folder').css('display') == 'block' ? ($('#folder').css('display', 'none'), $('#nav').css('display', 'block'), document.getElementById("Select").innerHTML = "<hr>搜索引擎 <img src='img/search-change.svg?v=2ae7ab8'>") : ($('#nav').css('display', 'none'), $('#folder').css('display', 'block'), document.getElementById("Select").innerHTML = "<hr>书签 <img src='img/search-change.svg?v=2ae7ab8'>");
 }
 
 // 天气插件

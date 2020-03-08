@@ -3,7 +3,7 @@
  *
  * 作者：酷安@_小K同學
  * 项目开始日期：2020年01月26日
- * 上次修改时间：2020年03月02日
+ * 上次修改时间：2020年03月08日
  * 开发日志：https://kksan.top/posts/12023
  *
  * 开源相关：
@@ -55,7 +55,7 @@ if (storage.bg != undefined) {
 
 if (storage.closealert != undefined) {
   closealert = closealert.split(',');
-  if (closealert[0] == '4.0.8') {
+  if (closealert[0] == '4.0.9') {
     $('#alert').remove();
   }
 }
@@ -166,6 +166,13 @@ $(function() {
       color: 'black',
       placeholder: 'Mag[i]...'
     }, {
+      name: 'miji',
+      icon: 'img/miji-xs.png',
+      searchlink: 'https://mijisou.com/',
+      searchname: 'q',
+      color: '#575757',
+      placeholder: '不追踪你的搜索引擎...'
+    }, {
       name: 'sougou',
       icon: 'img/sougou-xs.png',
       searchlink: 'https://www.sogou.com/web',
@@ -207,6 +214,20 @@ $(function() {
       searchname: 'q',
       color: '#6182f6',
       placeholder: '夸克搜索...'
+    }, {
+      name: 'taobao',
+      icon: 'img/taobao-xs.png',
+      searchlink: 'https://s.taobao.com/search',
+      searchname: 'q',
+      color: '#FF5B00',
+      placeholder: '淘，我喜欢...'
+    }, {
+      name: 'jingdong',
+      icon: 'img/jingdong-xs.png',
+      searchlink: 'https://search.jd.com/Search',
+      searchname: 'keyword',
+      color: '#F30213',
+      placeholder: '多，快，好，省...'
     }, {
       name: 'bilibili',
       icon: 'img/bilibili-xs.png',
@@ -312,7 +333,7 @@ $(function() {
 
   // 更新提示框
   $('#closealert').click(function() {
-    var version = '4.0.8';
+    var version = '4.0.9';
     localStorage.closealert = [version];
   })
   // 更新提示框结束
@@ -449,7 +470,7 @@ const jsonp = new searchHint();
  *
  * 作者：酷安@_小K同學
  * 项目开始日期：2020年01月26日
- * 上次修改时间：2020年03月02日
+ * 上次修改时间：2020年03月08日
  * 开发日志：https://kksan.top/posts/12023
  *
  * 开源相关：

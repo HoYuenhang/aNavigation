@@ -49,6 +49,23 @@ ul {
 	background-color: #fff
 }
 
+#menu::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 10px;
+    scrollbar-arrow-color:red;
+}
+#menu::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+    scrollbar-arrow-color:red;
+}
+#menu::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+}
+
 /*搜索盒子*/
 .search-box {
 	margin-top: 20px;
@@ -145,6 +162,7 @@ ul {
 	width: 100%;
 	height: 42px;
 	background: #F9F0DA;
+	color: #575757;
 	padding-left: 15px;
 	transition: box-shadow 0.2s;
 	-moz-transition: box-shadow 0.2s;/* Firefox */

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title id="title"></title>
   <meta name="keywords" content="网页导航">
-  <meta name="description" content="一个简单的网页导航">
+  <meta name="description" content="单纯就是一个导航">
   <link rel="stylesheet icon" href="img/icon.ico"/>
   <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -17,8 +17,7 @@
     var now = new Date().getTime();
     document.write('<link href="css/style.css?v=' + now + '" rel="stylesheet" type="text/css"/>');
     // 百度统计
-    var _hmt = _hmt || [];
-    (function() {
+    var _hmt = _hmt || []; (function() {
       var hm = document.createElement("script");
       hm.src = "https://hm.baidu.com/hm.js?cb801bf75a59bf9ae0d416685cd39811";
       var s = document.getElementsByTagName("script")[0];
@@ -26,7 +25,6 @@
     })();
   </script>
 </head>
-
 <body>
   <nav id="menu" class="menu"> 
    <blockquote class="blockquote">▎ 工具</blockquote> 
@@ -124,8 +122,9 @@
   <main id="main" class="panel">
   <!-- 天气 -->
   <div id="tp-weather-widget"></div>
-  
+   <!-- 主容器 -->
    <div class="container">
+
     <!-- 侧边栏按钮 -->
     <img class="slidebtn btn-hamburger js-slideout-toggle" src="img/menu.svg" /> 
     <!-- 搜索盒子 --> 
@@ -158,6 +157,7 @@
     <div id="folder" class="folder"> 
      <ul></ul>
     </div> 
+
     <!-- 导航引擎 --> 
     <div id="nav" class="nav"> 
      <ul></ul> 
@@ -180,10 +180,12 @@
     'padding': 290,
     'tolerance': 70
   });
-  document.querySelector('.js-slideout-toggle').addEventListener('click', function() {
+  document.querySelector('.js-slideout-toggle').addEventListener('click',
+  function() {
     slideout.toggle();
   });
-  document.querySelector('.menu').addEventListener('click', function(eve) {
+  document.querySelector('.menu').addEventListener('click',
+  function(eve) {
     if (eve.target.nodeName === 'A') {
       slideout.close();
     }

@@ -263,6 +263,13 @@ $(function() {
       searchname: 'q',
       color: '#1087eb',
       placeholder: '我们都是有问题的人...'
+    }, {
+      name: 'kuaidi',
+      icon: 'img/kuaidi-xs.png',
+      searchlink: 'https://m.kuaidi100.com/result.jsp',
+      searchname: 'nu',
+      color: '#317EE7',
+      placeholder: '搜快递...'
     }]
   }
   for (var i = 0; i < search.data.length; i++) { //添加搜索按钮

@@ -266,6 +266,10 @@ blockquote {
  /*标签延迟0.3s显示*/
 }
 
+.sidenav-btn:hover {
+	background-color: lightgray;
+}
+
 .sidenav-btn p {
 	margin: 0;
 	font-size: 10px;

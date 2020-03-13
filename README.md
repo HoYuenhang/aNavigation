@@ -16,11 +16,11 @@
 
 **桌面端**
 
-![桌面端预览](https://s2.ax1x.com/2020/03/02/3RYo4A.gif)
+![桌面端预览](https://s1.ax1x.com/2020/03/13/8uvb2d.png)
 
 **移动端**
 
-![移动端预览](https://s2.ax1x.com/2020/03/02/3RaORs.gif)
+![移动端预览](https://s1.ax1x.com/2020/03/13/8uvs5F.jpg)
 
 
 #### 开源相关

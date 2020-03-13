@@ -20,7 +20,7 @@
 
 **移动端**
 
-![移动端预览](https://s1.ax1x.com/2020/03/13/8uvs5F.jpg)
+<img style="width: 50%;" src="https://s1.ax1x.com/2020/03/13/8uvs5F.jpg">
 
 
 #### 开源相关

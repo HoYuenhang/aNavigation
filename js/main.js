@@ -3,7 +3,7 @@
  *
  * 作者：酷安@_小K同學
  * 项目开始日期：2020年01月26日
- * 上次修改时间：2020年03月08日
+ * 上次修改时间：2020年03月13日
  * 开发日志：https://kksan.top/posts/12023
  *
  * 开源相关：
@@ -55,7 +55,7 @@ if (storage.bg != undefined) {
 
 if (storage.closealert != undefined) {
   closealert = closealert.split(',');
-  if (closealert[0] == '4.0.9') {
+  if (closealert[0] == '4.1.0') {
     $('#alert').remove();
   }
 }
@@ -77,51 +77,91 @@ $(function() {
     data: [{
       name: '开发日志',
       link: 'http://kksan.top/posts/12023/',
+      box_shadow: '#F18033',
       icon: 'img/log.png',
     }, {
       name: '酷安',
       link: 'https://www.coolapk.com',
+      box_shadow: '#11B063',
       icon: 'img/coolapk.png',
     }, {
       name: 'Via插件',
       link: 'http://via-app.cn',
+      box_shadow: '#FA7199',
       icon: 'img/via.png',
     }, {
       name: '今日热榜',
       link: 'https://tophub.today/',
+      box_shadow: '#F2584A',
       icon: 'img/headline.png',
     }, {
       name: '知乎',
       link: 'https://www.zhihu.com/',
+      box_shadow: '#0078D8',
       icon: 'img/zhihulogo.png',
-    }, {
-      name: 'XDA',
-      link: 'https://www.xda-developers.com/',
-      icon: 'img/xda.png',
     }, {
       name: '小米商城',
       link: 'https://www.mi.com/',
+      box_shadow: '#F57923',
       icon: 'img/mi.png',
     }, {
       name: 'unsplash',
       link: 'https://unsplash.com/',
+      box_shadow: '#2C2C2C',
       icon: 'img/unsplash.png',
+    }, {
+      name: '豆瓣',
+      link: 'https://www.douban.com/',
+      box_shadow: '#37bf4c',
+      icon: 'img/douban.png',
+    }, {
+      name: '虎扑',
+      link: 'https://www.hupu.com/',
+      box_shadow: '#c01d2f',
+      icon: 'img/hupu.png',
+    }, {
+      name: '斗鱼',
+      link: 'https://www.douyu.com/',
+      box_shadow: '#fe7700',
+      icon: 'img/douyu.png',
+    }, {
+      name: 'XDA',
+      link: 'https://www.xda-developers.com/',
+      box_shadow: '#AC6E2F',
+      icon: 'img/xda.png',
     }, {
       name: '少数派',
       link: 'https://sspai.com/',
+      box_shadow: '#D7191A',
       icon: 'img/sspai.png',
+    }, {
+      name: '小众软件',
+      link: 'https://www.appinn.com/',
+      box_shadow: '#3279ea',
+      icon: 'img/xiaozhong.png',
+    }, {
+      name: '数字尾巴',
+      link: 'https://www.dgtle.com/',
+      box_shadow: '#62677b',
+      icon: 'img/shuziweiba.png',
     }, {
       name: '疫情跟踪',
       link: 'https://ncov.dxy.cn/ncovh5/view/pneumonia',
+      box_shadow: '#7C5DC7',
       icon: 'img/ding.png',
     }, {
       name: '疫情辟谣',
       link: 'https://vp.fact.qq.com/home',
+      box_shadow: '#00A0E9',
       icon: 'img/true.png',
     }]
   }
   for (var i = 0; i < bookmark.data.length; i++) {
-    var addList = '<li class="folder-item col-xs-3 col-sm-2"> <a href="' + bookmark.data[i].link + '"><div class="folder-item-box"><img class="folder-item-img" src="' + bookmark.data[i].icon + '" /><p>' + bookmark.data[i].name + '</p></div></a></li>'
+    if (bookmark.data[i].name == 'Via插件') {
+      var addList = '<li class="folder-item col-xs-3 col-sm-2 visible-xs visible-sm"> <a href="' + bookmark.data[i].link + '"><div class="folder-item-box"><img class="folder-item-img" style="box-shadow:' + bookmark.data[i].box_shadow + ' 0 14px 12px -6px" src="' + bookmark.data[i].icon + '" /><p>' + bookmark.data[i].name + '</p></div></a></li>'
+    } else {
+      var addList = '<li class="folder-item col-xs-3 col-sm-2"> <a href="' + bookmark.data[i].link + '"><div class="folder-item-box"><img class="folder-item-img" style="box-shadow:' + bookmark.data[i].box_shadow + ' 0 14px 12px -8px" src="' + bookmark.data[i].icon + '" /><p>' + bookmark.data[i].name + '</p></div></a></li>'
+    }
     $('#folder ul').append(addList);
   }
 })
@@ -273,7 +313,7 @@ $(function() {
     }]
   }
   for (var i = 0; i < search.data.length; i++) { //添加搜索按钮
-    var addList = '<li class="folder-item col-xs-3 col-sm-2"> <a href="#"> <div class="folder-item-box"> <img id="' + search.data[i].name + '" class="folder-item-img" src="' + search.data[i].icon + '" /> </div> </a> </li> '
+    var addList = '<li class="folder-item2 col-xs-3 col-sm-2"> <a href="#"> <div class="folder-item-box2"> <img id="' + search.data[i].name + '" class="folder-item-img2" src="' + search.data[i].icon + '" /> </div> </a> </li> '
     $('.nav ul').append(addList);
   }
 
@@ -340,7 +380,7 @@ $(function() {
 
   // 更新提示框
   $('#closealert').click(function() {
-    var version = '4.0.9';
+    var version = '4.1.0';
     localStorage.closealert = [version];
   })
   // 更新提示框结束
@@ -477,7 +517,7 @@ const jsonp = new searchHint();
  *
  * 作者：酷安@_小K同學
  * 项目开始日期：2020年01月26日
- * 上次修改时间：2020年03月08日
+ * 上次修改时间：2020年03月13日
  * 开发日志：https://kksan.top/posts/12023
  *
  * 开源相关：

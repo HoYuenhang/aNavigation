@@ -158,9 +158,9 @@ $(function() {
   }
   for (var i = 0; i < bookmark.data.length; i++) {
     if (bookmark.data[i].name == 'Via插件') {
-      var addList = '<li class="folder-item col-xs-3 col-sm-2 visible-xs visible-sm"> <a href="' + bookmark.data[i].link + '"><div class="folder-item-box"><img class="folder-item-img" style="box-shadow:' + bookmark.data[i].box_shadow + ' 0 14px 12px -6px" src="' + bookmark.data[i].icon + '" /><p>' + bookmark.data[i].name + '</p></div></a></li>'
+      var addList = '<li class="folder-item col-xs-3 col-sm-2 visible-xs visible-sm"> <a target="_blank" href="' + bookmark.data[i].link + '"><div class="folder-item-box"><img class="folder-item-img" style="box-shadow:' + bookmark.data[i].box_shadow + ' 0 14px 12px -6px" src="' + bookmark.data[i].icon + '" /><p>' + bookmark.data[i].name + '</p></div></a></li>'
     } else {
-      var addList = '<li class="folder-item col-xs-3 col-sm-2"> <a href="' + bookmark.data[i].link + '"><div class="folder-item-box"><img class="folder-item-img" style="box-shadow:' + bookmark.data[i].box_shadow + ' 0 14px 12px -8px" src="' + bookmark.data[i].icon + '" /><p>' + bookmark.data[i].name + '</p></div></a></li>'
+      var addList = '<li class="folder-item col-xs-3 col-sm-2"> <a target="_blank" href="' + bookmark.data[i].link + '"><div class="folder-item-box"><img class="folder-item-img" style="box-shadow:' + bookmark.data[i].box_shadow + ' 0 14px 12px -8px" src="' + bookmark.data[i].icon + '" /><p>' + bookmark.data[i].name + '</p></div></a></li>'
     }
     $('#folder ul').append(addList);
   }

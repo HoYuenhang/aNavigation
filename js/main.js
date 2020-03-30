@@ -3,7 +3,7 @@
  *
  * 作者：酷安@_小K同學
  * 项目开始日期：2020年01月26日
- * 上次修改时间：2020年03月13日
+ * 上次修改时间：2020年03月24日
  * 开发日志：https://kksan.top/posts/12023
  *
  * 开源相关：
@@ -55,7 +55,7 @@ if (storage.bg != undefined) {
 
 if (storage.closealert != undefined) {
   closealert = closealert.split(',');
-  if (closealert[0] == '4.1.0') {
+  if (closealert[0] == '4.1.1') {
     $('#alert').remove();
   }
 }
@@ -158,9 +158,9 @@ $(function() {
   }
   for (var i = 0; i < bookmark.data.length; i++) {
     if (bookmark.data[i].name == 'Via插件') {
-      var addList = '<li class="folder-item col-xs-3 col-sm-2 visible-xs visible-sm"> <a target="_blank" href="' + bookmark.data[i].link + '"><div class="folder-item-box"><img class="folder-item-img" style="box-shadow:' + bookmark.data[i].box_shadow + ' 0 14px 12px -6px" src="' + bookmark.data[i].icon + '" /><p>' + bookmark.data[i].name + '</p></div></a></li>'
+      var addList = '<li class="folder-item col-xs-3 col-sm-2 visible-xs visible-sm"><a target="_blank" href="' + bookmark.data[i].link + '"><div class="folder-item-box"><img class="folder-item-img" style="box-shadow:' + bookmark.data[i].box_shadow + ' 0 14px 12px -6px" src="' + bookmark.data[i].icon + '" /><p>' + bookmark.data[i].name + '</p></div></a></li>'
     } else {
-      var addList = '<li class="folder-item col-xs-3 col-sm-2"> <a target="_blank" href="' + bookmark.data[i].link + '"><div class="folder-item-box"><img class="folder-item-img" style="box-shadow:' + bookmark.data[i].box_shadow + ' 0 14px 12px -8px" src="' + bookmark.data[i].icon + '" /><p>' + bookmark.data[i].name + '</p></div></a></li>'
+      var addList = '<li class="folder-item col-xs-3 col-sm-2"><a target="_blank" href="' + bookmark.data[i].link + '"><div class="folder-item-box"><img class="folder-item-img" style="box-shadow:' + bookmark.data[i].box_shadow + ' 0 14px 12px -8px" src="' + bookmark.data[i].icon + '" /><p>' + bookmark.data[i].name + '</p></div></a></li>'
     }
     $('#folder ul').append(addList);
   }
@@ -380,7 +380,7 @@ $(function() {
 
   // 更新提示框
   $('#closealert').click(function() {
-    var version = '4.1.0';
+    var version = '4.1.1';
     localStorage.closealert = [version];
   })
   // 更新提示框结束
@@ -517,7 +517,7 @@ const jsonp = new searchHint();
  *
  * 作者：酷安@_小K同學
  * 项目开始日期：2020年01月26日
- * 上次修改时间：2020年03月13日
+ * 上次修改时间：2020年03月24日
  * 开发日志：https://kksan.top/posts/12023
  *
  * 开源相关：

@@ -164,6 +164,8 @@ $(function() {
     }
     $('#folder ul').append(addList);
   }
+  var hint2 = '<p><br>2020.04.04，深切哀悼。<br>愿逝者安息，生者奋发，祖国昌盛。</p>';
+  $('#hint2').append(hint2);
 })
 // 添加书签结束
 

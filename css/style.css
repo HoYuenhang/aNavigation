@@ -1,11 +1,4 @@
 /*公共布局*/
-html{
-	filter: grayscale(1);
-	-webkit-filter: grayscale(1);
-	-moz-filter: grayscale(1);
-	-ms-filter: grayscale(1);
-	-o-filter: grayscale(1);
-}
 a,a:hover,a:visited {
 	text-decoration: none;
 }

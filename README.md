@@ -10,7 +10,7 @@
 
 ------------
 
-地址：[点击跳转](http://www.orgloft.com/page/search/)
+地址：[点击跳转](https://nav.kksan.top/)
 
 #### 响应式
 

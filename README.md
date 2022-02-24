@@ -1,8 +1,9 @@
 ### 一个导航
 
-![](https://img.shields.io/badge/version-4.1.1-red)
+![](https://img.shields.io/badge/version-4.1.2-red)
 
 ------------
+#### 这是什么
 
 市面上有很多知名的导航，但是我都不太喜欢。不是铺满广告，就是信息太杂。所以尝试自己写了个导航页，支持响应式。绝对无添加无防腐剂！太低版本的浏览器（比如IE8以下）显示可能有问题，不过也没打算适配。
 
@@ -10,7 +11,16 @@
 
 ------------
 
-地址：[点击跳转](http://www.orgloft.com/page/search/)
+地址：[点击跳转](https://nav.kksan.top/)
+
+#### 如何使用
+
+------------
+
+选择download as zip方式下载或者clone到本地：
+```
+git clone https://github.com/Jackie1123/aNavigation
+```
 
 #### 响应式
 

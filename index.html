@@ -1,200 +1,434 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title id="title"></title>
-  <meta name="keywords" content="网页导航">
-  <meta name="description" content="单纯就是一个导航">
-  <link rel="stylesheet icon" href="img/icon.ico"/>
-  <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <script type="text/javascript" src="js/jQuery.js"></script>
-  <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="css/slideout.css">
-  <script>
-    var now = new Date().getTime();
-    document.write('<link href="css/style.css?v=' + now + '" rel="stylesheet" type="text/css"/>');
-	</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title id="title"></title>
+    <meta name="keywords" content="网页导航">
+    <meta name="description" content="单纯就是一个导航">
+    <link rel="stylesheet icon" href="img/icon.ico" />
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script type="text/javascript" src="js/jQuery.js"></script>
+    <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/slideout.css">
+    <script>
+        var now = new Date().getTime();
+        document.write('<link href="css/style.css?v=' + now + '" rel="stylesheet" type="text/css"/>');
+    </script>
 </head>
+
 <body>
-  <nav id="menu" class="menu">
-   <blockquote class="blockquote">▎ 工具</blockquote> 
-   <ul>
-    <a target="_blank" href="http://forsigner.com/browser-md5-file/"><li class="sidenav-btn">查询文件MD5<p>forsigner的项目</p></li></a> 
-    <a target="_blank" href="http://www.speedtest.cn/"><li class="sidenav-btn">SpeedTest<p>测速网</p></li></a> 
-    <a target="_blank" href="http://ip.tool.chinaz.com/"><li class="sidenav-btn">IP查询<p>站长工具</p></li></a> 
-    <a target="_blank" href="https://www.mdeditor.com/"><li class="sidenav-btn">MD编辑器<p>在线编辑MD</p></li></a> 
-    <a target="_blank" href="https://www.baiduwp.com/"><li class="sidenav-btn">网盘解析<p>破解云盘</p></li></a> 
-    <a target="_blank" href="https://mm.edrawsoft.cn/"><li class="sidenav-btn">思维导图<p>在线思维导图工具</p></li></a>
-    <a target="_blank" href="http://www.orgloft.com/page/luckyDraw.html"><li class="sidenav-btn">随机数<p>简单的随机数抽奖</p></li></a> 
-    <a target="_blank" href="https://www.desmos.com/calculator"><li class="sidenav-btn">desmos<p>在线函数图生成</p></li></a> 
-    <a target="_blank" href="https://123apps.com/cn/"><li class="sidenav-btn">123apps<p>免费网络应用</p></li></a> 
-    <a target="_blank" href="https://tool.oschina.net/"><li class="sidenav-btn">OSCHINA<p>应有尽有</p></li></a> 
-    <a target="_blank" href="https://5iux.cn/base64/"><li class="sidenav-btn">base64<p>加密解密base64</p></li></a> 
-    <a target="_blank" href="http://ping.pe/"><li class="sidenav-btn">ping.pe<p>黑科技感的ping</p></li></a> 
-    <a target="_blank" href="https://m.apkpure.com/cn/"><li class="sidenav-btn">Apkpure<p>国外类谷歌应用商店</p></li></a> 
-   </ul> 
-   <blockquote class="blockquote">▎ 文件传送</blockquote> 
-   <ul> 
-    <a target="_blank" href="https://cowtransfer.com/"><li class="sidenav-btn">奶牛快传<p>安全、省时高效</p></li></a> 
-    <a target="_blank" href="https://www.wenshushu.cn/"><li class="sidenav-btn">文叔叔<p>传文件的酸爽！</p></li></a> 
-    <a target="_blank" href="https://send.firefox.com/"><li class="sidenav-btn">FirefoxSend<p>安全高效火狐传送</p></li></a> 
-    <a target="_blank" href="https://app.tmp.link/"><li class="sidenav-btn">TMPLink<p>简单临时文件中转</p></li></a> 
-    <a target="_blank" href="https://pan.baidu.com/"><li class="sidenav-btn">百度云盘<p>毒！</p></li></a> 
-   </ul> 
-   <blockquote class="blockquote">▎ 社交媒体</blockquote> 
-   <ul> 
-    <a target="_blank" href="https://www.52pojie.cn/"><li class="sidenav-btn">吾爱破解<p>软件破解基地</p></li></a> 
-    <a target="_blank" href="https://www.youtube.com/"><li class="sidenav-btn">Youtube<p>国外视频网站</p></li></a> 
-    <a target="_blank" href="https://www.csdn.net/"><li class="sidenav-btn">CSDN<p>IT技术社区</p></li></a> 
-    <a target="_blank" href="https://www.zhihu.com/"><li class="sidenav-btn">知乎<p>有问题，上知乎</p></li></a> 
-    <a target="_blank" href="https://www.weibo.com/"><li class="sidenav-btn">微博<p>欣赏世界精彩瞬间</p></li></a> 
-    <a target="_blank" href="https://www.instagram.com/"><li class="sidenav-btn">Instagram<p>国外图片分享社区</p></li></a> 
-    <a target="_blank" href="https://twitter.com/"><li class="sidenav-btn">Twitter<p>国外微博</p></li></a> 
-    <a target="_blank" href="https://www.facebook.com/"><li class="sidenav-btn">Facebook<p>一本面子书</p></li></a> 
-   </ul> 
-   <blockquote class="blockquote">▎ 个人网站</blockquote> 
-   <ul> 
-    <a target="_blank" href="http://kksan.top"><li class="sidenav-btn">小K同學的博客<p>技术 日语 云旅游</p></li></a> 
-    <a target="_blank" href="http://www.carrotchou.blog/"><li class="sidenav-btn">胡萝卜周<p>软件分享领跑者</p></li></a> 
-    <a target="_blank" href="https://www.htcp.net/"><li class="sidenav-btn">云梦小站<p>安卓新资源</p></li></a> 
-    <a target="_blank" href="https://www.423down.com/"><li class="sidenav-btn">423down<p>软件搬运工</p></li></a> 
-   </ul> 
-   <blockquote class="blockquote">▎ 新闻</blockquote> 
-   <ul> 
-    <a target="_blank" href="http://www.chinadaily.com.cn/"><li class="sidenav-btn">中国日报</li></a> 
-    <a target="_blank" href="http://www.sc168.com/"><li class="sidenav-btn">顺德新闻</li></a> 
-    <a target="_blank" href="http://news.cctv.com/"><li class="sidenav-btn">央视新闻</li></a> 
-    <a target="_blank" href="https://www.thepaper.cn/"><li class="sidenav-btn">澎湃新闻</li></a> 
-    <a target="_blank" href="https://www.hk01.com/"><li class="sidenav-btn">香港01</li></a> 
-    <a target="_blank" href="https://www.msn.com/zh-tw/news"><li class="sidenav-btn">台湾即时新闻</li></a> 
-    <a target="_blank" href="https://www.bbc.com/"><li class="sidenav-btn">BBC</li></a> 
-    <a target="_blank" href="https://www.nhk.or.jp/"><li class="sidenav-btn">NHK</li></a> 
-   </ul> 
-   <blockquote class="blockquote">▎ 追剧</blockquote> 
-   <ul> 
-    <a target="_blank" href="http://www.mp4ba.la/"><li class="sidenav-btn">MP4吧<p>高清MP4吧</p></li></a> 
-    <a target="_blank" href="http://www.rrys2019.com/"><li class="sidenav-btn">YYeTs<p>人人字幕组</p></li></a> 
-    <a target="_blank" href="https://ddrk.me/"><li class="sidenav-btn">低端影视<p>超清在线视频站</p></li></a> 
-    <a target="_blank" href="https://www.biyov.com/"><li class="sidenav-btn">比优视频<p>人生如戏</p></li></a> 
-    <a target="_blank" href="http://www.novipnoad.com/"><li class="sidenav-btn">NO视频<p>不负追剧好时光</p></li></a> 
-    <a target="_blank" href="http://www.doki8.com/"><li class="sidenav-btn">doki8<p>心动日剧</p></li></a> 
-    <a target="_blank" href="http://www.zzrbl.com/"><li class="sidenav-btn">猪猪日部落<p>猪猪日剧字幕组</p></li></a> 
-    <a target="_blank" href="https://bde4.com/"><li class="sidenav-btn">哔嘀影视<p>热门最新电影</p></li></a> 
-    <a target="_blank" href="http://1090ys.com/"><li class="sidenav-btn">1090影视<p>挺全的电影</p></li></a> 
-    <a target="_blank" href="https://www.shenma4480.com/"><li class="sidenav-btn">神马影院<p>神马都有？</p></li></a> 
-   </ul> 
-   <blockquote class="blockquote">▎ 开发</blockquote> 
-   <ul> 
-    <a target="_blank" href="https://developer.mozilla.org/zh-CN/"><li class="sidenav-btn">MDN<p>服务开发者</p></li></a> 
-    <a target="_blank" href="https://cdnjs.com/"><li class="sidenav-btn">cdnjs<p>Web开发资源</p></li></a> 
-    <a target="_blank" href="https://www.w3school.com.cn/"><li class="sidenav-btn">W3school<p>Web技术教程</p></li></a> 
-    <a target="_blank" href="https://github.com/"><li class="sidenav-btn">Github<p>分布式版本管理</p></li></a> 
-    <a target="_blank" href="https://codepen.io/"><li class="sidenav-btn">Codepen<p>Coding online</p></li></a> 
-    <a target="_blank" href="https://uigradients.com/"><li class="sidenav-btn">uiGradients<p>网页设计配色</p></li></a> 
-    <a target="_blank" href="https://cssfx.netlify.com/"><li class="sidenav-btn">CSSFX<p>CSS效果</p></li></a> 
-    <a target="_blank" href="https://www.faviator.xyz/"><li class="sidenav-btn">Faviator<p>自动生成图标</p></li></a> 
-    <a target="_blank" href="https://www.iconfont.cn/"><li class="sidenav-btn">IconFont<p>阿里巴巴图标库</p></li></a> 
-    <a target="_blank" href="https://cloudconvert.com/"><li class="sidenav-btn">FileConvert<p>文件转换器</p></li></a> 
-   </ul> 
-   <blockquote class="blockquote">▎ 关于我的</blockquote> 
-   <ul> 
-    <a target="_blank" href="https://github.com/Jackie1123/aNavigation"><li class="sidenav-btn">Github<p>本网页导航</p></li></a> 
-    <a href="coolmarket://u/691518"><li class="sidenav-btn">@_小K同學<p>来酷安找我</p></li></a>
-   </ul> 
-   <blockquote class="blockquote">▎ 设置</blockquote> 
-   <ul> 
-    <a href="#"><li class="sidenav-btn" id="night">夜间模式</li></a>
-    <a href="#"><li class="sidenav-btn" id="bg">干掉/显示壁纸</li></a>
-   </ul>
-   <p style="width:100%;text-align:center;margin:0 auto;font-size:14px;color:lightgray;">2020 © <a style="color: lightgray;" href="http://www.coolapk.com/u/691518">小K同學</a><br>ALL RIGHTS RESERVED.</p>
-  </nav>
+    <nav id="menu" class="menu">
+        <blockquote class="blockquote">▎ 工具</blockquote>
+        <ul>
+            <a target="_blank" href="http://forsigner.com/browser-md5-file/">
+                <li class="sidenav-btn">查询文件MD5
+                    <p>forsigner的项目</p>
+                </li>
+            </a>
+            <a target="_blank" href="http://www.speedtest.cn/">
+                <li class="sidenav-btn">SpeedTest
+                    <p>测速网</p>
+                </li>
+            </a>
+            <a target="_blank" href="http://ip.tool.chinaz.com/">
+                <li class="sidenav-btn">IP查询
+                    <p>站长工具</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://pandao.github.io/editor.md/">
+                <li class="sidenav-btn">MD编辑器
+                    <p>在线编辑MD</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://mm.edrawsoft.cn/">
+                <li class="sidenav-btn">思维导图
+                    <p>在线思维导图工具</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www.desmos.com/calculator">
+                <li class="sidenav-btn">desmos
+                    <p>在线函数图生成</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://123apps.com/cn/">
+                <li class="sidenav-btn">123apps
+                    <p>免费网络应用</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://tool.oschina.net/">
+                <li class="sidenav-btn">OSCHINA
+                    <p>应有尽有</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://5iux.cn/base64/">
+                <li class="sidenav-btn">base64
+                    <p>加密解密base64</p>
+                </li>
+            </a>
+            <a target="_blank" href="http://ping.pe/">
+                <li class="sidenav-btn">ping.pe
+                    <p>黑科技感的ping</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://m.apkpure.com/cn/">
+                <li class="sidenav-btn">Apkpure
+                    <p>国外类谷歌应用店</p>
+                </li>
+            </a>
+        </ul>
+        <blockquote class="blockquote">▎ 学习</blockquote>
+        <ul>
+            <a target="_blank" href="https://www.youzack.com/">
+                <li class="sidenav-btn">Youzack
+                    <p>英语听背</p>
+                </li>
+            </a>
+            <a target="_blank" href="http://www.gavo.t.u-tokyo.ac.jp/ojad/chi/pages/home">
+                <li class="sidenav-btn">OJAD
+                    <p>在线日语声调词典</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www.weblio.jp/">
+                <li class="sidenav-btn">Weblio
+                    <p>好用的日语词典</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://hinoki-project.org/natsume/">
+                <li class="sidenav-btn">日语作文支援
+                    <p>日语作文搭配</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://nihongonosensei.net/">
+                <li class="sidenav-btn">日本語教師
+                    <p>一个日语老师的博客</p>
+                </li>
+            </a>
+        </ul>
+        <blockquote class="blockquote">▎ 文件传送</blockquote>
+        <ul>
+            <a target="_blank" href="https://cowtransfer.com/">
+                <li class="sidenav-btn">奶牛快传
+                    <p>安全、省时高效</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www.wenshushu.cn/">
+                <li class="sidenav-btn">文叔叔
+                    <p>传文件的酸爽！</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://app.tmp.link/">
+                <li class="sidenav-btn">TMPLink
+                    <p>简单临时文件中转</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://pan.baidu.com/">
+                <li class="sidenav-btn">百度云盘
+                    <p>毒！</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://cloud.189.cn/">
+                <li class="sidenav-btn">天翼云盘
+                    <p>酷友说挺好</p>
+                </li>
+            </a>
+        </ul>
+        <blockquote class="blockquote">▎ 社交媒体</blockquote>
+        <ul>
+            <a target="_blank" href="https://www.52pojie.cn/">
+                <li class="sidenav-btn">吾爱破解
+                    <p>软件破解基地</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www.youtube.com/">
+                <li class="sidenav-btn">Youtube
+                    <p>国外视频网站</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www.csdn.net/">
+                <li class="sidenav-btn">CSDN
+                    <p>IT技术社区</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www.zhihu.com/">
+                <li class="sidenav-btn">知乎
+                    <p>有问题，上知乎</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www.weibo.com/">
+                <li class="sidenav-btn">微博
+                    <p>欣赏世界精彩瞬间</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www.instagram.com/">
+                <li class="sidenav-btn">Instagram
+                    <p>国外图片分享社区</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://twitter.com/">
+                <li class="sidenav-btn">Twitter
+                    <p>国外微博</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www.facebook.com/">
+                <li class="sidenav-btn">Facebook
+                    <p>一本面子书</p>
+                </li>
+            </a>
+        </ul>
+        <blockquote class="blockquote">▎ 个人网站</blockquote>
+        <ul>
+            <a target="_blank" href="https://kksan.top">
+                <li class="sidenav-btn">小K同學的博客
+                    <p>随便写点东西</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www.htcp.net/">
+                <li class="sidenav-btn">云梦小站
+                    <p>安卓新资源</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www.423down.com/">
+                <li class="sidenav-btn">423down
+                    <p>软件搬运工</p>
+                </li>
+            </a>
+        </ul>
+        <blockquote class="blockquote">▎ 新闻</blockquote>
+        <ul>
+            <a target="_blank" href="http://www.chinadaily.com.cn/">
+                <li class="sidenav-btn">中国日报</li>
+            </a>
+            <a target="_blank" href="http://www.sc168.com/">
+                <li class="sidenav-btn">顺德新闻</li>
+            </a>
+            <a target="_blank" href="http://news.cctv.com/">
+                <li class="sidenav-btn">央视新闻</li>
+            </a>
+            <a target="_blank" href="https://www.thepaper.cn/">
+                <li class="sidenav-btn">澎湃新闻</li>
+            </a>
+            <a target="_blank" href="https://www.hk01.com/">
+                <li class="sidenav-btn">香港01</li>
+            </a>
+            <a target="_blank" href="https://www.msn.com/zh-tw/news">
+                <li class="sidenav-btn">台湾即时新闻</li>
+            </a>
+            <a target="_blank" href="https://www.bbc.com/">
+                <li class="sidenav-btn">BBC</li>
+            </a>
+            <a target="_blank" href="https://www.nhk.or.jp/">
+                <li class="sidenav-btn">NHK</li>
+            </a>
+        </ul>
+        <blockquote class="blockquote">▎ 追剧</blockquote>
+        <ul>
+            <a target="_blank" href="https://www.mp4ba.vip/">
+                <li class="sidenav-btn">MP4吧
+                    <p>高清MP4吧</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www.yyets.com/">
+                <li class="sidenav-btn">YYeTs
+                    <p>人人字幕组</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://ddrk.me/">
+                <li class="sidenav-btn">低端影视
+                    <p>超清在线视频站</p>
+                </li>
+            </a>
+            <a target="_blank" href="http://www.novipnoad.com/">
+                <li class="sidenav-btn">NO视频
+                    <p>不负追剧好时光</p>
+                </li>
+            </a>
+            <a target="_blank" href="http://www.doki8.com/">
+                <li class="sidenav-btn">doki8
+                    <p>心动日剧</p>
+                </li>
+            </a>
+            <a target="_blank" href="http://www.zzrbl.com/">
+                <li class="sidenav-btn">猪猪日部落
+                    <p>猪猪日剧字幕组</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www.btbdys.com/">
+                <li class="sidenav-btn">哔嘀影视
+                    <p>热门最新电影</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www.shenma4480.com/">
+                <li class="sidenav-btn">神马影院
+                    <p>神马都有？</p>
+                </li>
+            </a>
+        </ul>
+        <blockquote class="blockquote">▎ 开发</blockquote>
+        <ul>
+            <a target="_blank" href="https://developer.mozilla.org/zh-CN/">
+                <li class="sidenav-btn">MDN
+                    <p>服务开发者</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://cdnjs.com/">
+                <li class="sidenav-btn">cdnjs
+                    <p>Web开发资源</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www.w3school.com.cn/">
+                <li class="sidenav-btn">W3school
+                    <p>Web技术教程</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://github.com/">
+                <li class="sidenav-btn">Github
+                    <p>分布式版本管理</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://codepen.io/">
+                <li class="sidenav-btn">Codepen
+                    <p>Coding online</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://uigradients.com/">
+                <li class="sidenav-btn">uiGradients
+                    <p>网页设计配色</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://cssfx.netlify.com/">
+                <li class="sidenav-btn">CSSFX
+                    <p>CSS效果</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www.faviator.xyz/">
+                <li class="sidenav-btn">Faviator
+                    <p>自动生成图标</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www.iconfont.cn/">
+                <li class="sidenav-btn">IconFont
+                    <p>阿里巴巴图标库</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://cloudconvert.com/">
+                <li class="sidenav-btn">FileConvert
+                    <p>文件转换器</p>
+                </li>
+            </a>
+        </ul>
+        <blockquote class="blockquote">▎ 关于我的</blockquote>
+        <ul>
+            <a target="_blank" href="https://github.com/Jackie1123/aNavigation">
+                <li class="sidenav-btn">Github
+                    <p>本网页导航</p>
+                </li>
+            </a>
+            <a href="coolmarket://u/691518">
+                <li class="sidenav-btn">@_小K同學
+                    <p>来酷安找我</p>
+                </li>
+            </a>
+        </ul>
+        <blockquote class="blockquote">▎ 设置</blockquote>
+        <ul>
+            <a href="#">
+                <li class="sidenav-btn" id="night">夜间模式</li>
+            </a>
+            <a href="#">
+                <li class="sidenav-btn" id="bg">干掉/显示壁纸</li>
+            </a>
+        </ul>
+        <p style="width:100%;text-align:center;margin:0 auto;font-size:14px;color:lightgray;">2020-2022 © <a style="color: lightgray;" href="http://www.coolapk.com/u/691518">小K同學</a><br>ALL RIGHTS RESERVED.</p>
+    </nav>
 
-  <!-- 主页面 -->
-  <main id="main" class="panel">
-  <!-- 天气 -->
-  <div id="tp-weather-widget"></div>
-   <!-- 主容器 -->
-   <div class="container">
+    <!-- 主页面 -->
+    <main id="main" class="panel">
+        <!-- 天气 -->
+        <div id="tp-weather-widget"></div>
+        <!-- 主容器 -->
+        <div class="container">
 
-    <!-- 侧边栏按钮 -->
-    <img class="slidebtn btn-hamburger js-slideout-toggle" src="img/menu.svg" /> 
-    <!-- 搜索盒子 --> 
-    <div class="search-box"> 
-     <!-- logo --> 
-     <div id="logo"> 
-      <div id="state"> 
-       <a href="folder://"><img id="img" src="img/bing.png" /></a>
-      </div>
-     </div>
+            <!-- 侧边栏按钮 -->
+            <img class="slidebtn btn-hamburger js-slideout-toggle" src="img/menu.svg" />
+            <!-- 搜索盒子 -->
+            <div class="search-box">
+                <!-- logo -->
+                <div id="logo">
+                    <div id="state">
+                        <a href="folder://"><img id="img" src="img/bing.png" /></a>
+                    </div>
+                </div>
 
-     <!-- 搜索框 --> 
-     <div class="inputDiv">
-      <form id="form" action="https://cn.bing.com/search" target="_self" onsubmit="return check()"> 
-      <input onmouseover="this.focus()" onfocus="this.select()" id="inputText" type="text" placeholder="Bing搜索..." name="q" size="30" /> 
-      <button id="submitButton" class="submitButton" type="submit"></button>
-      </form>
-      <!-- 搜索提示词 -->
-      <div id="searchlist">
-        <ul id="list"></ul>
-      </div>
-    </div>
+                <!-- 搜索框 -->
+                <div class="inputDiv">
+                    <form id="form" action="https://cn.bing.com/search" target="_self" onsubmit="return check()">
+                        <input onmouseover="this.focus()" onfocus="this.select()" id="inputText" type="text" placeholder="Bing搜索..." name="q" size="30" />
+                        <button id="submitButton" class="submitButton" type="submit"></button>
+                    </form>
+                    <!-- 搜索提示词 -->
+                    <div id="searchlist">
+                        <ul id="list"></ul>
+                    </div>
+                </div>
 
-    <!-- 书签、引擎选择器 --> 
-    <div id="Select" class="Select" onclick="select()">
-     <hr>书签 
-     <img src="img/search-change.svg?v=2ae7ab8" />
-    </div> 
-    <!-- 书签 --> 
-    <div id="folder" class="folder"> 
-     <ul></ul>
-    </div> 
+                <!-- 书签、引擎选择器 -->
+                <div id="Select" class="Select" onclick="select()">
+                    <hr>书签
+                    <img src="img/search-change.svg?v=2ae7ab8" />
+                </div>
+                <!-- 书签 -->
+                <div id="folder" class="folder">
+                    <ul></ul>
+                </div>
 
-    <!-- 导航引擎 --> 
-    <div id="nav" class="nav"> 
-     <ul></ul> 
-    </div>
+                <!-- 导航引擎 -->
+                <div id="nav" class="nav">
+                    <ul></ul>
+                </div>
 
-    <!-- 更新提示框 -->
-    <div id="alert" class="alert alert-info alert-dismissible" role="alert">
-      <button type="button" id="closealert" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <strong>有新版本啦！</strong>赶紧清除缓存刷新看下吧！更新内容可查看<a href="http://kksan.top/posts/12023/" class="alert-link">更新日志</a>。
-    </div>
+                <!-- 更新提示框 -->
+                <div id="alert" class="alert alert-info alert-dismissible" role="alert">
+                    <button type="button" id="closealert" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>有新版本啦！</strong>赶紧清除缓存刷新看下吧！更新内容可查看<a target="_blank" href="https://kksan.top/f5404b68deeb4634b39dac0bc67ec693" class="alert-link">更新日志</a>。
+                </div>
 
-   </div>
-  </main>
- 
-<script type="text/javascript" src="js/slideout.min.js"></script>
-<script type="text/javascript">
-  var slideout = new Slideout({
-    'panel': document.getElementById('main'),
-    'menu': document.getElementById('menu'),
-    'padding': 290,
-    'tolerance': 70
-  });
-  document.querySelector('.js-slideout-toggle').addEventListener('click',
-  function() {
-    slideout.toggle();
-  });
-  document.querySelector('.menu').addEventListener('click',
-  function(eve) {
-    if (eve.target.nodeName === 'A') {
-      slideout.close();
-    }
-  });
-  $(document).click(function(e) {
-    var Class = $(e.target).attr("class");
-    var Id = $(e.target).attr("id");
-    if (Class == 'panel slideout-panel slideout-panel-left' || Class == 'folder-item col-xs-3 col-sm-2' || Class == 'search-box' || Id == 'inputText' || Id == 'logo') {
-      slideout.close();
-    }
-  });
-</script>
+            </div>
+    </main>
+
+    <script type="text/javascript" src="js/slideout.min.js"></script>
+    <script type="text/javascript">
+        var slideout = new Slideout({
+            'panel': document.getElementById('main'),
+            'menu': document.getElementById('menu'),
+            'padding': 290,
+            'tolerance': 70
+        });
+        document.querySelector('.js-slideout-toggle').addEventListener('click',
+            function() {
+                slideout.toggle();
+            });
+        document.querySelector('.menu').addEventListener('click',
+            function(eve) {
+                if (eve.target.nodeName === 'A') {
+                    slideout.close();
+                }
+            });
+        $(document).click(function(e) {
+            var Class = $(e.target).attr("class");
+            var Id = $(e.target).attr("id");
+            if (Class == 'panel slideout-panel slideout-panel-left' || Class == 'folder-item col-xs-3 col-sm-2' || Class == 'search-box' || Id == 'inputText' || Id == 'logo') {
+                slideout.close();
+            }
+        });
+    </script>
 
 </body>
 <script type="text/javascript">
-  document.write('<script src="js/main.js?v=' + now + '"><\/script\>');
+    document.write('<script src="js/main.js?v=' + now + '"><\/script\>');
 </script>
+
 </html>

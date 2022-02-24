@@ -1,124 +1,138 @@
 /*公共布局*/
-a,a:hover,a:visited {
-	text-decoration: none;
+
+a,
+a:hover,
+a:visited {
+    text-decoration: none;
 }
 
 span {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 li {
-	list-style: none;
+    list-style: none;
 }
 
 ul {
-	padding: 0 10px;
-	display: inline-block;
-	width: 100%;
-	margin: 0 auto;
-	margin: 0!important;
+    padding: 0 10px;
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    margin: 0!important;
 }
+
 
 /*媒体查询*/
-@media (max-width: 768px) { /*小屏*/
-	#main {
-		background: url(../img/bg-xs.jpg) no-repeat;
-		background-attachment: fixed;
-		background-size: cover;
-	}
 
-	.search-box {
-		margin : 0;
-	}
-
-	.inputDiv {
-		margin: 30px 20px 0;
-	}
+@media (max-width: 768px) {
+    /*小屏*/
+    #main {
+        background: url(../img/bg-xs.jpg) no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .search-box {
+        margin: 0;
+    }
+    .inputDiv {
+        margin: 30px 20px 0;
+    }
 }
 
-@media (min-width: 768px) { /*大屏*/
-	#main {
-		background: url(../img/bg.jpg) no-repeat;
-		background-attachment: fixed;
-		background-size: cover;
-	}
-
-	.search-box {
-		margin: 20px 70px 0 70px;
-	}
-
-	.inputDiv {
-		margin: 30px 130px 0;
-	}
+@media (min-width: 768px) {
+    /*大屏*/
+    #main {
+        background: url(../img/bg.jpg) no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .search-box {
+        margin: 20px 70px 0 70px;
+    }
+    .inputDiv {
+        margin: 30px 130px 0;
+    }
 }
 
 #main {
-	background-color: #fff;
-	margin: 0;
+    background-color: #fff;
+    margin: 0;
 }
 
-#menu::-webkit-scrollbar {/*滚动条整体样式*/
-    width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+#menu::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 10px;
+    /*高宽分别对应横竖滚动条的尺寸*/
     height: 10px;
-    scrollbar-arrow-color:red;
+    scrollbar-arrow-color: red;
 }
-#menu::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+
+#menu::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
     border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-    background: rgba(0,0,0,0.2);
-    scrollbar-arrow-color:red;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.2);
+    scrollbar-arrow-color: red;
 }
-#menu::-webkit-scrollbar-track {/*滚动条里面轨道*/
-    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+
+#menu::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
     border-radius: 0;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
 }
+
 
 /*搜索盒子*/
+
 #logo {
-	margin: 0 auto;
+    margin: 0 auto;
 }
 
 #logo div {
-	margin: 0 auto;
-	width: 300px;
+    margin: 0 auto;
+    width: 300px;
 }
 
 #img {
-	animation: fade-in;
-	animation-duration: 0.2s;
-	-webkit-animation: fade-in 0.2s;
-	width: 300px;
+    animation: fade-in;
+    animation-duration: 0.2s;
+    -webkit-animation: fade-in 0.2s;
+    width: 300px;
 }
+
 
 /*搜索提示词*/
-#searchlist{
-	width:100%;
-	position: absolute;
-	background-color: rgba(249,240,218,0.9);
-	border-radius:5px;
-	margin-top:10px;
-	display: none;
+
+#searchlist {
+    width: 100%;
+    position: absolute;
+    background-color: rgba(249, 240, 218, 0.9);
+    border-radius: 5px;
+    margin-top: 10px;
+    display: none;
 }
 
-#searchlist ul{
-	padding: 10px;
+#searchlist ul {
+    padding: 10px;
 }
 
-#searchlist ul a li{
-	color: #777;
-	text-align: left;
-	padding: 8px 0;
-	border-radius:5px;
+#searchlist ul a li {
+    color: #777;
+    text-align: left;
+    padding: 8px 0;
+    border-radius: 5px;
 }
 
-#searchlist ul a li:hover{
-	color: lightcoral;
-	background-color: #DCDCDC;
+#searchlist ul a li:hover,
+.activeli {
+    color: lightcoral;
+    background-color: #DCDCDC;
 }
 
-#searchlist ul a li span{
-	-webkit-tap-highlight-color: #00000000;
+#searchlist ul a li span {
+    -webkit-tap-highlight-color: #00000000;
     list-style: none;
     cursor: pointer;
     box-sizing: border-box;
@@ -134,202 +148,226 @@ ul {
     color: #999;
 }
 
+
 /*标签、导航选择器*/
+
 .Select {
-	margin: 20px auto 0;
-	color: #00868B;
-	font-weight: bold;
-	text-align: center;
-	cursor: pointer;
-	width: 50%;
-	font-size: 16px;
+    margin: 20px auto 0;
+    color: #00868B;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+    font-size: 16px;
 }
+
 
 /*搜索框*/
+
 .inputDiv {
-	padding: 0;
-	z-index: 0;
-	animation: fade-in;
-	animation-duration: 0.5s;
-	-webkit-animation: fade-in 0.5s;
-	position: relative;
-	border-radius: 0px;
+    padding: 0;
+    z-index: 0;
+    animation: fade-in;
+    animation-duration: 0.5s;
+    -webkit-animation: fade-in 0.5s;
+    position: relative;
+    border-radius: 0px;
 }
 
-.inputDiv input, .inputDiv button {
-	border: none;
-	outline: none;
-	border-radius: 3px;
+.inputDiv input,
+.inputDiv button {
+    border: none;
+    outline: none;
+    border-radius: 3px;
 }
 
 .inputDiv input {
-	width: 100%;
-	height: 42px;
-	background: #F9F0DA;
-	color: #575757;
-	padding-left: 15px;
-	transition: box-shadow 0.2s;
-	-moz-transition: box-shadow 0.2s;/* Firefox */
-	-webkit-transition: box-shadow 0.2s;/* Safari and Chrome */
-	-o-transition: box-shadow 0.2s;/* Opera */
+    width: 100%;
+    height: 42px;
+    background: #F9F0DA;
+    color: #575757;
+    padding-left: 15px;
+    transition: box-shadow 0.2s;
+    -moz-transition: box-shadow 0.2s;
+    /* Firefox */
+    -webkit-transition: box-shadow 0.2s;
+    /* Safari and Chrome */
+    -o-transition: box-shadow 0.2s;
+    /* Opera */
 }
 
 .inputDiv input:focus {
-	box-shadow: 0px 0px 0px 4px #F9F0DA;
+    box-shadow: 0px 0px 0px 4px #F9F0DA;
 }
 
 .inputDiv button {
-	height: 26px;
-	width: 26px;
-	padding: 2px;
-	position: absolute;
-	top: 8px;
-	right: 8px;
-	background: #00868B;
-	cursor: pointer;
+    height: 26px;
+    width: 26px;
+    padding: 2px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #00868B;
+    cursor: pointer;
 }
 
 .inputDiv button:before {
-	content: "\f105";
-	font-family: FontAwesome;
-	color: #F9F0DA;
-	font-size: 20px;
-	font-weight: bold;
+    content: "\f105";
+    font-family: FontAwesome;
+    color: #F9F0DA;
+    font-size: 20px;
+    font-weight: bold;
 }
 
+
 /*侧边栏按钮*/
+
 .slidebtn {
-	border-radius: 50%;
-	transition: background-color 0.2s;
+    border-radius: 50%;
+    transition: background-color 0.2s;
 }
 
 .slidebtn:hover {
-	background-color: rgba(211,211,211,0.2);
+    background-color: rgba(211, 211, 211, 0.2);
 }
 
+
 /*标签*/
+
 .folder {
-	animation: fade-in;
-	animation-duration: 1s;
-	-webkit-animation: fade-in 1s;
-	width: 100%;
-	margin-top: 10px;
-	display: block;
+    animation: fade-in;
+    animation-duration: 1s;
+    -webkit-animation: fade-in 1s;
+    width: 100%;
+    margin-top: 10px;
+    display: block;
 }
 
 .folder-item {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
-.folder-item-box , .folder-item-img {
-	width: 50px;
-	margin: 0 auto;
-	border-radius: 38%;
-	transition: all .2s ease;
+.folder-item-box,
+.folder-item-img {
+    width: 50px;
+    margin: 0 auto;
+    border-radius: 38%;
+    transition: all .2s ease;
 }
 
 .folder-item2 {
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
-.folder-item-box2 , .folder-item-img2 {
-	width: 42px;
-	margin: 0 auto;
-	border-radius: 38%;
-	transition: all .2s ease;
+.folder-item-box2,
+.folder-item-img2 {
+    width: 42px;
+    margin: 0 auto;
+    border-radius: 38%;
+    transition: all .2s ease;
 }
 
-.folder-item-img:hover , .folder-item-img2:hover {
-	transform: translate3d(0, -3px, 0);
-	box-shadow: rgba(33, 33, 33, 0.75) 0 14px 12px -7px!important;
+.folder-item-img:hover,
+.folder-item-img2:hover {
+    transform: translate3d(0, -3px, 0);
+    box-shadow: rgba(33, 33, 33, 0.75) 0 14px 12px -7px!important;
 }
 
 .folder-item-box p {
-	font-size: 12px;
-	color: #969696;
-	width: 100%;
-	margin: 10px 0 0 0;
-	text-align: center;
+    font-size: 12px;
+    color: #969696;
+    width: 100%;
+    margin: 10px 0 0 0;
+    text-align: center;
 }
+
 
 /*导航*/
+
 .nav {
-	animation: fade-in;
-	animation-duration: 1s;
-	-webkit-animation: fade-in 1s;
-	width: 100%;
-	margin-top: 10px;
-	display: none;
+    animation: fade-in;
+    animation-duration: 1s;
+    -webkit-animation: fade-in 1s;
+    width: 100%;
+    margin-top: 10px;
+    display: none;
 }
 
+
 /*侧边栏内容*/
+
 blockquote {
-	margin: 0!important;
-	font-weight: bold;
-	color: black;
+    margin: 0!important;
+    font-weight: bold;
+    color: black;
 }
 
 .menu ul a li {
-	float: left;
+    float: left;
 }
 
 .sidenav-btn {
-	font-size: 14px;
-	margin: 2% 4%;
-	padding: 6px;
-	border-radius: 5px;
-	background-color: #E3E3E3;
-	color: black;
-	display: block;
-	text-align: center;
-	text-decoration: none;
-	width: 42%;
-	transition: 0.3s;
- /*标签延迟0.3s显示*/
+    font-size: 14px;
+    margin: 2% 4%;
+    padding: 6px;
+    border-radius: 5px;
+    background-color: #E3E3E3;
+    color: black;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 42%;
+    transition: 0.3s;
+    /*标签延迟0.3s显示*/
 }
 
 .sidenav-btn:hover {
-	background-color: lightgray;
+    background-color: lightgray;
 }
 
 .sidenav-btn p {
-	margin: 0;
-	font-size: 10px;
-	text-align: center;
-	color: gray;
+    margin: 0;
+    font-size: 10px;
+    text-align: center;
+    color: gray;
 }
 
 #tp-weather-widget .sw-container {
-	z-index: 9;
-	left: unset;
-	right: 10px;
-	top: unset;
-	bottom: 10px;
-	box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px;
+    z-index: 9;
+    left: unset;
+    right: 10px;
+    top: unset;
+    bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px;
 }
 
+
 /*动画*/
+
 @keyframes fade-in {
-	0% {
-		opacity: 0;
-	}/*初始状态 透明度为0*/  
-	40% {
-		opacity: 0;
-	}/*过渡状态 透明度为0*/  
-	100% {
-		opacity: 1;
-	}/*结束状态 透明度为1*/
+    0% {
+        opacity: 0;
+    }
+    /*初始状态 透明度为0*/
+    40% {
+        opacity: 0;
+    }
+    /*过渡状态 透明度为0*/
+    100% {
+        opacity: 1;
+    }
+    /*结束状态 透明度为1*/
 }
 
 @-webkit-keyframes fade-in {
-/*针对webkit内核*/  
-	0% {
-		opacity: 0;
-	}
-	40% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+    /*针对webkit内核*/
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

@@ -13,6 +13,8 @@
 
 地址：[点击跳转](https://nav.kksan.top/)
 
+⭐更新日志：[点击跳转](https://kksan.top/f5404b68deeb4634b39dac0bc67ec693)⭐
+
 #### 如何使用
 
 ------------

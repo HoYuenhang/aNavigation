@@ -21,7 +21,7 @@
 
 选择download as zip方式下载或者clone到本地：
 ```
-git clone https://github.com/Jackie1123/aNavigation
+git clone https://github.com/HoYuenhang/aNavigation
 ```
 
 #### 响应式
